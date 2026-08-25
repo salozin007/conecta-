@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta+ | Feed de Ideias</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link corrigido para os ícones do Google -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Conecta+</div>
+        <div class="nav-links">
+            <a href="#" class="action-btn"><span class="material-icons">chat</span> Chat</a>
+            <div class="user-avatar">JS</div>
+        </div>
+    </nav>
+
+    <main class="main-feed">
+        <!-- Topo de Incentivo -->
+        <div class="ideia-header-box">
+            <h2>💡 Tem uma ideia? Compartilhe com a comunidade!</h2>
+            <p>"Sua ideia pode ser o começo de algo incrível."</p>
+        </div>
+
+        <!-- Formulário de Nova Ideia -->
+        <div class="post-card">
+            <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span class="material-icons" style="color: var(--primary)">add_circle</span> Deixe sua ideia
+            </h3>
+            <form id="idea-form">
+                <div class="form-group">
+                    <label for="titulo">Título da ideia</label>
+                    <input type="text" id="titulo" required placeholder="Ex: Aplicativo para ajudar idosos">
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria">
+                        <option>Tecnologia</option>
+                        <option>Educação</option>
+                        <option>Meio Ambiente</option>
+                        <option>Cultura</option>
+                    </select>
+                </div>
+                <!-- NOVO CAMPO: Projeto do Usuário -->
+                <div class="form-group">
+                    <label for="projeto-usuario">Seu projeto de origem / Portfólio (Opcional)</label>
+                    <input type="text" id="projeto-usuario" placeholder="Ex: GitHub, portfólio ou nome do projeto atual">
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição do Projeto</label>
+                    <textarea id="descricao" rows="4" required placeholder="🎯 Qual problema ela resolve?
+💭 Como você imagina a solução?
+👥 Que tipo de pessoa você procura?"></textarea>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                    <button type="button" class="btn-outline" style="font-size: 0.9rem; display: flex; align-items: center; gap: 0.3rem;">
+                        <span class="material-icons">image</span> Imagem
+                    </button>
+                    <button type="button" class="btn-outline" style="font-size: 0.9rem; display: flex; align-items: center; gap: 0.3rem;">
+                        <span class="material-icons">place</span> Localização
+                    </button>
+                </div>
+                <button type="submit" class="btn-primary" style="background: var(--secondary); width: 100%; padding: 0.8rem;">
+                    🟢 PUBLICAR IDEIA
+                </button>
+            </form>
+        </div>
+
+        <!-- Alerta de Notificação de match -->
+        <div class="post-card" style="border-left: 5px solid var(--primary); background: #f0f9ff; padding: 1rem 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); font-weight: bold;">
+                <span class="material-icons">rocket_launch</span> Nova pessoa interessada!
+            </div>
+            <p style="margin-left: 1.8rem; font-size: 0.95rem;"><strong>Carlos</strong> quer participar do seu projeto "Biblioteca comunitária no bairro". <a href="#" style="color: var(--primary); text-decoration: underline;">Abrir chat</a></p>
+        </div>
+
+        <!-- Container onde as novas ideias serão publicadas dinamicamente -->
+        <div id="feed-container">
+            <!-- Post de Exemplo (Atualizado com a exibição do projeto) -->
+            <div class="post-card">
+                <div class="post-user">
+                    <div class="user-avatar" style="background: #e0f2fe; color: #0369a1;">JS</div>
+                    <div>
+                        <strong>João Silva</strong>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Postado há 2 horas</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 0.5rem;">Biblioteca comunitária no bairro</h3>
+                
+                <!-- Exibição do Projeto no Card -->
+                <div class="user-project-badge">
+                    <span class="material-icons">folder_shared</span>
+                    <span>Projeto Criador: <a href="https://github.com" target="_blank">://github.com</a></span>
+                </div>
+
+                <p>Minha ideia é criar uma biblioteca gratuita para estudantes que não têm acesso a muitos livros no nosso bairro.</p>
+
+                <div class="tags">
+                    <span class="tag">📚 Educação</span>
+                    <span class="tag">👥 Procurando colaboradores</span>
+                </div>
+
+                <div class="post-actions">
+                    <button class="action-btn"><span class="material-icons" style="color: #ef4444;">favorite</span> 24</button>
+                    <button class="action-btn"><span class="material-icons">comment</span> 8 Comentários</button>
+                    <button class="btn-primary" style="font-size: 0.85rem; padding: 0.4rem 1rem; margin-left: auto; background: var(--secondary);">
+                        🤝 Quero participar
+                    </button>
+                </div>
+
+                <!-- Seção de Comentários -->
+                <div class="comments-section">
+                    <div class="comment destaque">
+                        <span class="badge-destaque"><span class="material-icons" style="font-size: 0.8rem; vertical-align: middle;">push_pin</span> Ideia útil</span>
+                        <strong>Ana</strong>
+                        <p style="margin-top: 0.25rem;">Gostei muito! Poderíamos fazer também uma área para troca de livros.</p>
+                    </div>
+                    <div class="comment">
+                        <strong>Carlos</strong>
+                        <p style="margin-top: 0.25rem;">Posso ajudar na criação do site do projeto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script de Validação e Publicação Dinâmica -->
+    <script>
+        document.getElementById('idea-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o recarregamento da página
+
+            // Captura os valores dos campos
+            const titulo = document.getElementById('titulo').value.trim();
+            const categoria = document.getElementById('categoria').value;
+            const projetoUsuario = document.getElementById('projeto-usuario').value.trim();
+            const descricao = document.getElementById('descricao').value.trim();
+
+            // Validação simples
+            if (!titulo || !descricao) {
+                alert('Por favor, preencha os campos obrigatórios (Título e Descrição).');
+                return;
+            }
+
+            // Constrói o HTML do bloco do projeto se ele existir
+            let projetoHTML = '';
+            if (projetoUsuario) {
+                projetoHTML = `
+                    <div class="user-project-badge">
+                        <span class="material-icons">folder_shared</span>
+                        <span>Projeto Criador: <strong>${projetoUsuario}</strong></span>
+                    </div>
+                `;
+            }
+
+            // Cria a estrutura do novo Card
+            const newPost = document.createElement('div');
+            newPost.className = 'post-card';
+            newPost.innerHTML = `
+                <div class="post-user">
+                    <div class="user-avatar" style="background: #e2e8f0; color: #1e293b;">JS</div>
+                    <div>
+                        <strong>Você (Usuário)</strong>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Postado agora mesmo</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 0.5rem;">${titulo}</h3>
+                
+                ${projetoHTML}
+
+                <p>${descricao}</p>
+
+                <div class="tags">
+                    <span class="tag"># ${categoria}</span>
+                    <span class="tag">👥 Procurando colaboradores</span>
+                </div>
+
+                <div class="post-actions">
+                    <button class="action-btn"><span class="material-icons">favorite_border</span> 0</button>
+                    <button class="action-btn"><span class="material-icons">comment</span> 0 Comentários</button>
+                    <button class="btn-primary" style="font-size: 0.85rem; padding: 0.4rem 1rem; margin-left: auto; background: var(--secondary); opacity: 0.7;" disabled>
+                        Seu projeto
+                    </button>
+                </div>
+            `;
+
+            // Insere o novo post no topo do feed
+            const feed = document.getElementById('feed-container');
+            feed.insertBefore(newPost, feed.firstChild);
+
+            // Limpa o formulário após o envio bem-sucedido
+            document.getElementById('idea-form').reset();
+        });
+    </script>
+</body>
+</html>
