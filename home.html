@@ -5,21 +5,16 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Conecta+ | Feed de Ideias</title>
 
     <link rel="stylesheet" href="style.css">
 
     <!-- Material Icons -->
-    <link
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
-
         /* ================================
            LOGO DA NAVBAR
         ================================= */
@@ -54,7 +49,6 @@
             }
 
         }
-
     </style>
 
 </head>
@@ -71,24 +65,29 @@
 
         <!-- LOGO -->
 
-        <a
-            href="index.html"
-            class="logo">
+        <a class="logo">
 
-            <img
-                src="logo.png"
-                alt="Conecta+">
+            <img src="logo.png" alt="Conecta+">
 
         </a>
 
+
+        <a href="index.html" class="action-btn"
+            style="background-color: #dc3545; color: white; display: flex; align-items: center; gap: 0.3rem; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">
+
+            <span class="material-icons">
+                logout
+            </span>
+
+            Sair
+
+        </a>
 
         <!-- LINKS -->
 
         <div class="nav-links">
 
-            <a
-                href="#"
-                class="action-btn">
+            <a href="#" class="action-btn">
 
                 <span class="material-icons">
                     chat
@@ -141,17 +140,14 @@
 
         <div class="post-card">
 
-            <h3
-                style="
+            <h3 style="
                     margin-bottom: 1rem;
                     display: flex;
                     align-items: center;
                     gap: 0.5rem;
                 ">
 
-                <span
-                    class="material-icons"
-                    style="color: var(--primary);">
+                <span class="material-icons" style="color: var(--primary);">
 
                     add_circle
 
@@ -173,11 +169,7 @@
                         Título da ideia
                     </label>
 
-                    <input
-                        type="text"
-                        id="titulo"
-                        required
-                        placeholder="Ex: Aplicativo para ajudar idosos">
+                    <input type="text" id="titulo" required placeholder="Ex: Aplicativo para ajudar idosos">
 
                 </div>
 
@@ -226,9 +218,7 @@
 
                     </label>
 
-                    <input
-                        type="text"
-                        id="projeto-usuario"
+                    <input type="text" id="projeto-usuario"
                         placeholder="Ex: GitHub, portfólio ou nome do projeto atual">
 
                 </div>
@@ -243,11 +233,7 @@
                         Descrição do Projeto
                     </label>
 
-                    <textarea
-                        id="descricao"
-                        rows="4"
-                        required
-                        placeholder="🎯 Qual problema ela resolve?
+                    <textarea id="descricao" rows="4" required placeholder="🎯 Qual problema ela resolve?
 💭 Como você imagina a solução?
 👥 Que tipo de pessoa você procura?"></textarea>
 
@@ -257,17 +243,13 @@
 
                 <!-- BOTÕES -->
 
-                <div
-                    style="
+                <div style="
                         display: flex;
                         gap: 1rem;
                         margin-bottom: 1rem;
                     ">
 
-                    <button
-                        type="button"
-                        class="btn-outline"
-                        style="
+                    <button type="button" class="btn-outline" style="
                             font-size: 0.9rem;
                             display: flex;
                             align-items: center;
@@ -283,10 +265,7 @@
                     </button>
 
 
-                    <button
-                        type="button"
-                        class="btn-outline"
-                        style="
+                    <button type="button" class="btn-outline" style="
                             font-size: 0.9rem;
                             display: flex;
                             align-items: center;
@@ -307,10 +286,7 @@
 
                 <!-- PUBLICAR -->
 
-                <button
-                    type="submit"
-                    class="btn-primary"
-                    style="
+                <button type="submit" class="btn-primary" style="
                         background: var(--secondary);
                         width: 100%;
                         padding: 0.8rem;
@@ -330,17 +306,14 @@
              NOTIFICAÇÃO
         ================================= -->
 
-        <div
-            class="post-card"
-            style="
+        <div class="post-card" style="
                 border-left: 5px solid var(--primary);
                 background: #f0f9ff;
                 padding: 1rem 1.5rem;
             ">
 
 
-            <div
-                style="
+            <div style="
                     display: flex;
                     align-items: center;
                     gap: 0.5rem;
@@ -357,8 +330,7 @@
             </div>
 
 
-            <p
-                style="
+            <p style="
                     margin-left: 1.8rem;
                     font-size: 0.95rem;
                 ">
@@ -367,9 +339,7 @@
                 quer participar do seu projeto
                 "Biblioteca comunitária no bairro".
 
-                <a
-                    href="#"
-                    style="
+                <a href="#" style="
                         color: var(--primary);
                         text-decoration: underline;
                     ">
@@ -400,9 +370,7 @@
 
                 <div class="post-user">
 
-                    <div
-                        class="user-avatar"
-                        style="
+                    <div class="user-avatar" style="
                             background: #e0f2fe;
                             color: #0369a1;
                         ">
@@ -418,8 +386,7 @@
                             João Silva
                         </strong>
 
-                        <div
-                            style="
+                        <div style="
                                 font-size: 0.8rem;
                                 color: var(--text-muted);
                             ">
@@ -436,8 +403,7 @@
 
                 <!-- TÍTULO -->
 
-                <h3
-                    style="
+                <h3 style="
                         margin-bottom: 0.5rem;
                     ">
 
@@ -459,9 +425,7 @@
 
                         Projeto Criador:
 
-                        <a
-                            href="https://github.com"
-                            target="_blank">
+                        <a href="https://github.com" target="_blank">
 
                             GitHub
 
@@ -508,9 +472,7 @@
 
                     <button class="action-btn">
 
-                        <span
-                            class="material-icons"
-                            style="color: #ef4444;">
+                        <span class="material-icons" style="color: #ef4444;">
 
                             favorite
 
@@ -534,9 +496,7 @@
 
 
 
-                    <button
-                        class="btn-primary"
-                        style="
+                    <button class="btn-primary" style="
                             font-size: 0.85rem;
                             padding: 0.4rem 1rem;
                             margin-left: auto;
@@ -564,9 +524,7 @@
 
                         <span class="badge-destaque">
 
-                            <span
-                                class="material-icons"
-                                style="
+                            <span class="material-icons" style="
                                     font-size: 0.8rem;
                                     vertical-align: middle;
                                 ">
@@ -585,8 +543,7 @@
                         </strong>
 
 
-                        <p
-                            style="
+                        <p style="
                                 margin-top: 0.25rem;
                             ">
 
@@ -608,8 +565,7 @@
                             Carlos
                         </strong>
 
-                        <p
-                            style="
+                        <p style="
                                 margin-top: 0.25rem;
                             ">
 
