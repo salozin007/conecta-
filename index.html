@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
-    <!-- Título da página -->
+
     <title>Conecta+ | Tire suas ideias do papel</title>
 
-    <!-- FAVICON DO CONECTA+ -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Cpath d='M35 55a18 18 0 0 1 0-25l8-8a18 18 0 0 1 25 0' fill='none' stroke='white' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M65 45a18 18 0 0 1 0 25l-8 8a18 18 0 0 1-25 0' fill='none' stroke='white' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M39 50h22' stroke='white' stroke-width='9' stroke-linecap='round'/%3E%3Ccircle cx='76' cy='24' r='10' fill='%2310b981'/%3E%3Cpath d='M76 19v10M71 24h10' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Cpath d='M35 55a18 18 0 0 1 0-25l8-8a18 18 0 0 1 25 0' fill='none' stroke='white' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M65 45a18 18 0 0 1 0 25l-8 8a18 18 0 0 1-25 0' fill='none' stroke='white' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M39 50h22' stroke='white' stroke-width='9' stroke-linecap='round'/%3E%3Ccircle cx='76' cy='24' r='10' fill='%2310b981'/%3E%3Cpath d='M76 19v10M71 24h10' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 
-    <!-- Ícones Material -->
+    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 
 </head>
 
@@ -21,15 +22,16 @@
 
     <!-- ================================
          NAVBAR
-    ================================== -->
+    ================================= -->
 
     <nav class="navbar">
 
-        <div class="logo">
-            Conecta+
-        </div>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo Conecta+">
+        </a>
 
         <div class="nav-links">
+
             <a href="login.html" class="btn-outline">
                 Entrar
             </a>
@@ -37,6 +39,7 @@
             <a href="login.html" class="btn-primary">
                 Criar Conta
             </a>
+
         </div>
 
     </nav>
@@ -44,7 +47,7 @@
 
     <!-- ================================
          HERO
-    ================================== -->
+    ================================= -->
 
     <header class="hero">
 
@@ -60,12 +63,8 @@
                 rascunhos em projetos reais.
             </p>
 
-            <a href="login.html"
-               class="btn-primary"
-               style="padding: 1rem 2rem; font-size: 1.1rem;">
-
+            <a href="login.html" class="btn-primary hero-button">
                 Começar Agora
-
             </a>
 
         </div>
@@ -84,7 +83,7 @@
 
     <!-- ================================
          FLUXO DO CONECTA+
-    ================================== -->
+    ================================= -->
 
     <section class="fluxo-section">
 
@@ -99,53 +98,98 @@
 
         <div class="fluxo-container">
 
-
             <!-- IDEIA -->
 
             <div class="fluxo-step">
-                <span
-                    class="material-icons"
-                    style="color: #3b82f6;">
+
+                <span class="material-icons ideia">
                     lightbulb
                 </span>
-                <h3> Ideia </h3>
 
-                <p>Compartilhe o que você pensou</p>
+                <h3>
+                    Ideia
+                </h3>
+
+                <p>
+                    Compartilhe o que você pensou
+                </p>
 
             </div>
-            <span class="material-icons">
+
+
+            <span class="material-icons arrow">
                 arrow_forward
             </span>
+
 
             <!-- SUGESTÕES -->
 
             <div class="fluxo-step">
-                <span class="material-icons" style="color: #10b981;">forum</span>
-                <h3>Sugestões</h3>
-                <p>Receba feedbacks</p>
+
+                <span class="material-icons sugestoes">
+                    forum
+                </span>
+
+                <h3>
+                    Sugestões
+                </h3>
+
+                <p>
+                    Receba feedbacks
+                </p>
+
             </div>
 
-            <span class="material-icons">arrow_forward</span>
+
+            <span class="material-icons arrow">
+                arrow_forward
+            </span>
+
 
             <!-- IA -->
+
             <div class="fluxo-step">
-                <span class="material-icons"style="color: #f59e0b;">psychology </span>
-                <h3>Insights IA</h3>
-                <p>Evolua com nossa IA</p>
+
+                <span class="material-icons ia">
+                    psychology
+                </span>
+
+                <h3>
+                    Insights IA
+                </h3>
+
+                <p>
+                    Evolua com nossa IA
+                </p>
+
             </div>
 
-            <span class="material-icons">arrow_forward</span>
+
+            <span class="material-icons arrow">
+                arrow_forward
+            </span>
+
 
             <!-- EQUIPE -->
 
             <div class="fluxo-step">
-                <span class="material-icons"style="color: #ec4899;"> groups</span>
-                <h3>Equipe</h3>
-                <p>Ache colaboradores</p>
+
+                <span class="material-icons equipe">
+                    groups
+                </span>
+
+                <h3>
+                    Equipe
+                </h3>
+
+                <p>
+                    Ache colaboradores
+                </p>
+
             </div>
 
 
-            <span class="material-icons">
+            <span class="material-icons arrow">
                 arrow_forward
             </span>
 
@@ -154,8 +198,9 @@
 
             <div class="fluxo-step">
 
-                <span
-class="material-icons"style="color: #8b5cf6;">rocket_launch</span>
+                <span class="material-icons projeto">
+                    rocket_launch
+                </span>
 
                 <h3>
                     Projeto

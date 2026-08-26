@@ -1,90 +1,737 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Conecta+ | Entrar</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- ================================
+         CSS
+    ================================= -->
+    <style>
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+
+            --border: #e2e8f0;
+
+            --radius: 12px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family:
+                'Segoe UI',
+                Tahoma,
+                Geneva,
+                Verdana,
+                sans-serif;
+        }
+
+
+        body {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8fafc,
+                    #eff6ff
+                );
+
+            color: var(--text-main);
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+
+        /* ================================
+           NAVBAR
+        ================================= */
+
+        .navbar {
+            width: 100%;
+
+            height: 78px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 0 5%;
+
+            background: white;
+
+            border-bottom: 1px solid var(--border);
+
+            box-shadow:
+                0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+
+        .logo {
+            display: flex;
+
+            align-items: center;
+
+            height: 100%;
+        }
+
+
+        .logo img {
+            width: 155px;
+
+            height: 65px;
+
+            object-fit: contain;
+
+            display: block;
+
+            transition: 0.3s ease;
+        }
+
+
+        .logo:hover img {
+            transform: scale(1.03);
+        }
+
+
+        /* ================================
+           CONTAINER
+        ================================= */
+
+        .auth-container {
+            min-height:
+                calc(100vh - 78px);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 30px 20px;
+        }
+
+
+        /* ================================
+           CARD
+        ================================= */
+
+        .auth-card {
+            width: 100%;
+
+            max-width: 430px;
+
+            background: var(--bg-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 15px 35px rgba(15, 23, 42, 0.08);
+        }
+
+
+        /* ================================
+           LOGO DO LOGIN
+        ================================= */
+
+        .login-logo {
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 18px;
+        }
+
+
+        .login-logo img {
+            width: 190px;
+
+            height: 85px;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
+
+        /* ================================
+           ABAS
+        ================================= */
+
+        .auth-tabs {
+            display: flex;
+
+            border-bottom:
+                2px solid var(--border);
+
+            margin-bottom: 25px;
+        }
+
+
+        .auth-tab {
+            flex: 1;
+
+            background: transparent;
+
+            border: none;
+
+            padding: 13px;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            color: var(--text-muted);
+
+            cursor: pointer;
+
+            border-bottom:
+                3px solid transparent;
+
+            margin-bottom: -2px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .auth-tab:hover {
+            color: var(--text-main);
+        }
+
+
+        .auth-tab.active {
+            color: var(--primary);
+
+            border-bottom:
+                3px solid var(--primary);
+        }
+
+
+        /* ================================
+           FORMULÁRIO
+        ================================= */
+
+        .form-group {
+            margin-bottom: 18px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 7px;
+        }
+
+
+        .form-group label {
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: var(--text-main);
+        }
+
+
+        .form-group label span {
+            color: var(--text-muted);
+
+            font-weight: 400;
+        }
+
+
+        .form-group input {
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            outline: none;
+
+            font-size: 15px;
+
+            background: white;
+
+            color: var(--text-main);
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .form-group input::placeholder {
+            color: #94a3b8;
+        }
+
+
+        .form-group input:focus {
+            border-color: var(--primary);
+
+            box-shadow:
+                0 0 0 3px rgba(
+                    37,
+                    99,
+                    235,
+                    0.10
+                );
+        }
+
+
+        /* ================================
+           ESCONDER CAMPOS
+        ================================= */
+
+        .hidden-field {
+            display: none !important;
+        }
+
+
+        /* ================================
+           BOTÃO
+        ================================= */
+
+        .login-button {
+            width: 100%;
+
+            padding: 13px;
+
+            margin-top: 8px;
+
+            border: none;
+
+            border-radius: var(--radius);
+
+            background: var(--primary);
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                background 0.3s ease,
+                transform 0.2s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .login-button:hover {
+            background: var(--primary-dark);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 18px rgba(
+                    37,
+                    99,
+                    235,
+                    0.20
+                );
+        }
+
+
+        .login-button:active {
+            transform: translateY(0);
+        }
+
+
+        /* ================================
+           RESPONSIVIDADE
+        ================================= */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                height: 70px;
+
+                padding: 0 20px;
+            }
+
+
+            .logo img {
+                width: 125px;
+
+                height: 55px;
+            }
+
+
+            .auth-container {
+                min-height:
+                    calc(100vh - 70px);
+
+                padding: 20px 15px;
+
+                align-items: flex-start;
+            }
+
+
+            .auth-card {
+                margin-top: 15px;
+
+                padding: 22px 18px;
+
+                border-radius: 15px;
+            }
+
+
+            .login-logo img {
+                width: 165px;
+
+                height: 75px;
+            }
+
+        }
+
+    </style>
 </head>
+
+
 <body>
 
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
     <nav class="navbar">
-        <a href="index.html" class="logo">Conecta+</a>
+
+        <a
+            href="index.html"
+            class="logo">
+
+            <img
+                src="logo.png"
+                alt="Conecta+">
+
+        </a>
+
     </nav>
 
+
+
+    <!-- ================================
+         LOGIN
+    ================================= -->
+
     <div class="auth-container">
+
         <div class="auth-card">
-            <div class="auth-tabs">
-                <button type="button" class="auth-tab active" id="tab-entrar">Entrar</button>
-                <button type="button" class="auth-tab" id="tab-cadastrar">Cadastrar</button>
+
+
+            <!-- LOGO -->
+
+            <div class="login-logo">
+
+                <img
+                    src="logo.png"
+                    alt="Logo Conecta+">
+
             </div>
 
-            <form action="home.html" id="auth-form">
-                <!-- CAMPO CADASTRO: Nome Completo (Oculto no Login) -->
-                <div class="form-group register-field hidden-field">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" placeholder="Seu nome e sobrenome">
-                </div>
 
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="seu@email.com" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" placeholder="Sua senha" required>
-                </div>
+            <!-- ABAS -->
 
-                <!-- CAMPO CADASTRO: Link do Projeto (Oculto no Login) -->
-                <div class="form-group register-field hidden-field">
-                    <label for="projeto">Seu Projeto Atual / Portfólio (Opcional)</label>
-                    <input type="text" id="projeto" placeholder="Ex: Link do GitHub ou nome do projeto">
-                </div>
+            <div class="auth-tabs">
 
-                <button type="submit" id="btn-submit" class="btn-primary" style="width: 100%; padding: 0.8rem; margin-top: 1rem;">
-                    Acessar Plataforma
+                <button
+                    type="button"
+                    class="auth-tab active"
+                    id="tab-entrar">
+
+                    Entrar
+
                 </button>
+
+
+                <button
+                    type="button"
+                    class="auth-tab"
+                    id="tab-cadastrar">
+
+                    Cadastrar
+
+                </button>
+
+            </div>
+
+
+
+            <!-- FORMULÁRIO -->
+
+            <form
+                action="home.html"
+                id="auth-form">
+
+
+                <!-- ================================
+                     NOME
+                ================================= -->
+
+                <div
+                    class="form-group register-field hidden-field">
+
+                    <label for="nome">
+                        Nome Completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Seu nome e sobrenome">
+
+                </div>
+
+
+
+                <!-- ================================
+                     EMAIL
+                ================================= -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="seu@email.com"
+                        required>
+
+                </div>
+
+
+
+                <!-- ================================
+                     SENHA
+                ================================= -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Sua senha"
+                        required>
+
+                </div>
+
+
+
+                <!-- ================================
+                     PROJETO
+                ================================= -->
+
+                <div
+                    class="form-group register-field hidden-field">
+
+                    <label for="projeto">
+
+                        Seu Projeto Atual /
+                        Portfólio
+
+                        <span>
+                            (Opcional)
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="projeto"
+                        placeholder="Ex: Link do GitHub ou nome do projeto">
+
+                </div>
+
+
+
+                <!-- ================================
+                     BOTÃO
+                ================================= -->
+
+                <button
+                    type="submit"
+                    id="btn-submit"
+                    class="login-button">
+
+                    Acessar Plataforma
+
+                </button>
+
             </form>
+
         </div>
+
     </div>
 
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
     <script>
-        const tabEntrar = document.getElementById('tab-entrar');
-        const tabCadastrar = document.getElementById('tab-cadastrar');
-        const registerFields = document.querySelectorAll('.register-field');
-        const btnSubmit = document.getElementById('btn-submit');
-        const inputNome = document.getElementById('nome');
 
-        // Alternar para tela de Cadastro
-        tabCadastrar.addEventListener('click', () => {
-            tabEntrar.classList.remove('active');
-            tabCadastrar.classList.add('active');
-            
-            // Remove a classe que esconde os campos
-            registerFields.forEach(field => field.classList.remove('hidden-field'));
-            
-            // Define o nome como obrigatório para o cadastro
-            inputNome.setAttribute('required', 'true');
-            
-            // Altera o texto de ação do botão
-            btnSubmit.textContent = 'Criar Minha Conta';
-        });
+        const tabEntrar =
+            document.getElementById(
+                'tab-entrar'
+            );
 
-        // Alternar para tela de Login
-        tabEntrar.addEventListener('click', () => {
-            tabCadastrar.classList.remove('active');
-            tabEntrar.classList.add('active');
-            
-            // Adiciona a classe que esconde os campos
-            registerFields.forEach(field => field.classList.add('hidden-field'));
-            
-            // Remove a obrigatoriedade do nome
-            inputNome.removeAttribute('required');
-            
-            // Altera o texto de ação do botão de volta para o padrão
-            btnSubmit.textContent = 'Acessar Plataforma';
-        });
+
+        const tabCadastrar =
+            document.getElementById(
+                'tab-cadastrar'
+            );
+
+
+        const registerFields =
+            document.querySelectorAll(
+                '.register-field'
+            );
+
+
+        const btnSubmit =
+            document.getElementById(
+                'btn-submit'
+            );
+
+
+        const inputNome =
+            document.getElementById(
+                'nome'
+            );
+
+
+
+        /* ================================
+           CADASTRAR
+        ================================= */
+
+        tabCadastrar.addEventListener(
+            'click',
+            function () {
+
+                tabEntrar.classList.remove(
+                    'active'
+                );
+
+                tabCadastrar.classList.add(
+                    'active'
+                );
+
+
+                registerFields.forEach(
+                    function (field) {
+
+                        field.classList.remove(
+                            'hidden-field'
+                        );
+
+                    }
+                );
+
+
+                inputNome.setAttribute(
+                    'required',
+                    'true'
+                );
+
+
+                btnSubmit.textContent =
+                    'Criar Minha Conta';
+
+            }
+        );
+
+
+
+        /* ================================
+           ENTRAR
+        ================================= */
+
+        tabEntrar.addEventListener(
+            'click',
+            function () {
+
+                tabCadastrar.classList.remove(
+                    'active'
+                );
+
+                tabEntrar.classList.add(
+                    'active'
+                );
+
+
+                registerFields.forEach(
+                    function (field) {
+
+                        field.classList.add(
+                            'hidden-field'
+                        );
+
+                    }
+                );
+
+
+                inputNome.removeAttribute(
+                    'required'
+                );
+
+
+                btnSubmit.textContent =
+                    'Acessar Plataforma';
+
+            }
+        );
+
     </script>
+
 </body>
+
 </html>

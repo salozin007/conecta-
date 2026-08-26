@@ -1,13 +1,16 @@
-
 :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
     --secondary: #10b981;
+
     --bg-main: #f8fafc;
     --bg-card: #ffffff;
+
     --text-main: #1e293b;
     --text-muted: #64748b;
+
     --border: #e2e8f0;
+
     --radius: 12px;
 }
 
@@ -19,7 +22,7 @@
 }
 
 body {
-    background-color: var(--bg-main);
+    background: var(--bg-main);
     color: var(--text-main);
     line-height: 1.6;
 }
@@ -35,30 +38,56 @@ button {
     transition: all 0.3s ease;
 }
 
+
 /* ================================
    NAVBAR
-================================== */
+================================ */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+
+    padding: 0.7rem 5%;
+
     background: var(--bg-card);
     border-bottom: 1px solid var(--border);
+
     position: sticky;
     top: 0;
+
     z-index: 100;
 }
 
+
+/* LOGO */
+
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+
+    text-decoration: none;
+
+    height: 65px;
 }
+
+.logo img {
+    width: 155px;
+    height: 65px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.04);
+}
+
+
+/* LINKS */
 
 .nav-links {
     display: flex;
@@ -66,27 +95,44 @@ button {
     align-items: center;
 }
 
+
+/* ================================
+   BOTÕES
+================================ */
+
 .btn-primary {
     background: var(--primary);
     color: white;
+
     padding: 0.6rem 1.2rem;
+
     border-radius: var(--radius);
+
     font-weight: 600;
+
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
+
     transform: translateY(-2px);
 }
 
+
 .btn-outline {
     background: transparent;
+
     border: 1px solid var(--primary);
+
     color: var(--primary);
+
     padding: 0.6rem 1.2rem;
+
     border-radius: var(--radius);
+
     font-weight: 600;
+
     transition: all 0.3s ease;
 }
 
@@ -95,15 +141,20 @@ button {
     color: white;
 }
 
+
 /* ================================
-   LANDING PAGE
-================================== */
+   HERO
+================================ */
 
 .hero {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     padding: 5rem 5%;
+
     gap: 2rem;
 }
 
@@ -113,34 +164,57 @@ button {
 
 .hero-text h1 {
     font-size: 3rem;
+
     line-height: 1.2;
+
     margin-bottom: 1.5rem;
 }
 
 .hero-text p {
     font-size: 1.2rem;
+
     color: var(--text-muted);
+
     margin-bottom: 2rem;
 }
 
+.hero-button {
+    display: inline-block;
+
+    padding: 1rem 2rem;
+
+    font-size: 1.1rem;
+}
+
+
+/* IMAGEM */
+
 .hero-image img {
     width: 100%;
+
     max-width: 500px;
+
     border-radius: var(--radius);
+
+    display: block;
 }
+
 
 /* ================================
    FLUXO
-================================== */
+================================ */
 
 .fluxo-section {
     background: white;
+
     padding: 5rem 5%;
+
     text-align: center;
 }
 
 .fluxo-section h2 {
     font-size: 2rem;
+
     margin-bottom: 0.5rem;
 }
 
@@ -148,32 +222,81 @@ button {
     color: var(--text-muted);
 }
 
+
+/* CONTAINER */
+
 .fluxo-container {
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 1rem;
+
     margin-top: 3rem;
+
     flex-wrap: wrap;
 }
 
+
+/* CARDS */
+
 .fluxo-step {
     background: var(--bg-main);
+
     padding: 1.5rem;
+
     border-radius: var(--radius);
+
     width: 180px;
+
     transition: all 0.3s ease;
 }
 
 .fluxo-step:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
 }
+
 
 .fluxo-step .material-icons {
     font-size: 40px;
+
     margin-bottom: 0.5rem;
 }
+
+
+/* CORES DOS ÍCONES */
+
+.ideia {
+    color: #3b82f6;
+}
+
+.sugestoes {
+    color: #10b981;
+}
+
+.ia {
+    color: #f59e0b;
+}
+
+.equipe {
+    color: #ec4899;
+}
+
+.projeto {
+    color: #8b5cf6;
+}
+
+.arrow {
+    color: #94a3b8;
+}
+
+
+/* TEXTOS */
 
 .fluxo-step h3 {
     margin-bottom: 0.3rem;
@@ -181,45 +304,68 @@ button {
 
 .fluxo-step p {
     color: var(--text-muted);
+
     font-size: 0.9rem;
 }
 
+
 /* ================================
    LOGIN / REGISTRO
-================================== */
+================================ */
 
 .auth-container {
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     min-height: calc(100vh - 80px);
+
     padding: 1rem;
 }
 
 .auth-card {
     background: var(--bg-card);
+
     border: 1px solid var(--border);
+
     border-radius: var(--radius);
+
     padding: 2rem;
+
     width: 100%;
+
     max-width: 420px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
+
 
 .auth-tabs {
     display: flex;
+
     border-bottom: 2px solid var(--border);
+
     margin-bottom: 1.5rem;
 }
 
 .auth-tab {
     flex: 1;
+
     background: transparent;
+
     padding: 0.75rem;
+
     font-size: 1rem;
+
     font-weight: 600;
+
     color: var(--text-muted);
+
     border-bottom: 2px solid transparent;
+
     margin-bottom: -2px;
 }
 
@@ -229,20 +375,32 @@ button {
 
 .auth-tab.active {
     color: var(--primary);
+
     border-bottom: 2px solid var(--primary);
 }
 
+
+/* ================================
+   FORMULÁRIOS
+================================ */
+
 .form-group {
     margin-bottom: 1.2rem;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 0.4rem;
 }
 
 .form-group label {
     display: block;
+
     font-weight: 600;
+
     font-size: 0.9rem;
+
     color: var(--text-main);
 }
 
@@ -250,12 +408,19 @@ button {
 .form-group textarea,
 .form-group select {
     width: 100%;
+
     padding: 0.75rem;
+
     border: 1px solid var(--border);
+
     border-radius: var(--radius);
+
     outline: none;
+
     font-size: 0.95rem;
+
     background-color: #ffffff;
+
     transition: border-color 0.2s ease;
 }
 
@@ -265,103 +430,159 @@ button {
     border-color: var(--primary);
 }
 
-/* Helper para esconder campos dinamicamente */
-
 .hidden-field {
     display: none !important;
 }
 
+
 /* ================================
    HOME / FEED
-================================== */
+================================ */
 
 .main-feed {
     max-width: 800px;
+
     margin: 2rem auto;
+
     padding: 0 1rem;
 }
 
 .ideia-header-box {
-    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #dbeafe
+        );
+
     padding: 2rem;
+
     border-radius: var(--radius);
+
     text-align: center;
+
     margin-bottom: 2rem;
 }
 
 .post-card {
     background: white;
+
     border-radius: var(--radius);
+
     padding: 1.5rem;
+
     margin-bottom: 1.5rem;
+
     border: 1px solid var(--border);
 }
 
 .post-user {
     display: flex;
+
     align-items: center;
+
     gap: 0.75rem;
+
     margin-bottom: 1rem;
 }
 
 .user-avatar {
     width: 40px;
+
     height: 40px;
+
     background: var(--border);
+
     border-radius: 50%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     font-weight: bold;
 }
 
 .user-project-badge {
     display: inline-flex;
+
     align-items: center;
+
     gap: 0.4rem;
+
     background: #f1f5f9;
+
     padding: 0.4rem 0.8rem;
+
     border-radius: 6px;
+
     font-size: 0.85rem;
+
     color: var(--text-muted);
+
     margin-bottom: 0.8rem;
+
     border: 1px dashed var(--border);
 }
 
 .user-project-badge a {
     color: var(--primary);
+
     text-decoration: underline;
 }
 
+
+/* TAGS */
+
 .tags {
     display: flex;
+
     gap: 0.5rem;
+
     margin: 1rem 0;
 }
 
 .tag {
     background: #f1f5f9;
+
     padding: 0.25rem 0.75rem;
+
     border-radius: 20px;
+
     font-size: 0.85rem;
+
     font-weight: 500;
 }
 
+
+/* AÇÕES */
+
 .post-actions {
     display: flex;
+
     gap: 1rem;
+
     border-top: 1px solid var(--border);
+
     border-bottom: 1px solid var(--border);
+
     padding: 0.75rem 0;
+
     margin: 1rem 0;
 }
 
 .action-btn {
     background: none;
+
     display: flex;
+
     align-items: center;
+
     gap: 0.3rem;
+
     color: var(--text-muted);
+
     font-size: 0.9rem;
 }
 
@@ -369,21 +590,28 @@ button {
     color: var(--primary);
 }
 
+
 /* ================================
    COMENTÁRIOS
-================================== */
+================================ */
 
 .comments-section {
     background: var(--bg-main);
+
     padding: 1rem;
+
     border-radius: var(--radius);
 }
 
 .comment {
     background: white;
+
     padding: 0.75rem;
+
     border-radius: var(--radius);
+
     margin-bottom: 0.75rem;
+
     position: relative;
 }
 
@@ -393,53 +621,104 @@ button {
 
 .badge-destaque {
     background: #f59e0b;
+
     color: white;
+
     font-size: 0.75rem;
+
     padding: 0.1rem 0.5rem;
+
     border-radius: 4px;
+
     position: absolute;
+
     top: 10px;
+
     right: 10px;
 }
 
+
 /* ================================
    PAINEL DE IA
-================================== */
+================================ */
 
 .ia-box {
-    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    background:
+        linear-gradient(
+            135deg,
+            #f0fdf4,
+            #dcfce7
+        );
+
     border: 1px solid #bbf7d0;
+
     border-radius: var(--radius);
+
     padding: 1.5rem;
+
     margin-top: 1.5rem;
 }
 
 .ia-header {
     display: flex;
+
     align-items: center;
+
     gap: 0.5rem;
+
     color: #15803d;
+
     font-weight: bold;
+
     margin-bottom: 0.5rem;
 }
 
+
 /* ================================
    RESPONSIVIDADE
-================================== */
+================================ */
 
 @media (max-width: 768px) {
 
+    .navbar {
+        padding: 0.6rem 4%;
+    }
+
+    .logo {
+        height: 55px;
+    }
+
+    .logo img {
+        width: 120px;
+        height: 55px;
+    }
+
     .hero {
         flex-direction: column;
+
         text-align: center;
+
+        padding: 3rem 5%;
     }
 
     .hero-text h1 {
         font-size: 2.2rem;
     }
 
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
     .fluxo-container {
         flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
     }
 
     .nav-links {
@@ -449,6 +728,7 @@ button {
     .btn-primary,
     .btn-outline {
         padding: 0.5rem 0.8rem;
+
         font-size: 0.9rem;
     }
 }
