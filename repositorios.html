@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conecta+Cold | Repositórios</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="repositorios.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <a href="home.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-cloud"></i>
+                <b>+</b>
+            </div>
+
+            <span>
+                Conecta<span>+Cold</span>
+            </span>
+
+        </a>
+
+
+        <nav class="menu">
+
+            <a href="home.html" class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+
+            <a href="repositorios.html"
+               class="menu-item active">
+
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Repositórios</span>
+
+            </a>
+
+
+
+            <a href="compartilhados.html" class="menu-item">
+
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>Compartilhados</span>
+
+            </a>
+
+
+            <a href="favoritos.html" class="menu-item">
+
+                <i class="fa-regular fa-star"></i>
+                <span>Favoritos</span>
+
+            </a>
+
+
+            <a href="mensagens.html" class="menu-item">
+
+                <i class="fa-regular fa-envelope"></i>
+                <span>Mensagens</span>
+
+            </a>
+
+
+            <a href="equipe.html" class="menu-item">
+
+                <i class="fa-solid fa-users"></i>
+                <span>Equipe</span>
+
+            </a>
+
+
+            <a href="configuracoes.html" class="menu-item">
+
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- CARD INFERIOR -->
+
+        <div class="upgrade">
+
+            <div class="upgrade-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <strong>
+                Espaço acadêmico
+            </strong>
+
+            <p>
+                Organize seus trabalhos
+                escolares.
+            </p>
+
+            <button>
+                Saiba mais
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <button class="menu-button" id="menuButton">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar repositórios...">
+
+
+            </div>
+
+
+            <div class="top-actions">
+
+
+                <button class="icon-button">
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+
+
+                <!-- PERFIL -->
+
+                <div class="profile-container">
+
+                    <div class="profile" id="profileButton">
+
+                        <div class="avatar">
+                            JS
+                        </div>
+
+                        <div class="profile-name">
+
+                            <strong>
+                                João Silva
+                            </strong>
+
+                            <small>
+                                Aluno
+                            </small>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+
+                    <!-- MENU PERFIL -->
+
+                    <div class="profile-menu" id="profileMenu">
+
+                        <a href="perfil.html">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <span>
+                                Ver perfil
+                            </span>
+
+                        </a>
+
+
+                        <a href="configuracoes.html">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span>
+                                Configurações
+                            </span>
+
+                        </a>
+
+
+                        <div class="profile-divider"></div>
+
+
+                        <a href="index.html" class="logout">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            <span>
+                                Sair
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <div class="content">
+
+
+            <!-- CABEÇALHO -->
+
+            <section class="page-header">
+
+                <div>
+
+                    <h1>
+                        Repositórios
+                    </h1>
+
+                    <p>
+                        Gerencie e organize seus projetos e trabalhos.
+                    </p>
+
+                </div>
+
+
+                <button class="new-repository">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Novo repositório
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ESTATÍSTICAS
+            ================================================== -->
+
+            <section class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="fa-solid fa-box-archive"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            24
+                        </strong>
+
+                        <span>
+                            Total de repositórios
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            12
+                        </strong>
+
+                        <span>
+                            Repositórios privados
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            8
+                        </strong>
+
+                        <span>
+                            Repositórios da equipe
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon yellow">
+
+                        <i class="fa-regular fa-star"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            156
+                        </strong>
+
+                        <span>
+                            Total de estrelas
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 REPOSITÓRIOS
+            ================================================== -->
+
+            <section class="repository-panel">
+
+
+                <!-- FILTROS -->
+
+                <div class="repository-tools">
+
+
+                    <div class="tabs">
+
+                        <button class="tab active">
+                            Todos
+                        </button>
+
+                        <button class="tab">
+                            Meus
+                        </button>
+
+                        <button class="tab">
+                            Da equipe
+                        </button>
+
+                        <button class="tab">
+                            Favoritos
+                        </button>
+
+                    </div>
+
+
+                    <div class="filters">
+
+                        <button class="filter">
+
+                            <i class="fa-solid fa-filter"></i>
+
+                            Todos os tipos
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+
+                        <button class="filter">
+
+                            <i class="fa-solid fa-arrow-down-wide-short"></i>
+
+                            Mais recentes
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CABEÇALHO DA LISTA -->
+
+                <div class="repository-header">
+
+                    <span>
+                        Repositório
+                    </span>
+
+                    <span>
+                        Proprietário
+                    </span>
+
+                    <span>
+                        Tipo
+                    </span>
+
+                    <span>
+                        Atualizado
+                    </span>
+
+                    <span>
+                        Estrelas
+                    </span>
+
+                    <span></span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     REPOSITÓRIO 1
+                ================================================== -->
+
+                <article class="repository">
+
+                    <div class="repo-main">
+
+                        <div class="repo-icon blue">
+
+                            <i class="fa-regular fa-folder"></i>
+
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                sistema-conecta
+                            </a>
+
+                            <p>
+                                Sistema principal da plataforma Conecta+Cold
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="owner">
+
+                        <div class="mini-avatar">
+                            JS
+                        </div>
+
+                        <strong>
+                            João Silva
+                        </strong>
+
+                    </div>
+
+
+                    <span class="type private">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Privado
+
+                    </span>
+
+
+                    <span class="updated">
+                        há 2 horas
+                    </span>
+
+
+                    <span class="stars">
+
+                        <i class="fa-regular fa-star"></i>
+
+                        45
+
+                    </span>
+
+
+                    <button class="more">
+
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     REPOSITÓRIO 2
+                ================================================== -->
+
+                <article class="repository">
+
+                    <div class="repo-main">
+
+                        <div class="repo-icon green">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                api-conecta
+                            </a>
+
+                            <p>
+                                API RESTful para integração com o sistema
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="owner">
+
+                        <div class="mini-avatar">
+                            JS
+                        </div>
+
+                        <strong>
+                            João Silva
+                        </strong>
+
+                    </div>
+
+
+                    <span class="type public">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                        Público
+
+                    </span>
+
+
+                    <span class="updated">
+                        há 1 dia
+                    </span>
+
+
+                    <span class="stars">
+
+                        <i class="fa-regular fa-star"></i>
+
+                        32
+
+                    </span>
+
+
+                    <button class="more">
+
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     REPOSITÓRIO 3
+                ================================================== -->
+
+                <article class="repository">
+
+                    <div class="repo-main">
+
+                        <div class="repo-icon purple">
+
+                            <i class="fa-solid fa-mobile-screen"></i>
+
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                mobile-app
+                            </a>
+
+                            <p>
+                                Aplicativo móvel para acompanhamento
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="owner">
+
+                        <div class="mini-avatar">
+                            JS
+                        </div>
+
+                        <strong>
+                            João Silva
+                        </strong>
+
+                    </div>
+
+
+                    <span class="type private">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Privado
+
+                    </span>
+
+
+                    <span class="updated">
+                        há 3 dias
+                    </span>
+
+
+                    <span class="stars">
+
+                        <i class="fa-regular fa-star"></i>
+
+                        18
+
+                    </span>
+
+
+                    <button class="more">
+
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     REPOSITÓRIO 4
+                ================================================== -->
+
+                <article class="repository">
+
+                    <div class="repo-main">
+
+                        <div class="repo-icon orange">
+
+                            <i class="fa-regular fa-file-lines"></i>
+
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                docs-conecta
+                            </a>
+
+                            <p>
+                                Documentação técnica da plataforma
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="owner">
+
+                        <div class="mini-avatar">
+                            JS
+                        </div>
+
+                        <strong>
+                            João Silva
+                        </strong>
+
+                    </div>
+
+
+                    <span class="type public">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                        Público
+
+                    </span>
+
+
+                    <span class="updated">
+                        há 1 semana
+                    </span>
+
+
+                    <span class="stars">
+
+                        <i class="fa-regular fa-star"></i>
+
+                        27
+
+                    </span>
+
+
+                    <button class="more">
+
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     REPOSITÓRIO 5
+                ================================================== -->
+
+                <article class="repository">
+
+                    <div class="repo-main">
+
+                        <div class="repo-icon cyan">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                componentes-ui
+                            </a>
+
+                            <p>
+                                Biblioteca de componentes reutilizáveis
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="owner">
+
+                        <div class="team-avatar">
+                            C+
+                        </div>
+
+                        <strong>
+                            Equipe Conecta
+                        </strong>
+
+                    </div>
+
+
+                    <span class="type private">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Privado
+
+                    </span>
+
+
+                    <span class="updated">
+                        há 2 semanas
+                    </span>
+
+
+                    <span class="stars">
+
+                        <i class="fa-regular fa-star"></i>
+
+                        14
+
+                    </span>
+
+
+                    <button class="more">
+
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     RODAPÉ DA LISTA
+                ================================================== -->
+
+                <div class="repository-footer">
+
+                    <span>
+                        Mostrando 1 a 5 de 24 repositórios
+                    </span>
+
+
+                    <div class="pagination">
+
+                        <button>
+                            Anterior
+                        </button>
+
+                        <button class="page active">
+                            1
+                        </button>
+
+                        <button class="page">
+                            2
+                        </button>
+
+                        <button class="page">
+                            3
+                        </button>
+
+                        <span>
+                            ...
+                        </span>
+
+                        <button class="page">
+                            5
+                        </button>
+
+                        <button>
+                            Próxima
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            © 2026 Conecta+Cold.
+            Todos os direitos reservados.
+
+        </footer>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* MENU MOBILE */
+
+        const menuButton =
+            document.querySelector("#menuButton");
+
+        const sidebar =
+            document.querySelector(".sidebar");
+
+        menuButton.addEventListener("click", () => {
+
+            sidebar.classList.toggle("open");
+
+        });
+
+
+
+        /* MENU DO PERFIL */
+
+        const profileButton =
+            document.querySelector("#profileButton");
+
+        const profileContainer =
+            document.querySelector(".profile-container");
+
+        profileButton.addEventListener("click", (event) => {
+
+            event.stopPropagation();
+
+            profileContainer.classList.toggle("open");
+
+        });
+
+
+
+        /* FECHAR PERFIL */
+
+        document.addEventListener("click", (event) => {
+
+            if (!profileContainer.contains(event.target)) {
+
+                profileContainer.classList.remove("open");
+
+            }
+
+        });
+
+
+
+        /* PESQUISA */
+
+        const searchInput =
+            document.querySelector("#searchInput");
+
+        const repositories =
+            document.querySelectorAll(".repository");
+
+        searchInput.addEventListener("input", () => {
+
+            const value =
+                searchInput.value.toLowerCase();
+
+            repositories.forEach(repository => {
+
+                const text =
+                    repository.textContent.toLowerCase();
+
+                if (text.includes(value)) {
+
+                    repository.style.display = "grid";
+
+                } else {
+
+                    repository.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+
+
+        /* ABAS */
+
+        const tabs =
+            document.querySelectorAll(".tab");
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                tabs.forEach(item => {
+
+                    item.classList.remove("active");
+
+                });
+
+                tab.classList.add("active");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

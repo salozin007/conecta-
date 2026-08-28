@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta+Cold | Equipe</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="equipe.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <a href="home.html" class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-cloud"></i>
+                <b>+</b>
+            </div>
+
+            <span>Conecta<span>+Cold</span></span>
+        </a>
+
+        <nav class="menu">
+
+            <a href="home.html" class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="repositorios.html" class="menu-item">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Repositórios</span>
+            </a>
+
+            <a href="compartilhados.html" class="menu-item">
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>Compartilhados</span>
+            </a>
+
+            <a href="favoritos.html" class="menu-item">
+                <i class="fa-regular fa-star"></i>
+                <span>Favoritos</span>
+            </a>
+
+            <a href="mensagens.html" class="menu-item">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Mensagens</span>
+            </a>
+
+            <a href="equipe.html" class="menu-item active">
+                <i class="fa-solid fa-users"></i>
+                <span>Equipe</span>
+            </a>
+
+            <a href="configuracoes.html" class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </a>
+
+        </nav>
+
+        <div class="upgrade">
+
+            <div class="upgrade-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <strong>Espaço acadêmico</strong>
+
+            <p>
+                Organize seus trabalhos escolares.
+            </p>
+
+            <button>Saiba mais</button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Buscar repositórios, trabalhos, usuários..."
+                >
+            </div>
+
+            <div class="top-actions">
+
+                <button class="icon-button">
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+
+                <div class="profile-container">
+
+                    <div class="profile" id="profileButton">
+
+                        <div class="avatar">
+                            JS
+                        </div>
+
+                        <div>
+                            <strong>João Silva</strong>
+                            <small>Aluno</small>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="profile-menu">
+
+                        <a href="perfil.html">
+                            <i class="fa-regular fa-user"></i>
+                            Ver perfil
+                        </a>
+
+                        <a href="configuracoes.html">
+                            <i class="fa-solid fa-gear"></i>
+                            Configurações
+                        </a>
+
+                        <div class="profile-divider"></div>
+
+                        <a href="index.html" class="logout">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Sair
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- EQUIPE -->
+        <div class="content">
+
+            <section class="page-header">
+
+                <div>
+                    <h1>Equipe</h1>
+
+                    <p>
+                        Gerencie os membros da sua equipe e colabore em projetos.
+                    </p>
+                </div>
+
+                <button class="invite-button">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Convidar membro
+                </button>
+
+            </section>
+
+
+            <!-- ESTATÍSTICAS -->
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <strong>12</strong>
+                        <span>Membros</span>
+                        <small>Na equipe</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+
+                    <div>
+                        <strong>8</strong>
+                        <span>Projetos</span>
+                        <small>Em andamento</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>24</strong>
+                        <span>Tarefas</span>
+                        <small>Concluídas</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <strong>5</strong>
+                        <span>Pendências</span>
+                        <small>Em revisão</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MEMBROS -->
+            <section class="team-card">
+
+                <div class="team-header">
+
+                    <h2>Membros da equipe</h2>
+
+                    <div class="team-filters">
+
+                        <div class="member-search">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                id="memberSearch"
+                                type="text"
+                                placeholder="Buscar membro..."
+                            >
+
+                        </div>
+
+                        <select id="roleFilter">
+                            <option value="todos">Todos os papéis</option>
+                            <option value="aluno">Aluno</option>
+                            <option value="professora">Professora</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="members" id="members">
+
+                    <!-- JOÃO -->
+                    <article class="member">
+
+                        <div class="member-avatar blue-avatar">
+                            JS
+                        </div>
+
+                        <div class="member-info">
+
+                            <div class="member-name">
+                                <strong>João Silva</strong>
+                                <span class="role aluno">Aluno</span>
+                            </div>
+
+                            <p>joaosilva@email.com</p>
+
+                        </div>
+
+                        <div class="member-projects">
+                            <strong>4 projetos</strong>
+                            <span class="online">
+                                <i></i> Online
+                            </span>
+                        </div>
+
+                        <div class="member-actions">
+
+                            <a href="mensagens.html" title="Enviar mensagem">
+                                <i class="fa-regular fa-message"></i>
+                            </a>
+
+                            <button title="Mais opções">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MARIA -->
+                    <article class="member">
+
+                        <div class="member-avatar pink-avatar">
+                            ME
+                        </div>
+
+                        <div class="member-info">
+
+                            <div class="member-name">
+                                <strong>Maria Eduarda</strong>
+                                <span class="role professora">Professora</span>
+                            </div>
+
+                            <p>maria.eduarda@escola.edu.br</p>
+
+                        </div>
+
+                        <div class="member-projects">
+                            <strong>6 projetos</strong>
+                            <span class="online">
+                                <i></i> Online
+                            </span>
+                        </div>
+
+                        <div class="member-actions">
+
+                            <a href="mensagens.html" title="Enviar mensagem">
+                                <i class="fa-regular fa-message"></i>
+                            </a>
+
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- LUCAS -->
+                    <article class="member">
+
+                        <div class="member-avatar gray-avatar">
+                            LF
+                        </div>
+
+                        <div class="member-info">
+
+                            <div class="member-name">
+                                <strong>Lucas Ferreira</strong>
+                                <span class="role aluno">Aluno</span>
+                            </div>
+
+                            <p>lucas.ferreira@email.com</p>
+
+                        </div>
+
+                        <div class="member-projects">
+                            <strong>3 projetos</strong>
+                            <span class="away">
+                                <i></i> Ausente
+                            </span>
+                        </div>
+
+                        <div class="member-actions">
+
+                            <a href="mensagens.html">
+                                <i class="fa-regular fa-message"></i>
+                            </a>
+
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JULIANA -->
+                    <article class="member">
+
+                        <div class="member-avatar purple-avatar">
+                            JC
+                        </div>
+
+                        <div class="member-info">
+
+                            <div class="member-name">
+                                <strong>Juliana Costa</strong>
+                                <span class="role aluno">Aluno</span>
+                            </div>
+
+                            <p>juliana.costa@email.com</p>
+
+                        </div>
+
+                        <div class="member-projects">
+                            <strong>2 projetos</strong>
+                            <span class="online">
+                                <i></i> Online
+                            </span>
+                        </div>
+
+                        <div class="member-actions">
+
+                            <a href="mensagens.html">
+                                <i class="fa-regular fa-message"></i>
+                            </a>
+
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PEDRO -->
+                    <article class="member">
+
+                        <div class="member-avatar green-avatar">
+                            PH
+                        </div>
+
+                        <div class="member-info">
+
+                            <div class="member-name">
+                                <strong>Pedro Henrique</strong>
+                                <span class="role aluno">Aluno</span>
+                            </div>
+
+                            <p>pedro.henrique@email.com</p>
+
+                        </div>
+
+                        <div class="member-projects">
+                            <strong>2 projetos</strong>
+                            <span class="offline">
+                                <i></i> Offline
+                            </span>
+                        </div>
+
+                        <div class="member-actions">
+
+                            <a href="mensagens.html">
+                                <i class="fa-regular fa-message"></i>
+                            </a>
+
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- PAGINAÇÃO -->
+                <div class="pagination">
+
+                    <button>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="page active">1</button>
+                    <button class="page">2</button>
+                    <button class="page">3</button>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        /* MENU MOBILE */
+        const menuButton = document.querySelector(".menu-button");
+        const sidebar = document.querySelector(".sidebar");
+
+        menuButton.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+        });
+
+
+        /* PERFIL */
+        const profileButton = document.querySelector("#profileButton");
+        const profileContainer = document.querySelector(".profile-container");
+
+        profileButton.addEventListener("click", (event) => {
+            event.stopPropagation();
+            profileContainer.classList.toggle("open");
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!profileContainer.contains(event.target)) {
+                profileContainer.classList.remove("open");
+            }
+        });
+
+
+        /* BUSCA DE MEMBROS */
+        const search = document.querySelector("#memberSearch");
+        const roleFilter = document.querySelector("#roleFilter");
+        const members = document.querySelectorAll(".member");
+
+        function filterMembers() {
+
+            const text = search.value.toLowerCase();
+            const role = roleFilter.value;
+
+            members.forEach(member => {
+
+                const content = member.textContent.toLowerCase();
+                const roleElement = member.querySelector(".role");
+
+                const roleText = roleElement
+                    ? roleElement.textContent.toLowerCase()
+                    : "";
+
+                const matchesText = content.includes(text);
+                const matchesRole =
+                    role === "todos" || roleText === role;
+
+                member.style.display =
+                    matchesText && matchesRole
+                    ? "grid"
+                    : "none";
+
+            });
+        }
+
+        search.addEventListener("input", filterMembers);
+        roleFilter.addEventListener("change", filterMembers);
+
+    </script>
+
+</body>
+</html>

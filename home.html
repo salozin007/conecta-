@@ -5,51 +5,16 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Conecta+ | Feed de Ideias</title>
+    <title>Conecta+Cold | Início</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <style>
-        /* ================================
-           LOGO DA NAVBAR
-        ================================= */
-
-        .navbar .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            height: 100%;
-        }
-
-        .navbar .logo img {
-            width: 150px;
-            height: 60px;
-            object-fit: contain;
-            display: block;
-        }
-
-        .navbar .logo:hover img {
-            transform: scale(1.03);
-        }
-
-        /* ================================
-           RESPONSIVIDADE DA LOGO
-        ================================= */
-
-        @media (max-width: 768px) {
-
-            .navbar .logo img {
-                width: 125px;
-                height: 55px;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet"
+          href="home.css">
 
 </head>
 
@@ -57,622 +22,392 @@
 <body>
 
 
-    <!-- ================================
-         NAVBAR
-    ================================= -->
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
 
-    <nav class="navbar">
+    <aside class="sidebar">
+
 
         <!-- LOGO -->
 
-        <a class="logo">
+        <a href="home.html"
+           class="logo">
 
-            <img src="logo.png" alt="Conecta+">
+            <div class="logo-icon">
 
-        </a>
+                <i class="fa-solid fa-cloud"></i>
 
+                <b>+</b>
 
-        <a href="index.html" class="action-btn"
-            style="background-color: #dc3545; color: white; display: flex; align-items: center; gap: 0.3rem; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">
+            </div>
 
-            <span class="material-icons">
-                logout
+            <span>
+                Conecta<span>+Cold</span>
             </span>
 
-            Sair
-
         </a>
 
-        <!-- LINKS -->
 
-        <div class="nav-links">
 
-            <a href="#" class="action-btn">
+        <!-- =================================================
+             MENU LATERAL
+        ================================================== -->
 
-                <span class="material-icons">
-                    chat
+        <nav class="menu">
+
+
+            <!-- INÍCIO -->
+
+            <a href="home.html"
+               class="menu-item active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Início
                 </span>
-
-                Chat
 
             </a>
 
 
-            <div class="user-avatar">
-                JS
-            </div>
 
-        </div>
+            <!-- REPOSITÓRIOS -->
 
-    </nav>
+            <a href="repositorios.html"
+               class="menu-item">
 
+                <i class="fa-solid fa-box-archive"></i>
 
-
-    <!-- ================================
-         CONTEÚDO PRINCIPAL
-    ================================= -->
-
-    <main class="main-feed">
-
-
-        <!-- ================================
-             TOPO DE INCENTIVO
-        ================================= -->
-
-        <div class="ideia-header-box">
-
-            <h2>
-                💡 Tem uma ideia?
-                Compartilhe com a comunidade!
-            </h2>
-
-            <p>
-                "Sua ideia pode ser o começo de algo incrível."
-            </p>
-
-        </div>
-
-
-
-        <!-- ================================
-             NOVA IDEIA
-        ================================= -->
-
-        <div class="post-card">
-
-            <h3 style="
-                    margin-bottom: 1rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                ">
-
-                <span class="material-icons" style="color: var(--primary);">
-
-                    add_circle
-
+                <span>
+                    Repositórios
                 </span>
 
-                Deixe sua ideia
-
-            </h3>
-
-
-            <form id="idea-form">
-
-
-                <!-- TÍTULO -->
-
-                <div class="form-group">
-
-                    <label for="titulo">
-                        Título da ideia
-                    </label>
-
-                    <input type="text" id="titulo" required placeholder="Ex: Aplicativo para ajudar idosos">
-
-                </div>
-
-
-
-                <!-- CATEGORIA -->
-
-                <div class="form-group">
-
-                    <label for="categoria">
-                        Categoria
-                    </label>
-
-                    <select id="categoria">
-
-                        <option>
-                            Tecnologia
-                        </option>
-
-                        <option >
-                            Construção
-                        </option>
-
-                        <option>
-                            Educação
-                        </option>
-
-                        <option>
-                            Meio Ambiente
-                        </option>
-
-                        <option>
-                            Cultura
-                        </option>
-
-                        <option>
-                            Outros
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-
-                <!-- PROJETO -->
-
-                <div class="form-group">
-
-                    <label for="projeto-usuario">
-
-                        Seu projeto de origem /
-                        Portfólio (Opcional)
-
-                    </label>
-
-                    <input type="text" id="projeto-usuario"
-                        placeholder="Ex: GitHub, portfólio ou nome do projeto atual">
-
-                </div>
-
-
-
-                <!-- DESCRIÇÃO -->
-
-                <div class="form-group">
-
-                    <label for="descricao">
-                        Descrição do Projeto
-                    </label>
-
-                    <textarea id="descricao" rows="4" required placeholder="🎯 Qual problema ela resolve?
-💭 Como você imagina a solução?
-👥 Que tipo de pessoa você procura?"></textarea>
-
-                </div>
-
-
-
-                <!-- BOTÕES -->
-
-                
+            </a>
 
 
 
 
-                <!-- PUBLICAR -->
 
-                <button type="submit" class="btn-primary" style="
-                        background: var(--secondary);
-                        width: 100%;
-                        padding: 0.8rem;
-                    ">
+            <!-- COMPARTILHADOS -->
 
-                    🟢 PUBLICAR IDEIA 🟢
+            <a href="compartilhados.html"
+               class="menu-item">
+
+                <i class="fa-solid fa-share-nodes"></i>
+
+                <span>
+                    Compartilhados
+                </span>
+
+            </a>
+
+
+
+            <!-- FAVORITOS -->
+
+            <a href="favoritos.html"
+               class="menu-item">
+
+                <i class="fa-regular fa-star"></i>
+
+                <span>
+                    Favoritos
+                </span>
+
+            </a>
+
+
+
+            <!-- ATIVIDADES REMOVIDA -->
+
+
+
+            <!-- MENSAGENS -->
+
+            <a href="mensagens.html"
+               class="menu-item">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <span>
+                    Mensagens
+                </span>
+
+            </a>
+
+
+
+            <!-- EQUIPE -->
+
+            <a href="equipe.html"
+               class="menu-item">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>
+                    Equipe
+                </span>
+
+            </a>
+
+
+
+            <!-- CONFIGURAÇÕES -->
+
+            <a href="#configuracoes"
+               class="menu-item">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>
+                    Configurações
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             CARD INFERIOR
+        ================================================== -->
+
+        <div class="upgrade">
+
+
+            <div class="upgrade-icon">
+
+                <i class="fa-solid fa-rocket"></i>
+
+            </div>
+
+
+            <strong>
+                Espaço acadêmico
+            </strong>
+
+
+            <p>
+                Organize seus trabalhos
+                escolares.
+            </p>
+
+
+            <button>
+                Saiba mais
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <!-- BOTÃO MENU MOBILE -->
+
+            <button class="menu-button">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- PESQUISA -->
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Buscar repositórios, trabalhos, usuários...">
+
+            </div>
+
+
+
+            <!-- AÇÕES -->
+
+            <div class="top-actions">
+
+
+                <!-- MENSAGENS -->
+
+                <button class="icon-button">
+
+                    <i class="fa-regular fa-envelope"></i>
 
                 </button>
 
-            </form>
-
-        </div>
 
 
+                <!-- =================================================
+                     PERFIL
+                ================================================== -->
 
-        <!-- ================================
-             NOTIFICAÇÃO
-        ================================= -->
-
-        <div class="post-card" style="
-                border-left: 5px solid var(--primary);
-                background: #f0f9ff;
-                padding: 1rem 1.5rem;
-            ">
+                <div class="profile-container">
 
 
-            <div style="
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    color: var(--primary);
-                    font-weight: bold;
-                ">
+                    <!-- BOTÃO DO PERFIL -->
 
-                <span class="material-icons">
-                    rocket_launch
-                </span>
-
-                Nova pessoa interessada!
-
-            </div>
+                    <div class="profile"
+                         id="profileButton">
 
 
-            <p style="
-                    margin-left: 1.8rem;
-                    font-size: 0.95rem;
-                ">
-
-                <strong>Carlos</strong>
-                quer participar do seu projeto
-                "Biblioteca comunitária no bairro".
-
-            </p>
-
-        </div>
+                        <div class="avatar">
+                            JS
+                        </div>
 
 
+                        <div>
 
-        <!-- ================================
-             FEED
-        ================================= -->
+                            <strong>
+                                João Silva
+                            </strong>
 
-        <div id="feed-container">
-
-
-            <!-- POST DE EXEMPLO -->
-
-            <div class="post-card">
-
-
-                <!-- USUÁRIO -->
-
-                <div class="post-user">
-
-                    <div class="user-avatar" style="
-                            background: #e0f2fe;
-                            color: #0369a1;
-                        ">
-
-                        JS
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            João Silva
-                        </strong>
-
-                        <div style="
-                                font-size: 0.8rem;
-                                color: var(--text-muted);
-                            ">
-
-                            Postado há 2 horas
+                            <small>
+                                Aluno
+                            </small>
 
                         </div>
 
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+
                     </div>
 
-                </div>
 
 
+                    <!-- =================================================
+                         MENU DO PERFIL
+                    ================================================== -->
 
-                <!-- TÍTULO -->
-
-                <h3 style="
-                        margin-bottom: 0.5rem;
-                    ">
-
-                    Biblioteca comunitária no bairro
-
-                </h3>
+                    <div class="profile-menu"
+                         id="profileMenu">
 
 
+                        <!-- VER PERFIL -->
 
-                <!-- PROJETO DO CRIADOR -->
+                        <a href="perfil.html">
 
-                <div class="user-project-badge">
+                            <i class="fa-regular fa-user"></i>
 
-                    <span class="material-icons">
-                        folder_shared
-                    </span>
-
-                    <span>
-
-                        Projeto Criador:
-
-                        <a href="https://github.com" target="_blank">
-
-                            GitHub
+                            <span>
+                                Ver perfil
+                            </span>
 
                         </a>
 
-                    </span>
-
-                </div>
 
 
+                        <!-- CONFIGURAÇÕES -->
 
-                <!-- DESCRIÇÃO -->
+                        <a href="configuracoes.html">
 
-                <p>
+                            <i class="fa-solid fa-gear"></i>
 
-                    Minha ideia é criar uma biblioteca
-                    gratuita para estudantes que não têm
-                    acesso a muitos livros no nosso bairro.
-
-                </p>
-
-
-
-                <!-- TAGS -->
-
-                <div class="tags">
-
-                    <span class="tag">
-                        📚 Educação
-                    </span>
-
-                    <span class="tag">
-                        👥 Procurando colaboradores
-                    </span>
-
-                </div>
-
-
-
-                <!-- AÇÕES -->
-
-                <div class="post-actions">
-
-
-                    <button class="action-btn">
-
-                        <span class="material-icons" style="color: #ef4444;">
-
-                            favorite
-
-                        </span>
-
-                        24
-
-                    </button>
-
-
-
-                    <button class="action-btn">
-
-                        <span class="material-icons">
-                            comment
-                        </span>
-
-                        8 Comentários
-
-                    </button>
-
-
-
-                    <button class="btn-primary" style="
-                            font-size: 0.85rem;
-                            padding: 0.4rem 1rem;
-                            margin-left: auto;
-                            background: var(--secondary);
-                        ">
-
-                        🤝 Quero participar
-
-                    </button>
-
-                </div>
-
-
-
-                <!-- ================================
-                     COMENTÁRIOS
-                ================================= -->
-
-                <div class="comments-section">
-
-
-                    <!-- COMENTÁRIO DESTAQUE -->
-
-                    <div class="comment destaque">
-
-                        <span class="badge-destaque">
-
-                            <span class="material-icons" style="
-                                    font-size: 0.8rem;
-                                    vertical-align: middle;
-                                ">
-
-                                push_pin
-
+                            <span>
+                                Configurações
                             </span>
 
-                            Ideia útil
-
-                        </span>
+                        </a>
 
 
-                        <strong>
-                            Ana
-                        </strong>
+
+                        <div class="profile-divider"></div>
 
 
-                        <p style="
-                                margin-top: 0.25rem;
-                            ">
 
-                            Gostei muito!
-                            Poderíamos fazer também
-                            uma área para troca de livros.
+                        <!-- SAIR -->
 
-                        </p>
+                        <a href="index.html"
+                           class="logout">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            <span>
+                                Sair
+                            </span>
+
+                        </a>
+
 
                     </div>
 
-
-
-                    <!-- OUTRO COMENTÁRIO -->
-
-                    <div class="comment">
-
-                        <strong>
-                            Carlos
-                        </strong>
-
-                        <p style="
-                                margin-top: 0.25rem;
-                            ">
-
-                            Posso ajudar na criação
-                            do site do projeto.
-
-                        </p>
-
-                    </div>
 
                 </div>
+
 
             </div>
 
-        </div>
 
-    </main>
-
-
-
-    <!-- ================================
-         JAVASCRIPT
-    ================================= -->
-
-    <script>
-
-        document
-            .getElementById('idea-form')
-            .addEventListener(
-                'submit',
-                function (event) {
-
-                    event.preventDefault();
-
-
-                    /* ================================
-                       CAPTURA DOS CAMPOS
-                    ================================= */
-
-                    const titulo =
-                        document
-                            .getElementById('titulo')
-                            .value
-                            .trim();
-
-
-                    const categoria =
-                        document
-                            .getElementById('categoria')
-                            .value;
-
-
-                    const projetoUsuario =
-                        document
-                            .getElementById('projeto-usuario')
-                            .value
-                            .trim();
-
-
-                    const descricao =
-                        document
-                            .getElementById('descricao')
-                            .value
-                            .trim();
+        </header>
 
 
 
-                    /* ================================
-                       VALIDAÇÃO
-                    ================================= */
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
 
-                    if (!titulo || !descricao) {
-
-                        alert(
-                            'Por favor, preencha os campos obrigatórios (Título e Descrição).'
-                        );
-
-                        return;
-
-                    }
+        <div class="content">
 
 
+            <!-- =================================================
+                 BOAS-VINDAS
+            ================================================== -->
 
-                    /* ================================
-                       PROJETO
-                    ================================= */
-
-                    let projetoHTML = '';
+            <section class="welcome">
 
 
-                    if (projetoUsuario) {
+                <div class="welcome-text">
 
-                        projetoHTML = `
 
-                            <div class="user-project-badge">
+                    <h1>
+                        Bem-vindo de volta,
+                        João! 👋
+                    </h1>
 
-                                <span class="material-icons">
-                                    folder_shared
-                                </span>
 
-                                <span>
-
-                                    Projeto Criador:
-
-                                    <strong>
-                                        ${projetoUsuario}
-                                    </strong>
-
-                                </span>
-
-                            </div>
-
-                        `;
-
-                    }
+                    <p>
+                        Aqui está o que está acontecendo
+                        com seus projetos hoje.
+                    </p>
 
 
 
-                    /* ================================
-                       NOVO POST
-                    ================================= */
+                    <!-- ESTATÍSTICAS -->
 
-                    const newPost =
-                        document.createElement(
-                            'div'
-                        );
+                    <div class="stats">
 
 
-                    newPost.className =
-                        'post-card';
+                        <!-- REPOSITÓRIOS -->
 
+                        <div class="stat">
 
-                    newPost.innerHTML = `
+                            <div class="stat-icon blue">
 
-                        <div class="post-user">
-
-                            <div
-                                class="user-avatar"
-                                style="
-                                    background: #e2e8f0;
-                                    color: #1e293b;
-                                ">
-
-                                JS
+                                <i class="fa-solid fa-folder"></i>
 
                             </div>
 
@@ -680,130 +415,876 @@
                             <div>
 
                                 <strong>
-                                    Você (Usuário)
+                                    12
                                 </strong>
 
-                                <div
-                                    style="
-                                        font-size: 0.8rem;
-                                        color: var(--text-muted);
-                                    ">
-
-                                    Postado agora mesmo
-
-                                </div>
+                                <span>
+                                    Meus Repositórios
+                                </span>
 
                             </div>
 
                         </div>
 
 
-                        <h3
-                            style="
-                                margin-bottom: 0.5rem;
-                            ">
 
-                            ${titulo}
+                        <!-- TRABALHOS -->
 
-                        </h3>
+                        <div class="stat">
 
+                            <div class="stat-icon green">
 
-                        ${projetoHTML}
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
 
-
-                        <p>
-                            ${descricao}
-                        </p>
+                            </div>
 
 
-                        <div class="tags">
+                            <div>
 
-                            <span class="tag">
-                                # ${categoria}
-                            </span>
+                                <strong>
+                                    8
+                                </strong>
 
-                            <span class="tag">
-                                👥 Procurando colaboradores
-                            </span>
+                                <span>
+                                    Trabalhos Enviados
+                                </span>
+
+                            </div>
 
                         </div>
 
 
-                        <div class="post-actions">
+
+                        <!-- COMPARTILHADOS -->
+
+                        <div class="stat">
+
+                            <div class="stat-icon purple">
+
+                                <i class="fa-solid fa-users"></i>
+
+                            </div>
 
 
-                            <button class="action-btn">
+                            <div>
 
-                                <span class="material-icons">
-                                    favorite_border
+                                <strong>
+                                    5
+                                </strong>
+
+                                <span>
+                                    Compartilhados
                                 </span>
 
-                                0
-
-                            </button>
-
-
-                            <button class="action-btn">
-
-                                <span class="material-icons">
-                                    comment
-                                </span>
-
-                                0 Comentários
-
-                            </button>
-
-
-                            <button
-                                class="btn-primary"
-                                style="
-                                    font-size: 0.85rem;
-                                    padding: 0.4rem 1rem;
-                                    margin-left: auto;
-                                    background: var(--secondary);
-                                    opacity: 0.7;
-                                "
-                                disabled>
-
-                                Seu projeto
-
-                            </button>
+                            </div>
 
                         </div>
 
-                    `;
+
+
+                        <!-- FAVORITOS -->
+
+                        <div class="stat">
+
+                            <div class="stat-icon yellow">
+
+                                <i class="fa-solid fa-star"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    3
+                                </strong>
+
+                                <span>
+                                    Favoritos
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
 
 
 
-                    /* ================================
-                       ADICIONAR AO FEED
-                    ================================= */
+                <!-- ILUSTRAÇÃO -->
 
-                    const feed =
-                        document.getElementById(
-                            'feed-container'
-                        );
+                <div class="welcome-illustration">
 
+                    <i class="fa-solid fa-graduation-cap"></i>
 
-                    feed.insertBefore(
-                        newPost,
-                        feed.firstChild
-                    );
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                </div>
 
 
+            </section>
 
-                    /* ================================
-                       LIMPAR FORMULÁRIO
-                    ================================= */
 
-                    document
-                        .getElementById('idea-form')
-                        .reset();
 
+            <!-- =================================================
+                 GRID PRINCIPAL
+            ================================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- =================================================
+                     REPOSITÓRIOS
+                ================================================== -->
+
+                <section class="panel repositories"
+                         id="repositorios">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Repositórios Recentes
+                            </h2>
+
+                            <p>
+                                Seus projetos e trabalhos recentes.
+                            </p>
+
+                        </div>
+
+
+                        <button>
+                            Ver todos
+                        </button>
+
+
+                    </div>
+
+
+
+                    <div class="repository-list">
+
+
+                        <!-- REPOSITÓRIO 1 -->
+
+                        <article class="repository">
+
+
+                            <div class="repo-icon">
+
+                                <i class="fa-solid fa-code"></i>
+
+                            </div>
+
+
+                            <div class="repo-info">
+
+                                <a href="#">
+                                    Trabalho Final -
+                                    Engenharia de Software
+                                </a>
+
+                                <span>
+                                    Engenharia de Software
+                                </span>
+
+                            </div>
+
+
+                            <span class="updated">
+                                Atualizado há 2h
+                            </span>
+
+
+                            <span class="visibility private">
+                                Privado
+                            </span>
+
+
+                            <button class="more">
+
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </button>
+
+
+                        </article>
+
+
+
+                        <!-- REPOSITÓRIO 2 -->
+
+                        <article class="repository">
+
+
+                            <div class="repo-icon">
+
+                                <i class="fa-solid fa-network-wired"></i>
+
+                            </div>
+
+
+                            <div class="repo-info">
+
+                                <a href="#">
+                                    Projeto de Redes
+                                    de Computadores
+                                </a>
+
+                                <span>
+                                    Redes de Computadores
+                                </span>
+
+                            </div>
+
+
+                            <span class="updated">
+                                Atualizado há 1d
+                            </span>
+
+
+                            <span class="visibility group">
+                                Grupo
+                            </span>
+
+
+                            <button class="more">
+
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </button>
+
+
+                        </article>
+
+
+
+                        <!-- REPOSITÓRIO 3 -->
+
+                        <article class="repository">
+
+
+                            <div class="repo-icon">
+
+                                <i class="fa-solid fa-database"></i>
+
+                            </div>
+
+
+                            <div class="repo-info">
+
+                                <a href="#">
+                                    Banco de Dados -
+                                    Normalização
+                                </a>
+
+                                <span>
+                                    Banco de Dados
+                                </span>
+
+                            </div>
+
+
+                            <span class="updated">
+                                Atualizado há 2d
+                            </span>
+
+
+                            <span class="visibility group">
+                                Grupo
+                            </span>
+
+
+                            <button class="more">
+
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </button>
+
+
+                        </article>
+
+
+
+                        <!-- REPOSITÓRIO 4 -->
+
+                        <article class="repository">
+
+
+                            <div class="repo-icon">
+
+                                <i class="fa-solid fa-code"></i>
+
+                            </div>
+
+
+                            <div class="repo-info">
+
+                                <a href="#">
+                                    Algoritmos e
+                                    Estruturas de Dados
+                                </a>
+
+                                <span>
+                                    Algoritmos
+                                </span>
+
+                            </div>
+
+
+                            <span class="updated">
+                                Atualizado há 3d
+                            </span>
+
+
+                            <span class="visibility private">
+                                Privado
+                            </span>
+
+
+                            <button class="more">
+
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </button>
+
+
+                        </article>
+
+
+
+                        <!-- REPOSITÓRIO 5 -->
+
+                        <article class="repository">
+
+
+                            <div class="repo-icon">
+
+                                <i class="fa-solid fa-brain"></i>
+
+                            </div>
+
+
+                            <div class="repo-info">
+
+                                <a href="#">
+                                    Inteligência Artificial -
+                                    Trabalho 1
+                                </a>
+
+                                <span>
+                                    Inteligência Artificial
+                                </span>
+
+                            </div>
+
+
+                            <span class="updated">
+                                Atualizado há 5d
+                            </span>
+
+
+                            <span class="visibility group">
+                                Grupo
+                            </span>
+
+
+                            <button class="more">
+
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                            </button>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     PRAZOS
+                ================================================== -->
+
+                <section class="panel deadlines">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Próximos Prazos
+                            </h2>
+
+                            <p>
+                                Não perca nenhuma entrega.
+                            </p>
+
+                        </div>
+
+
+                        <button>
+                            Ver todos
+                        </button>
+
+
+                    </div>
+
+
+
+                    <div class="deadline-list">
+
+
+                        <!-- PRAZO 1 -->
+
+                        <div class="deadline">
+
+
+                            <div class="date red">
+
+                                <span>
+                                    MAI
+                                </span>
+
+                                <strong>
+                                    25
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Trabalho Final -
+                                    Parte 2
+                                </strong>
+
+                                <span>
+                                    Engenharia de Software
+                                </span>
+
+                                <small>
+                                    Entrega até 23:59
+                                </small>
+
+                            </div>
+
+
+                            <label class="urgent">
+                                Urgente
+                            </label>
+
+
+                        </div>
+
+
+
+                        <!-- PRAZO 2 -->
+
+                        <div class="deadline">
+
+
+                            <div class="date orange">
+
+                                <span>
+                                    MAI
+                                </span>
+
+                                <strong>
+                                    28
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Relatório de Redes
+                                </strong>
+
+                                <span>
+                                    Redes de Computadores
+                                </span>
+
+                                <small>
+                                    Entrega até 23:59
+                                </small>
+
+                            </div>
+
+
+                            <label class="attention">
+                                Atenção
+                            </label>
+
+
+                        </div>
+
+
+
+                        <!-- PRAZO 3 -->
+
+                        <div class="deadline">
+
+
+                            <div class="date blue-date">
+
+                                <span>
+                                    JUN
+                                </span>
+
+                                <strong>
+                                    02
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Projeto de Banco
+                                    de Dados
+                                </strong>
+
+                                <span>
+                                    Banco de Dados
+                                </span>
+
+                                <small>
+                                    Entrega até 23:59
+                                </small>
+
+                            </div>
+
+
+                            <label class="normal">
+                                Normal
+                            </label>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     POPULARES
+                ================================================== -->
+
+                <section class="panel popular">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Repositórios Populares
+                            </h2>
+
+                            <p>
+                                Conteúdos recomendados pela comunidade.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="popular-list">
+
+
+                        <!-- POPULAR 1 -->
+
+                        <div class="popular-item">
+
+
+                            <span class="rank">
+                                1
+                            </span>
+
+
+                            <div>
+
+                                <a href="#">
+                                    Guia de Boas Práticas
+                                </a>
+
+                                <small>
+                                    Prof. Carlos
+                                </small>
+
+                            </div>
+
+
+                            <span class="stars">
+
+                                <i class="fa-regular fa-star"></i>
+
+                                24
+
+                            </span>
+
+
+                        </div>
+
+
+
+                        <!-- POPULAR 2 -->
+
+                        <div class="popular-item">
+
+
+                            <span class="rank">
+                                2
+                            </span>
+
+
+                            <div>
+
+                                <a href="#">
+                                    Exemplos de Código
+                                </a>
+
+                                <small>
+                                    Prof. Ana
+                                </small>
+
+                            </div>
+
+
+                            <span class="stars">
+
+                                <i class="fa-regular fa-star"></i>
+
+                                18
+
+                            </span>
+
+
+                        </div>
+
+
+
+                        <!-- POPULAR 3 -->
+
+                        <div class="popular-item">
+
+
+                            <span class="rank">
+                                3
+                            </span>
+
+
+                            <div>
+
+                                <a href="#">
+                                    Templates de Documentos
+                                </a>
+
+                                <small>
+                                    Coordenação
+                                </small>
+
+                            </div>
+
+
+                            <span class="stars">
+
+                                <i class="fa-regular fa-star"></i>
+
+                                15
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <button class="view-all">
+                        Ver todos os populares
+                    </button>
+
+
+                </section>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            © 2026 Conecta+Cold.
+            Todos os direitos reservados.
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =====================================================
+           BOTÃO DO MENU LATERAL
+        ====================================================== */
+    
+        const menuButton = document.querySelector(".menu-button");
+        const sidebar = document.querySelector(".sidebar");
+    
+        menuButton.addEventListener("click", () => {
+    
+            sidebar.classList.toggle("open");
+    
+        });
+    
+    
+        /* =====================================================
+           PESQUISA DOS REPOSITÓRIOS
+        ====================================================== */
+    
+        const search = document.querySelector(".search input");
+        const repositories = document.querySelectorAll(".repository");
+    
+        search.addEventListener("input", () => {
+    
+            const value = search.value.toLowerCase().trim();
+    
+            repositories.forEach(repository => {
+    
+                const text = repository.textContent.toLowerCase();
+    
+                if (text.includes(value)) {
+    
+                    repository.style.display = "flex";
+    
+                } else {
+    
+                    repository.style.display = "none";
+    
                 }
-            );
-
+    
+            });
+    
+        });
+    
+    
+        /* =====================================================
+           MENU DO PERFIL
+        ====================================================== */
+    
+        const profileButton = document.querySelector("#profileButton");
+        const profileContainer = document.querySelector(".profile-container");
+    
+        profileButton.addEventListener("click", (event) => {
+    
+            event.stopPropagation();
+    
+            profileContainer.classList.toggle("open");
+    
+        });
+    
+    
+        /* =====================================================
+           FECHAR MENU DO PERFIL AO CLICAR FORA
+        ====================================================== */
+    
+        document.addEventListener("click", (event) => {
+    
+            if (!profileContainer.contains(event.target)) {
+    
+                profileContainer.classList.remove("open");
+    
+            }
+    
+        });
+    
+    
+        /* =====================================================
+           MENU LATERAL - DEIXAR ITEM SELECIONADO AZUL
+        ====================================================== */
+    
+        const menuItems = document.querySelectorAll(".menu-item");
+    
+        menuItems.forEach(item => {
+    
+            item.addEventListener("click", function() {
+    
+                menuItems.forEach(menu => {
+                    menu.classList.remove("active");
+                });
+    
+                this.classList.add("active");
+    
+            });
+    
+        });
+    
+    
+        /* =====================================================
+           FECHAR SIDEBAR NO CELULAR AO CLICAR EM UM ITEM
+        ====================================================== */
+    
+        menuItems.forEach(item => {
+    
+            item.addEventListener("click", () => {
+    
+                if (window.innerWidth <= 900) {
+    
+                    sidebar.classList.remove("open");
+    
+                }
+    
+            });
+    
+        });
+    
     </script>
+
 
 </body>
 

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta+Cold | Mensagens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="mensagens.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <a href="home.html" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-cloud"></i><b>+</b></div>
+        <span>Conecta<span>+Cold</span></span>
+    </a>
+
+    <nav class="menu">
+        <a href="home.html" class="menu-item"><i class="fa-solid fa-house"></i><span>Início</span></a>
+        <a href="repositorios.html" class="menu-item"><i class="fa-solid fa-box-archive"></i><span>Repositórios</span></a>
+        <a href="compartilhados.html" class="menu-item"><i class="fa-solid fa-share-nodes"></i><span>Compartilhados</span></a>
+        <a href="favoritos.html" class="menu-item"><i class="fa-regular fa-star"></i><span>Favoritos</span></a>
+        <a href="mensagens.html" class="menu-item active"><i class="fa-regular fa-envelope"></i><span>Mensagens</span></a>
+        <a href="equipe.html" class="menu-item"><i class="fa-solid fa-users"></i><span>Equipe</span></a>
+        <a href="configuracoes.html" class="menu-item"><i class="fa-solid fa-gear"></i><span>Configurações</span></a>
+    </nav>
+
+    <div class="upgrade">
+        <div class="upgrade-icon"><i class="fa-solid fa-rocket"></i></div>
+        <strong>Espaço acadêmico</strong>
+        <p>Organize seus trabalhos escolares.</p>
+        <button>Saiba mais</button>
+    </div>
+</aside>
+
+<main class="main">
+    <header class="topbar">
+        <button class="menu-button"><i class="fa-solid fa-bars"></i></button>
+
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Buscar repositórios, trabalhos, usuários...">
+        </div>
+
+        <div class="top-actions">
+            <button class="icon-button"><i class="fa-regular fa-envelope"></i></button>
+
+            <div class="profile-container">
+                <div class="profile" id="profileButton">
+                    <div class="avatar">JS</div>
+                    <div>
+                        <strong>João Silva</strong>
+                        <small>Aluno</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="profile-menu" id="profileMenu">
+                    <a href="perfil.html"><i class="fa-regular fa-user"></i>Ver perfil</a>
+                    <a href="configuracoes.html"><i class="fa-solid fa-gear"></i>Configurações</a>
+                    <div class="profile-divider"></div>
+                    <a href="index.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="messages">
+        <div class="conversation-list">
+            <div class="list-header">
+                <h1>Mensagens</h1>
+                <button class="new-message" title="Nova mensagem"><i class="fa-solid fa-pen-to-square"></i></button>
+            </div>
+
+            <div class="conversation-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="conversationSearch" type="text" placeholder="Buscar conversas...">
+            </div>
+
+            <div class="tabs">
+                <button class="tab active">Todas</button>
+                <button class="tab">Não lidas</button>
+                <button class="tab">Grupos</button>
+            </div>
+
+            <div class="conversations" id="conversations">
+                <button class="conversation active" data-name="Maria Eduarda">
+                    <div class="contact-avatar maria">ME<span></span></div>
+                    <div class="conversation-info">
+                        <strong>Maria Eduarda</strong>
+                        <p>Oi João! Conseguiu enviar o trabalho de História?</p>
+                    </div>
+                    <div class="conversation-meta"><small>10:24</small><b>2</b></div>
+                </button>
+
+                <button class="conversation" data-name="Lucas Ferreira">
+                    <div class="contact-avatar lucas">LF</div>
+                    <div class="conversation-info">
+                        <strong>Lucas Ferreira</strong>
+                        <p>Beleza, vou revisar aqui e te mando depois.</p>
+                    </div>
+                    <div class="conversation-meta"><small>09:15</small><b>1</b></div>
+                </button>
+
+                <button class="conversation" data-name="Grupo: Projeto Final">
+                    <div class="contact-avatar group">GP<span></span></div>
+                    <div class="conversation-info">
+                        <strong>Grupo: Projeto Final</strong>
+                        <p>Ana: Pessoal, enviem suas partes até sexta-feira.</p>
+                    </div>
+                    <div class="conversation-meta"><small>Ontem</small></div>
+                </button>
+
+                <button class="conversation" data-name="Juliana Costa">
+                    <div class="contact-avatar juliana">JC<span></span></div>
+                    <div class="conversation-info">
+                        <strong>Juliana Costa</strong>
+                        <p>Obrigada pelo material! Me ajudou bastante.</p>
+                    </div>
+                    <div class="conversation-meta"><small>Ontem</small></div>
+                </button>
+
+                <button class="conversation" data-name="Pedro Henrique">
+                    <div class="contact-avatar pedro">PH</div>
+                    <div class="conversation-info">
+                        <strong>Pedro Henrique</strong>
+                        <p>Quando vamos marcar a reunião?</p>
+                    </div>
+                    <div class="conversation-meta"><small>2 dias</small></div>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat">
+            <div class="chat-header">
+                <div class="chat-contact">
+                    <div class="contact-avatar maria big">ME<span></span></div>
+                    <div><strong>Maria Eduarda</strong><small><i></i> Online</small></div>
+                </div>
+                <button class="chat-options"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <div class="chat-body" id="chatBody">
+                <div class="date">Hoje</div>
+
+                <div class="message received">
+                    <p>Oi João! Conseguiu enviar o trabalho de História?</p>
+                    <small>10:24</small>
+                </div>
+
+                <div class="message sent">
+                    <p>Oi Maria! Ainda estou finalizando, mas já está quase pronto.</p>
+                    <small>10:25 <i class="fa-solid fa-check-double"></i></small>
+                </div>
+
+                <div class="message received">
+                    <p>Que bom! 😊 Quando puder me manda uma prévia, por favor.</p>
+                    <small>10:25</small>
+                </div>
+
+                <div class="message sent">
+                    <p>Claro! Assim que terminar eu envio para você dar uma olhada.</p>
+                    <small>10:26 <i class="fa-solid fa-check-double"></i></small>
+                </div>
+
+                <div class="message received">
+                    <p>Perfeito, muito obrigado! 🙌</p>
+                    <small>10:26</small>
+                </div>
+            </div>
+
+            <form class="message-form" id="messageForm">
+                <button type="button" class="attach"><i class="fa-solid fa-paperclip"></i></button>
+                <input id="messageInput" type="text" placeholder="Digite sua mensagem..." autocomplete="off">
+                <button type="button" class="emoji"><i class="fa-regular fa-face-smile"></i></button>
+                <button class="send" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<script>
+const menuButton = document.querySelector(".menu-button");
+const sidebar = document.querySelector(".sidebar");
+menuButton.addEventListener("click", () => sidebar.classList.toggle("open"));
+
+const profileButton = document.querySelector("#profileButton");
+const profileContainer = document.querySelector(".profile-container");
+profileButton.addEventListener("click", e => {
+    e.stopPropagation();
+    profileContainer.classList.toggle("open");
+});
+document.addEventListener("click", e => {
+    if (!profileContainer.contains(e.target)) profileContainer.classList.remove("open");
+});
+
+const input = document.querySelector("#conversationSearch");
+const conversations = document.querySelectorAll(".conversation");
+input.addEventListener("input", () => {
+    const value = input.value.toLowerCase();
+    conversations.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(value) ? "grid" : "none";
+    });
+});
+
+document.querySelectorAll(".conversation").forEach(item => {
+    item.addEventListener("click", () => {
+        document.querySelector(".conversation.active")?.classList.remove("active");
+        item.classList.add("active");
+    });
+});
+
+const form = document.querySelector("#messageForm");
+const messageInput = document.querySelector("#messageInput");
+const chatBody = document.querySelector("#chatBody");
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    const text = messageInput.value.trim();
+    if (!text) return;
+
+    const message = document.createElement("div");
+    message.className = "message sent";
+    message.innerHTML = `<p></p><small>agora <i class="fa-solid fa-check-double"></i></small>`;
+    message.querySelector("p").textContent = text;
+    chatBody.appendChild(message);
+    messageInput.value = "";
+    chatBody.scrollTop = chatBody.scrollHeight;
+});
+</script>
+</body>
+</html>

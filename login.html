@@ -2,732 +2,1036 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Conecta+ | Entrar</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- ================================
-         CSS
-    ================================= -->
-    <style>
+    <title>Conecta+Cold | Acesso</title>
 
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #10b981;
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-            --bg-main: #f8fafc;
-            --bg-card: #ffffff;
+    <link rel="stylesheet"
+          href="login.css">
 
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-
-            --border: #e2e8f0;
-
-            --radius: 12px;
-        }
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-
-            font-family:
-                'Segoe UI',
-                Tahoma,
-                Geneva,
-                Verdana,
-                sans-serif;
-        }
-
-
-        body {
-            min-height: 100vh;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #f8fafc,
-                    #eff6ff
-                );
-
-            color: var(--text-main);
-        }
-
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-
-        button,
-        input {
-            font-family: inherit;
-        }
-
-
-        /* ================================
-           NAVBAR
-        ================================= */
-
-        .navbar {
-            width: 100%;
-
-            height: 78px;
-
-            display: flex;
-
-            align-items: center;
-
-            padding: 0 5%;
-
-            background: white;
-
-            border-bottom: 1px solid var(--border);
-
-            box-shadow:
-                0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-
-
-        .logo {
-            display: flex;
-
-            align-items: center;
-
-            height: 100%;
-        }
-
-
-        .logo img {
-            width: 155px;
-
-            height: 65px;
-
-            object-fit: contain;
-
-            display: block;
-
-            transition: 0.3s ease;
-        }
-
-
-        .logo:hover img {
-            transform: scale(1.03);
-        }
-
-
-        /* ================================
-           CONTAINER
-        ================================= */
-
-        .auth-container {
-            min-height:
-                calc(100vh - 78px);
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            padding: 30px 20px;
-        }
-
-
-        /* ================================
-           CARD
-        ================================= */
-
-        .auth-card {
-            width: 100%;
-
-            max-width: 430px;
-
-            background: var(--bg-card);
-
-            border: 1px solid var(--border);
-
-            border-radius: 18px;
-
-            padding: 30px;
-
-            box-shadow:
-                0 15px 35px rgba(15, 23, 42, 0.08);
-        }
-
-
-        /* ================================
-           LOGO DO LOGIN
-        ================================= */
-
-        .login-logo {
-            width: 100%;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            margin-bottom: 18px;
-        }
-
-
-        .login-logo img {
-            width: 190px;
-
-            height: 85px;
-
-            object-fit: contain;
-
-            display: block;
-        }
-
-
-        /* ================================
-           ABAS
-        ================================= */
-
-        .auth-tabs {
-            display: flex;
-
-            border-bottom:
-                2px solid var(--border);
-
-            margin-bottom: 25px;
-        }
-
-
-        .auth-tab {
-            flex: 1;
-
-            background: transparent;
-
-            border: none;
-
-            padding: 13px;
-
-            font-size: 16px;
-
-            font-weight: 600;
-
-            color: var(--text-muted);
-
-            cursor: pointer;
-
-            border-bottom:
-                3px solid transparent;
-
-            margin-bottom: -2px;
-
-            transition: 0.3s ease;
-        }
-
-
-        .auth-tab:hover {
-            color: var(--text-main);
-        }
-
-
-        .auth-tab.active {
-            color: var(--primary);
-
-            border-bottom:
-                3px solid var(--primary);
-        }
-
-
-        /* ================================
-           FORMULÁRIO
-        ================================= */
-
-        .form-group {
-            margin-bottom: 18px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 7px;
-        }
-
-
-        .form-group label {
-            font-size: 14px;
-
-            font-weight: 600;
-
-            color: var(--text-main);
-        }
-
-
-        .form-group label span {
-            color: var(--text-muted);
-
-            font-weight: 400;
-        }
-
-
-        .form-group input {
-            width: 100%;
-
-            padding: 13px 14px;
-
-            border:
-                1px solid var(--border);
-
-            border-radius: var(--radius);
-
-            outline: none;
-
-            font-size: 15px;
-
-            background: white;
-
-            color: var(--text-main);
-
-            transition:
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-
-        .form-group input::placeholder {
-            color: #94a3b8;
-        }
-
-
-        .form-group input:focus {
-            border-color: var(--primary);
-
-            box-shadow:
-                0 0 0 3px rgba(
-                    37,
-                    99,
-                    235,
-                    0.10
-                );
-        }
-
-
-        /* ================================
-           ESCONDER CAMPOS
-        ================================= */
-
-        .hidden-field {
-            display: none !important;
-        }
-
-
-        /* ================================
-           BOTÃO
-        ================================= */
-
-        .login-button {
-            width: 100%;
-
-            padding: 13px;
-
-            margin-top: 8px;
-
-            border: none;
-
-            border-radius: var(--radius);
-
-            background: var(--primary);
-
-            color: white;
-
-            font-size: 15px;
-
-            font-weight: 600;
-
-            cursor: pointer;
-
-            transition:
-                background 0.3s ease,
-                transform 0.2s ease,
-                box-shadow 0.3s ease;
-        }
-
-
-        .login-button:hover {
-            background: var(--primary-dark);
-
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 8px 18px rgba(
-                    37,
-                    99,
-                    235,
-                    0.20
-                );
-        }
-
-
-        .login-button:active {
-            transform: translateY(0);
-        }
-
-
-        /* ================================
-           RESPONSIVIDADE
-        ================================= */
-
-        @media (max-width: 600px) {
-
-            .navbar {
-                height: 70px;
-
-                padding: 0 20px;
-            }
-
-
-            .logo img {
-                width: 125px;
-
-                height: 55px;
-            }
-
-
-            .auth-container {
-                min-height:
-                    calc(100vh - 70px);
-
-                padding: 20px 15px;
-
-                align-items: flex-start;
-            }
-
-
-            .auth-card {
-                margin-top: 15px;
-
-                padding: 22px 18px;
-
-                border-radius: 15px;
-            }
-
-
-            .login-logo img {
-                width: 165px;
-
-                height: 75px;
-            }
-
-        }
-
-    </style>
 </head>
 
 
 <body>
 
 
-    <!-- ================================
-         NAVBAR
-    ================================= -->
+    <!-- FUNDO -->
 
-    <nav class="navbar">
+    <div class="background-decoration decoration-one"></div>
 
-        <a
-            class="logo">
-
-            <img
-                src="logo.png"
-                alt="Conecta+">
-
-        </a>
-
-    </nav>
+    <div class="background-decoration decoration-two"></div>
 
 
 
-    <!-- ================================
-         LOGIN
-    ================================= -->
+    <!-- VOLTAR -->
 
-    <div class="auth-container">
+    <a href="index.html"
+       class="back-button">
 
-        <div class="auth-card">
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Voltar para o início
+
+    </a>
 
 
-            <!-- LOGO -->
 
-            <div class="login-logo">
+    <!-- CONTAINER -->
 
-                <img
-                    src="logo.png"
-                    alt="Logo Conecta+">
+    <main class="login-container">
+
+
+        <!-- =================================================
+             LADO ESQUERDO
+        ================================================== -->
+
+        <section class="login-info">
+
+
+            <a href="index.html"
+               class="logo">
+
+                <div class="logo-icon">
+
+                    <i class="fa-solid fa-cloud"></i>
+
+                    <b>+</b>
+
+                </div>
+
+                <span>
+                    Conecta<span>+Cold</span>
+                </span>
+
+            </a>
+
+
+
+            <div class="info-content">
+
+
+                <div class="small-badge">
+
+                    <i class="fa-solid fa-circle"></i>
+
+                    PLATAFORMA DE PROJETOS
+
+                </div>
+
+
+                <h1 id="sideTitle">
+
+                    Seus projetos.
+
+                    <br>
+
+                    Suas ideias.
+
+                    <br>
+
+                    <strong>
+                        Suas versões.
+                    </strong>
+
+                </h1>
+
+
+                <p id="sideText">
+
+                    Desenvolva, colabore e acompanhe
+                    a evolução dos seus projetos em
+                    um só lugar.
+
+                </p>
+
+
+                <div class="benefits">
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-code-branch"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Versionamento
+                            </strong>
+
+                            <span>
+                                Acompanhe todas as alterações.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Colaboração
+                            </strong>
+
+                            <span>
+                                Trabalhe junto com sua equipe.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Segurança
+                            </strong>
+
+                            <span>
+                                Seus projetos sempre protegidos.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
 
             </div>
 
 
+            <div class="connection-graphic">
 
-            <!-- ABAS -->
+                <div class="graphic-line line-one"></div>
 
-            <div class="auth-tabs">
+                <div class="graphic-line line-two"></div>
 
-                <button
-                    type="button"
-                    class="auth-tab active"
-                    id="tab-entrar">
+                <div class="graphic-node node-one"></div>
 
-                    Entrar
+                <div class="graphic-node node-two"></div>
 
-                </button>
+                <div class="graphic-node node-three"></div>
 
+                <i class="fa-solid fa-cloud"></i>
 
-                <button
-                    type="button"
-                    class="auth-tab"
-                    id="tab-cadastrar">
-
-                    Cadastrar
-
-                </button>
+                <span>+</span>
 
             </div>
 
 
-
-            <!-- FORMULÁRIO -->
-
-            <form
-                action="home.html"
-                id="auth-form">
-
-
-                <!-- ================================
-                     NOME
-                ================================= -->
-
-                <div
-                    class="form-group register-field hidden-field">
-
-                    <label for="nome">
-                        Nome Completo
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        placeholder="Seu nome e sobrenome">
-
-                </div>
+        </section>
 
 
 
-                <!-- ================================
-                     EMAIL
-                ================================= -->
+        <!-- =================================================
+             LADO DIREITO
+        ================================================== -->
 
-                <div class="form-group">
+        <section class="login-area">
 
-                    <label for="email">
-                        E-mail
-                    </label>
 
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="seu@email.com"
-                        required>
+            <div class="login-card">
+
+
+                <!-- LOGO MOBILE -->
+
+                <div class="mobile-logo">
+
+                    <div class="logo-icon">
+
+                        <i class="fa-solid fa-cloud"></i>
+
+                        <b>+</b>
+
+                    </div>
+
+                    <span>
+                        Conecta<span>+Cold</span>
+                    </span>
 
                 </div>
 
 
 
-                <!-- ================================
-                     SENHA
-                ================================= -->
+                <!-- =================================================
+                     LOGIN
+                ================================================== -->
 
-                <div class="form-group">
-
-                    <label for="password">
-                        Senha
-                    </label>
-
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Sua senha"
-                        required>
-
-                </div>
+                <div id="loginFormContainer"
+                     class="form-container active">
 
 
+                    <div class="form-header">
 
-                <!-- ================================
-                     PROJETO
-                ================================= -->
 
-                <div
-                    class="form-group register-field hidden-field">
+                        <div class="user-icon">
 
-                    <label for="projeto">
+                            <i class="fa-regular fa-user"></i>
 
-                        Seu Projeto Atual /
-                        Portfólio
+                        </div>
+
+
+                        <h2>
+                            Entrar na sua conta
+                        </h2>
+
+
+                        <p>
+                            Informe seus dados para continuar
+                        </p>
+
+
+                    </div>
+
+
+
+                    <form id="loginForm">
+
+
+                        <div class="form-group">
+
+
+                            <label for="loginEmail">
+                                E-mail
+                            </label>
+
+
+                            <div class="input-box">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="loginEmail"
+                                    placeholder="seuemail@exemplo.com"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+
+                            <div class="password-label">
+
+                                <label for="loginSenha">
+                                    Senha
+                                </label>
+
+                                <a href="#">
+                                    Esqueceu a senha?
+                                </a>
+
+                            </div>
+
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+
+                                <input
+                                    type="password"
+                                    id="loginSenha"
+                                    placeholder="Digite sua senha"
+                                    required>
+
+
+                                <button
+                                    type="button"
+                                    class="show-password"
+                                    onclick="mostrarSenha(
+                                        'loginSenha',
+                                        'loginEye'
+                                    )">
+
+                                    <i
+                                        class="fa-regular fa-eye"
+                                        id="loginEye">
+                                    </i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="remember">
+
+                            <label>
+
+                                <input type="checkbox">
+
+                                <span>
+                                    Lembrar de mim
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <button
+                            type="submit"
+                            class="login-button">
+
+                            Entrar na plataforma
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                    </form>
+
+
+
+                    <div class="divider">
 
                         <span>
-                            (Opcional)
+                            ou
                         </span>
 
-                    </label>
+                    </div>
 
-                    <input
-                        type="text"
-                        id="projeto"
-                        placeholder="Ex: Link do GitHub ou nome do projeto">
+
+
+                    <p class="switch-text">
+
+                        Ainda não possui uma conta?
+
+                        <button
+                            type="button"
+                            onclick="mostrarCadastro()">
+
+                            Criar conta gratuitamente
+
+                        </button>
+
+                    </p>
+
+
+
+                    <div class="security">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Seus dados são protegidos
+                            e mantidos em segurança.
+                        </span>
+
+                    </div>
+
 
                 </div>
 
 
 
-                <!-- ================================
-                     BOTÃO
-                ================================= -->
+                <!-- =================================================
+                     CADASTRO
+                ================================================== -->
 
-                <button
-                    type="submit"
-                    id="btn-submit"
-                    class="login-button">
+                <div id="registerFormContainer"
+                     class="form-container">
 
-                    Acessar Plataforma
 
-                </button>
+                    <div class="form-header">
 
-            </form>
+
+                        <div class="user-icon">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                        </div>
+
+
+                        <h2>
+                            Criar sua conta
+                        </h2>
+
+
+                        <p>
+                            Comece a organizar seus projetos
+                        </p>
+
+
+                    </div>
+
+
+
+                    <form id="registerForm">
+
+
+                        <div class="form-group">
+
+                            <label for="registerName">
+                                Nome completo
+                            </label>
+
+
+                            <div class="input-box">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="registerName"
+                                    placeholder="Digite seu nome"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="registerEmail">
+                                E-mail
+                            </label>
+
+
+                            <div class="input-box">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="registerEmail"
+                                    placeholder="seuemail@exemplo.com"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="registerSenha">
+                                Senha
+                            </label>
+
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="registerSenha"
+                                    placeholder="Crie uma senha"
+                                    required>
+
+
+                                <button
+                                    type="button"
+                                    class="show-password"
+                                    onclick="mostrarSenha(
+                                        'registerSenha',
+                                        'registerEye'
+                                    )">
+
+                                    <i
+                                        class="fa-regular fa-eye"
+                                        id="registerEye">
+                                    </i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="confirmSenha">
+                                Confirmar senha
+                            </label>
+
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="confirmSenha"
+                                    placeholder="Digite a senha novamente"
+                                    required>
+
+
+                                <button
+                                    type="button"
+                                    class="show-password"
+                                    onclick="mostrarSenha(
+                                        'confirmSenha',
+                                        'confirmEye'
+                                    )">
+
+                                    <i
+                                        class="fa-regular fa-eye"
+                                        id="confirmEye">
+                                    </i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="terms">
+
+                            <label>
+
+                                <input
+                                    type="checkbox"
+                                    id="terms"
+                                    required>
+
+                                <span>
+
+                                    Concordo com os
+
+                                    <a href="#">
+                                        Termos de uso
+                                    </a>
+
+                                    e a
+
+                                    <a href="#">
+                                        Política de privacidade
+                                    </a>.
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <button
+                            type="submit"
+                            class="login-button">
+
+                            Criar minha conta
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                    </form>
+
+
+
+                    <p class="switch-text register-switch">
+
+                        Já possui uma conta?
+
+                        <button
+                            type="button"
+                            onclick="mostrarLogin()">
+
+                            Entrar na plataforma
+
+                        </button>
+
+                    </p>
+
+
+
+                    <div class="security">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Seus dados são protegidos
+                            e mantidos em segurança.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <span>
+            © 2026 Conecta+Cold
+        </span>
+
+
+        <div>
+
+            <a href="#">
+                Termos de uso
+            </a>
+
+            <a href="#">
+                Privacidade
+            </a>
 
         </div>
 
-    </div>
+    </footer>
 
 
 
-    <!-- ================================
+    <!-- =====================================================
          JAVASCRIPT
-    ================================= -->
+    ====================================================== -->
 
     <script>
 
-        const tabEntrar =
-            document.getElementById(
-                'tab-entrar'
-            );
+
+        /* =================================================
+           MOSTRAR / ESCONDER SENHA
+        ================================================== */
+
+        function mostrarSenha(inputId, iconId) {
+
+            const input =
+                document.getElementById(inputId);
+
+            const icon =
+                document.getElementById(iconId);
 
 
-        const tabCadastrar =
-            document.getElementById(
-                'tab-cadastrar'
-            );
+            if (input.type === "password") {
 
+                input.type = "text";
 
-        const registerFields =
-            document.querySelectorAll(
-                '.register-field'
-            );
-
-
-        const btnSubmit =
-            document.getElementById(
-                'btn-submit'
-            );
-
-
-        const inputNome =
-            document.getElementById(
-                'nome'
-            );
-
-
-
-        /* ================================
-           CADASTRAR
-        ================================= */
-
-        tabCadastrar.addEventListener(
-            'click',
-            function () {
-
-                tabEntrar.classList.remove(
-                    'active'
+                icon.classList.remove(
+                    "fa-eye"
                 );
 
-                tabCadastrar.classList.add(
-                    'active'
+                icon.classList.add(
+                    "fa-eye-slash"
                 );
 
+            } else {
 
-                registerFields.forEach(
-                    function (field) {
+                input.type = "password";
 
-                        field.classList.remove(
-                            'hidden-field'
-                        );
-
-                    }
+                icon.classList.remove(
+                    "fa-eye-slash"
                 );
 
-
-                inputNome.setAttribute(
-                    'required',
-                    'true'
+                icon.classList.add(
+                    "fa-eye"
                 );
-
-
-                btnSubmit.textContent =
-                    'Criar Minha Conta';
 
             }
-        );
+
+        }
 
 
 
-        /* ================================
-           ENTRAR
-        ================================= */
+        /* =================================================
+           MOSTRAR CADASTRO
+        ================================================== */
 
-        tabEntrar.addEventListener(
-            'click',
-            function () {
+        function mostrarCadastro() {
 
-                tabCadastrar.classList.remove(
-                    'active'
-                );
 
-                tabEntrar.classList.add(
-                    'active'
+            const login =
+                document.getElementById(
+                    "loginFormContainer"
                 );
 
 
-                registerFields.forEach(
-                    function (field) {
+            const cadastro =
+                document.getElementById(
+                    "registerFormContainer"
+                );
 
-                        field.classList.add(
-                            'hidden-field'
+
+            login.classList.remove(
+                "active"
+            );
+
+
+            cadastro.classList.add(
+                "active"
+            );
+
+
+            document.getElementById(
+                "sideTitle"
+            ).innerHTML = `
+
+                Crie sua conta.
+
+                <br>
+
+                Organize suas ideias.
+
+                <br>
+
+                <strong>
+                    Evolua seus projetos.
+                </strong>
+
+            `;
+
+
+            document.getElementById(
+                "sideText"
+            ).textContent =
+
+                "Crie sua conta gratuitamente e comece a desenvolver, colaborar e controlar seus projetos em um só lugar.";
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+
+        /* =================================================
+           MOSTRAR LOGIN
+        ================================================== */
+
+        function mostrarLogin() {
+
+
+            const login =
+                document.getElementById(
+                    "loginFormContainer"
+                );
+
+
+            const cadastro =
+                document.getElementById(
+                    "registerFormContainer"
+                );
+
+
+            cadastro.classList.remove(
+                "active"
+            );
+
+
+            login.classList.add(
+                "active"
+            );
+
+
+            document.getElementById(
+                "sideTitle"
+            ).innerHTML = `
+
+                Seus projetos.
+
+                <br>
+
+                Suas ideias.
+
+                <br>
+
+                <strong>
+                    Suas versões.
+                </strong>
+
+            `;
+
+
+            document.getElementById(
+                "sideText"
+            ).textContent =
+
+                "Desenvolva, colabore e acompanhe a evolução dos seus projetos em um só lugar.";
+
+        }
+
+
+
+        /* =================================================
+           LOGIN
+           
+           SEM BANCO DE DADOS
+        ================================================== */
+
+        document
+            .getElementById("loginForm")
+            .addEventListener(
+                "submit",
+                function(event) {
+
+
+                    event.preventDefault();
+
+
+                    const email =
+                        document.getElementById(
+                            "loginEmail"
+                        ).value.trim();
+
+
+                    const senha =
+                        document.getElementById(
+                            "loginSenha"
+                        ).value;
+
+
+                    if (
+                        email === "" ||
+                        senha === ""
+                    ) {
+
+                        alert(
+                            "Preencha todos os campos."
                         );
 
+                        return;
+
                     }
-                );
 
 
-                inputNome.removeAttribute(
-                    'required'
-                );
+                    localStorage.setItem(
+                        "usuarioEmail",
+                        email
+                    );
 
 
-                btnSubmit.textContent =
-                    'Acessar Plataforma';
+                    window.location.href =
+                        "home.html";
 
-            }
-        );
+
+                }
+            );
+
+
+
+        /* =================================================
+           CADASTRO
+           
+           SEM BANCO DE DADOS
+        ================================================== */
+
+        document
+            .getElementById("registerForm")
+            .addEventListener(
+                "submit",
+                function(event) {
+
+
+                    event.preventDefault();
+
+
+                    const nome =
+                        document.getElementById(
+                            "registerName"
+                        ).value.trim();
+
+
+                    const email =
+                        document.getElementById(
+                            "registerEmail"
+                        ).value.trim();
+
+
+                    const senha =
+                        document.getElementById(
+                            "registerSenha"
+                        ).value;
+
+
+                    const confirmar =
+                        document.getElementById(
+                            "confirmSenha"
+                        ).value;
+
+
+                    if (
+                        nome === "" ||
+                        email === "" ||
+                        senha === "" ||
+                        confirmar === ""
+                    ) {
+
+                        alert(
+                            "Preencha todos os campos."
+                        );
+
+                        return;
+
+                    }
+
+
+                    if (
+                        senha !== confirmar
+                    ) {
+
+                        alert(
+                            "As senhas não são iguais."
+                        );
+
+                        return;
+
+                    }
+
+
+                    localStorage.setItem(
+                        "usuarioNome",
+                        nome
+                    );
+
+
+                    localStorage.setItem(
+                        "usuarioEmail",
+                        email
+                    );
+
+
+                    window.location.href =
+                        "home.html";
+
+
+                }
+            );
+
+
+
+        /* =================================================
+           VERIFICA SE VEIO DA LANDING PAGE
+           
+           login.html?cadastro=true
+           
+           SE SIM → ABRE CADASTRO
+        ================================================== */
+
+        const parametros =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        if (
+            parametros.get("cadastro")
+            === "true"
+        ) {
+
+            mostrarCadastro();
+
+        }
+
 
     </script>
 

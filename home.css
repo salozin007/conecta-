@@ -1,0 +1,1356 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: #ffffff;
+
+    border-right: 1px solid #e5e7eb;
+
+    padding: 25px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 35px;
+
+    color: #111827;
+}
+
+.logo > span span {
+    color: #2563eb;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    font-size: 18px;
+}
+
+.logo-icon b {
+    position: absolute;
+
+    right: -4px;
+    top: -6px;
+
+    width: 17px;
+    height: 17px;
+
+    background: white;
+    color: #2563eb;
+
+    border-radius: 50%;
+
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 14px;
+
+    border-radius: 9px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.menu-item i {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    color: #64748b;
+
+    transition: 0.2s;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.menu-item:hover {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.menu-item:hover i {
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   ITEM ATIVO
+===================================================== */
+
+.menu-item.active {
+    background: #2563eb;
+
+    color: white;
+
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.20);
+}
+
+.menu-item.active i {
+    color: white;
+}
+
+
+/* =====================================================
+   CARD INFERIOR
+===================================================== */
+
+.upgrade {
+    margin-top: auto;
+
+    background: #eff6ff;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    border: 1px solid #dbeafe;
+}
+
+.upgrade-icon {
+    width: 40px;
+    height: 40px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+}
+
+.upgrade strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+.upgrade p {
+    font-size: 12px;
+
+    color: #64748b;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+}
+
+.upgrade button {
+    width: 100%;
+
+    padding: 9px;
+
+    background: white;
+
+    color: #2563eb;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.upgrade button:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================================
+   TOPBAR
+===================================================== */
+
+.topbar {
+    height: 75px;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 30px;
+
+    gap: 20px;
+}
+
+.menu-button {
+    display: none;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    color: #475569;
+}
+
+
+/* =====================================================
+   PESQUISA
+===================================================== */
+
+.search {
+    flex: 1;
+
+    max-width: 650px;
+
+    height: 42px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    gap: 10px;
+}
+
+.search i {
+    color: #94a3b8;
+}
+
+.search input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 13px;
+
+    color: #334155;
+}
+
+
+/* =====================================================
+   AÇÕES DO TOPO
+===================================================== */
+
+.top-actions {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.icon-button {
+    width: 38px;
+    height: 38px;
+
+    background: transparent;
+
+    color: #64748b;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.icon-button:hover {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   PERFIL
+===================================================== */
+
+.profile-container {
+    position: relative;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    padding: 5px 8px;
+
+    border-radius: 9px;
+
+    transition: 0.2s;
+}
+
+.profile:hover {
+    background: #f8fafc;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.profile strong {
+    display: block;
+
+    font-size: 13px;
+
+    color: #1e293b;
+}
+
+.profile small {
+    display: block;
+
+    font-size: 11px;
+
+    color: #64748b;
+
+    margin-top: 2px;
+}
+
+.profile > i {
+    font-size: 11px;
+
+    color: #94a3b8;
+
+    margin-left: 5px;
+}
+
+
+/* =====================================================
+   MENU DO PERFIL
+===================================================== */
+
+.profile-menu {
+    position: absolute;
+
+    right: 0;
+    top: 52px;
+
+    width: 200px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+
+    padding: 8px;
+
+    display: none;
+
+    z-index: 2000;
+}
+
+.profile-container.open .profile-menu {
+    display: block;
+
+    animation: profileMenu 0.15s ease;
+}
+
+@keyframes profileMenu {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    color: #475569;
+
+    transition: 0.2s;
+}
+
+.profile-menu a i {
+    width: 18px;
+
+    text-align: center;
+}
+
+.profile-menu a:hover {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+.profile-menu .logout:hover {
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+.profile-divider {
+    height: 1px;
+
+    background: #e5e7eb;
+
+    margin: 6px 0;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content {
+    padding: 30px;
+
+    flex: 1;
+}
+
+
+/* =====================================================
+   WELCOME
+===================================================== */
+
+.welcome {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.welcome-text {
+    position: relative;
+
+    z-index: 2;
+}
+
+.welcome h1 {
+    font-size: 27px;
+
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    font-size: 14px;
+
+    opacity: 0.9;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   ESTATÍSTICAS
+===================================================== */
+
+.stats {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.14);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 10px;
+
+    padding: 10px 13px;
+
+    min-width: 145px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.stat-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    color: #2563eb;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 17px;
+}
+
+.stat span {
+    display: block;
+
+    font-size: 10px;
+
+    opacity: 0.9;
+
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   ILUSTRAÇÃO
+===================================================== */
+
+.welcome-illustration {
+    position: relative;
+
+    width: 230px;
+    height: 150px;
+}
+
+.welcome-illustration i {
+    position: absolute;
+
+    color: rgba(255, 255, 255, 0.18);
+
+    font-size: 70px;
+}
+
+.welcome-illustration i:nth-child(1) {
+    top: 10px;
+    left: 20px;
+}
+
+.welcome-illustration i:nth-child(2) {
+    bottom: 5px;
+    right: 25px;
+
+    font-size: 80px;
+}
+
+.welcome-illustration i:nth-child(3) {
+    top: 50px;
+    right: 10px;
+
+    font-size: 55px;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   PAINÉIS
+===================================================== */
+
+.panel {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.panel-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 18px;
+}
+
+.panel-header h2 {
+    font-size: 17px;
+
+    color: #1e293b;
+
+    margin-bottom: 5px;
+}
+
+.panel-header p {
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+.panel-header button {
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.panel-header button:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   REPOSITÓRIOS
+===================================================== */
+
+.repository-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.repository {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 5px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    transition: 0.2s;
+}
+
+.repository:last-child {
+    border-bottom: none;
+}
+
+.repository:hover {
+    background: #f8fafc;
+
+    border-radius: 8px;
+}
+
+.repo-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.repo-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.repo-info a {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 4px;
+}
+
+.repo-info a:hover {
+    text-decoration: underline;
+}
+
+.repo-info span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+.updated {
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+.visibility {
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.visibility.private {
+    background: #f1f5f9;
+
+    color: #64748b;
+}
+
+.visibility.group {
+    background: #ecfdf5;
+
+    color: #059669;
+}
+
+.more {
+    background: transparent;
+
+    color: #94a3b8;
+
+    padding: 5px;
+
+    border-radius: 5px;
+}
+
+.more:hover {
+    background: #f1f5f9;
+
+    color: #334155;
+}
+
+
+/* =====================================================
+   PRAZOS
+===================================================== */
+
+.deadline-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.deadline {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+}
+
+.date {
+    width: 42px;
+    height: 48px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.date span {
+    font-size: 8px;
+
+    font-weight: bold;
+}
+
+.date strong {
+    font-size: 17px;
+}
+
+.date.red {
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+.date.orange {
+    background: #fff7ed;
+
+    color: #ea580c;
+}
+
+.date.blue-date {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+.deadline > div:nth-child(2) {
+    flex: 1;
+}
+
+.deadline > div:nth-child(2) strong {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 4px;
+}
+
+.deadline > div:nth-child(2) span {
+    display: block;
+
+    font-size: 10px;
+
+    color: #64748b;
+
+    margin-bottom: 3px;
+}
+
+.deadline small {
+    font-size: 9px;
+
+    color: #94a3b8;
+}
+
+.deadline label {
+    font-size: 9px;
+
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+.urgent {
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+.attention {
+    background: #fff7ed;
+
+    color: #ea580c;
+}
+
+.normal {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   POPULARES
+===================================================== */
+
+.popular {
+    grid-column: 1 / -1;
+}
+
+.popular-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.popular-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px;
+
+    border-radius: 9px;
+
+    transition: 0.2s;
+}
+
+.popular-item:hover {
+    background: #f8fafc;
+}
+
+.rank {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 8px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.popular-item div {
+    flex: 1;
+}
+
+.popular-item a {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 3px;
+}
+
+.popular-item small {
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+.stars {
+    color: #f59e0b;
+
+    font-size: 11px;
+}
+
+.view-all {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 10px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.view-all:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main {
+        margin-left: 220px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popular {
+        grid-column: auto;
+    }
+
+    .welcome-illustration {
+        display: none;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET / CELULAR
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        left: -250px;
+
+        width: 250px;
+
+        transition: 0.3s;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .topbar {
+        gap: 10px;
+    }
+
+    .search {
+        max-width: none;
+    }
+
+    .top-actions {
+        gap: 5px;
+    }
+
+    .icon-button {
+        display: none;
+    }
+
+    .profile > div:not(.avatar) {
+        display: none;
+    }
+
+    .profile > i {
+        display: none;
+    }
+
+    .welcome {
+        padding: 22px;
+    }
+
+    .welcome h1 {
+        font-size: 22px;
+    }
+
+    .stats {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat {
+        min-width: 0;
+
+        padding: 9px;
+    }
+
+    .stat span {
+        font-size: 9px;
+    }
+
+    .repository {
+        flex-wrap: wrap;
+    }
+
+    .updated {
+        display: none;
+    }
+
+    .visibility {
+        margin-left: auto;
+    }
+
+    .deadline {
+        align-items: flex-start;
+    }
+
+    .deadline label {
+        display: none;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media (max-width: 430px) {
+
+    .search input {
+        font-size: 11px;
+    }
+
+    .welcome {
+        border-radius: 13px;
+    }
+
+    .welcome h1 {
+        font-size: 19px;
+    }
+
+    .welcome p {
+        font-size: 12px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat {
+        width: 100%;
+    }
+
+    .panel-header h2 {
+        font-size: 15px;
+    }
+
+    .repository {
+        gap: 9px;
+    }
+
+    .repo-info {
+        max-width: calc(100% - 55px);
+    }
+
+    .repo-info a {
+        font-size: 11px;
+    }
+
+}

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Conecta+Cold | Favoritos</title>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+      href="favoritos.css">
+
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="sidebar">
+
+    <a href="home.html" class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-cloud"></i>
+
+            <b>+</b>
+
+        </div>
+
+        <span>
+            Conecta<span>+Cold</span>
+        </span>
+
+    </a>
+
+
+    <nav class="menu">
+
+
+        <!-- INÍCIO -->
+
+        <a href="home.html"
+           class="menu-item">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>
+                Início
+            </span>
+
+        </a>
+
+
+        <!-- REPOSITÓRIOS -->
+
+        <a href="repositorios.html"
+           class="menu-item">
+
+            <i class="fa-solid fa-box-archive"></i>
+
+            <span>
+                Repositórios
+            </span>
+
+        </a>
+
+
+        <!-- COMPARTILHADOS -->
+
+        <a href="compartilhados.html"
+           class="menu-item">
+
+            <i class="fa-solid fa-share-nodes"></i>
+
+            <span>
+                Compartilhados
+            </span>
+
+        </a>
+
+
+        <!-- FAVORITOS -->
+
+        <a href="favoritos.html"
+           class="menu-item active">
+
+            <i class="fa-regular fa-star"></i>
+
+            <span>
+                Favoritos
+            </span>
+
+        </a>
+
+
+        <!-- MENSAGENS -->
+
+        <a href="mensagens.html"
+           class="menu-item">
+
+            <i class="fa-regular fa-envelope"></i>
+
+            <span>
+                Mensagens
+            </span>
+
+        </a>
+
+
+        <!-- EQUIPE -->
+
+        <a href="equipe.html"
+           class="menu-item">
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>
+                Equipe
+            </span>
+
+        </a>
+
+
+        <!-- CONFIGURAÇÕES -->
+
+        <a href="configuracoes.html"
+           class="menu-item">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>
+                Configurações
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- CARD INFERIOR -->
+
+    <div class="upgrade">
+
+        <div class="upgrade-icon">
+
+            <i class="fa-solid fa-rocket"></i>
+
+        </div>
+
+
+        <strong>
+            Espaço acadêmico
+        </strong>
+
+
+        <p>
+            Organize seus trabalhos
+            escolares.
+        </p>
+
+
+        <button>
+            Saiba mais
+        </button>
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     CONTEÚDO PRINCIPAL
+====================================================== -->
+
+<main class="main">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <header class="topbar">
+
+
+        <button class="menu-button">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <div class="search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar repositórios, trabalhos, usuários...">
+
+        </div>
+
+
+        <div class="top-actions">
+
+
+            <button class="icon-button">
+
+                <i class="fa-regular fa-envelope"></i>
+
+            </button>
+
+
+            <!-- PERFIL -->
+
+            <div class="profile-container">
+
+
+                <div class="profile"
+                     id="profileButton">
+
+
+                    <div class="avatar">
+                        JS
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            João Silva
+                        </strong>
+
+                        <small>
+                            Aluno
+                        </small>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+
+                </div>
+
+
+                <!-- MENU DO PERFIL -->
+
+                <div class="profile-menu"
+                     id="profileMenu">
+
+
+                    <a href="perfil.html">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <span>
+                            Ver perfil
+                        </span>
+
+                    </a>
+
+
+                    <a href="configuracoes.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        <span>
+                            Configurações
+                        </span>
+
+                    </a>
+
+
+                    <div class="profile-divider"></div>
+
+
+                    <a href="index.html"
+                       class="logout">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        <span>
+                            Sair
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         CONTEÚDO
+    ================================================== -->
+
+    <div class="content">
+
+
+        <!-- TÍTULO -->
+
+        <section class="page-header">
+
+            <div>
+
+                <div class="title-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h1>
+                    Meus Favoritos
+                </h1>
+
+                <p>
+                    Repositórios e conteúdos que você salvou para acessar rapidamente.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- FILTROS -->
+
+        <div class="filters">
+
+            <button class="filter active">
+                <i class="fa-solid fa-layer-group"></i>
+                Todos
+            </button>
+
+            <button class="filter">
+                <i class="fa-solid fa-code"></i>
+                Repositórios
+            </button>
+
+            <button class="filter">
+                <i class="fa-regular fa-file"></i>
+                Trabalhos
+            </button>
+
+            <div class="sort">
+
+                <i class="fa-solid fa-arrow-down-wide-short"></i>
+
+                <select>
+
+                    <option>
+                        Mais recentes
+                    </option>
+
+                    <option>
+                        Mais antigos
+                    </option>
+
+                    <option>
+                        Nome A-Z
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GRID DE FAVORITOS -->
+
+        <section class="favorites-grid">
+
+
+            <!-- FAVORITO 1 -->
+
+            <article class="favorite-card">
+
+                <div class="favorite-top">
+
+                    <div class="repo-icon blue">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+
+                    <button class="star-button active">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+                </div>
+
+
+                <h2>
+                    Guia de Boas Práticas
+                </h2>
+
+                <p>
+                    Material com boas práticas para desenvolvimento de software.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        Engenharia de Software
+                    </span>
+
+                    <span>
+                        Material
+                    </span>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <div class="author">
+
+                        <div class="mini-avatar">
+                            PC
+                        </div>
+
+                        <span>
+                            Prof. Carlos
+                        </span>
+
+                    </div>
+
+
+                    <small>
+                        há 2 dias
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- FAVORITO 2 -->
+
+            <article class="favorite-card">
+
+                <div class="favorite-top">
+
+                    <div class="repo-icon purple">
+
+                        <i class="fa-solid fa-network-wired"></i>
+
+                    </div>
+
+
+                    <button class="star-button active">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+                </div>
+
+
+                <h2>
+                    Projeto de Redes
+                </h2>
+
+                <p>
+                    Exemplos e materiais utilizados nas aulas de Redes de Computadores.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        Redes
+                    </span>
+
+                    <span>
+                        Grupo
+                    </span>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <div class="author">
+
+                        <div class="mini-avatar">
+                            AS
+                        </div>
+
+                        <span>
+                            Ana Silva
+                        </span>
+
+                    </div>
+
+
+                    <small>
+                        há 4 dias
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- FAVORITO 3 -->
+
+            <article class="favorite-card">
+
+                <div class="favorite-top">
+
+                    <div class="repo-icon green">
+
+                        <i class="fa-solid fa-database"></i>
+
+                    </div>
+
+
+                    <button class="star-button active">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+                </div>
+
+
+                <h2>
+                    Banco de Dados
+                </h2>
+
+                <p>
+                    Exercícios e exemplos sobre modelagem e normalização de bancos.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        Banco de Dados
+                    </span>
+
+                    <span>
+                        Exercícios
+                    </span>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <div class="author">
+
+                        <div class="mini-avatar">
+                            MR
+                        </div>
+
+                        <span>
+                            Prof. Marcos
+                        </span>
+
+                    </div>
+
+
+                    <small>
+                        há 1 semana
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- FAVORITO 4 -->
+
+            <article class="favorite-card">
+
+                <div class="favorite-top">
+
+                    <div class="repo-icon orange">
+
+                        <i class="fa-solid fa-brain"></i>
+
+                    </div>
+
+
+                    <button class="star-button active">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+                </div>
+
+
+                <h2>
+                    Inteligência Artificial
+                </h2>
+
+                <p>
+                    Introdução aos principais conceitos de Inteligência Artificial.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        IA
+                    </span>
+
+                    <span>
+                        Estudos
+                    </span>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <div class="author">
+
+                        <div class="mini-avatar">
+                            JA
+                        </div>
+
+                        <span>
+                            João Almeida
+                        </span>
+
+                    </div>
+
+
+                    <small>
+                        há 1 semana
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- FAVORITO 5 -->
+
+            <article class="favorite-card">
+
+                <div class="favorite-top">
+
+                    <div class="repo-icon red">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                    </div>
+
+
+                    <button class="star-button active">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+                </div>
+
+
+                <h2>
+                    Modelo de Trabalho Acadêmico
+                </h2>
+
+                <p>
+                    Modelo para organização e apresentação de trabalhos escolares.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        Documentos
+                    </span>
+
+                    <span>
+                        Acadêmico
+                    </span>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <div class="author">
+
+                        <div class="mini-avatar">
+                            CO
+                        </div>
+
+                        <span>
+                            Coordenação
+                        </span>
+
+                    </div>
+
+
+                    <small>
+                        há 2 semanas
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- FAVORITO 6 -->
+
+            <article class="favorite-card">
+
+                <div class="favorite-top">
+
+                    <div class="repo-icon blue">
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                    </div>
+
+
+                    <button class="star-button active">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </button>
+
+                </div>
+
+
+                <h2>
+                    Exemplos de Código
+                </h2>
+
+                <p>
+                    Exemplos de códigos para auxiliar nos estudos de programação.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        Programação
+                    </span>
+
+                    <span>
+                        Código
+                    </span>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <div class="author">
+
+                        <div class="mini-avatar">
+                            PA
+                        </div>
+
+                        <span>
+                            Prof. Ana
+                        </span>
+
+                    </div>
+
+
+                    <small>
+                        há 3 semanas
+                    </small>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Conecta+Cold.
+        Todos os direitos reservados.
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+    /* MENU MOBILE */
+
+    const menuButton =
+        document.querySelector(".menu-button");
+
+    const sidebar =
+        document.querySelector(".sidebar");
+
+
+    menuButton.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.toggle("open");
+
+        }
+    );
+
+
+
+    /* MENU DO PERFIL */
+
+    const profileButton =
+        document.querySelector("#profileButton");
+
+    const profileContainer =
+        document.querySelector(".profile-container");
+
+
+    profileButton.addEventListener(
+        "click",
+        (event) => {
+
+            event.stopPropagation();
+
+            profileContainer.classList.toggle("open");
+
+        }
+    );
+
+
+
+    /* FECHAR PERFIL */
+
+    document.addEventListener(
+        "click",
+        (event) => {
+
+            if (
+                !profileContainer.contains(event.target)
+            ) {
+
+                profileContainer.classList.remove("open");
+
+            }
+
+        }
+    );
+
+
+
+    /* PESQUISA */
+
+    const searchInput =
+        document.querySelector("#searchInput");
+
+    const cards =
+        document.querySelectorAll(".favorite-card");
+
+
+    searchInput.addEventListener(
+        "input",
+        () => {
+
+            const value =
+                searchInput.value.toLowerCase();
+
+
+            cards.forEach(
+                card => {
+
+                    const text =
+                        card.textContent.toLowerCase();
+
+
+                    card.style.display =
+                        text.includes(value)
+                        ? "flex"
+                        : "none";
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* ESTRELAS */
+
+    const stars =
+        document.querySelectorAll(".star-button");
+
+
+    stars.forEach(
+        star => {
+
+            star.addEventListener(
+                "click",
+                () => {
+
+                    star.classList.toggle("active");
+
+                }
+            );
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>

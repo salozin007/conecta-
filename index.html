@@ -2,219 +2,1193 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Conecta+ | Tire suas ideias do papel</title>
+    <title>Conecta+Cold | Projetos e Versionamento</title>
 
-    <!-- FAVICON -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Cpath d='M35 55a18 18 0 0 1 0-25l8-8a18 18 0 0 1 25 0' fill='none' stroke='white' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M65 45a18 18 0 0 1 0 25l-8 8a18 18 0 0 1-25 0' fill='none' stroke='white' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M39 50h22' stroke='white' stroke-width='9' stroke-linecap='round'/%3E%3Ccircle cx='76' cy='24' r='10' fill='%2310b981'/%3E%3Cpath d='M76 19v10M71 24h10' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="style.css">
 
 </head>
 
+
 <body>
 
-    <!-- ================================
+
+    <!-- =====================================================
          NAVBAR
-    ================================= -->
+    ====================================================== -->
 
-    <nav class="navbar">
+    <header class="navbar">
 
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="Logo Conecta+">
+
+        <a href="#inicio"
+           class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fa-solid fa-cloud"></i>
+
+                <b>+</b>
+
+            </div>
+
+
+            <span>
+                Conecta<span>+Cold</span>
+            </span>
+
         </a>
 
-        <div class="nav-links">
 
-            <a href="login.html" class="btn-outline">
+
+        <nav>
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#funciona">
+                Como funciona
+            </a>
+
+            <a href="#recursos">
+                Recursos
+            </a>
+
+            <a href="#projetos">
+                Projetos
+            </a>
+
+            <a href="#sobre">
+                Sobre
+            </a>
+
+        </nav>
+
+
+
+        <div class="nav-buttons">
+
+
+            <!-- ENTRAR -->
+
+            <a href="login.html"
+               class="btn-login">
+
                 Entrar
+
             </a>
 
-            <a href="login.html" class="btn-primary">
-                Criar Conta
+
+
+            <!-- CRIAR CONTA
+                 ABRE DIRETAMENTE O CADASTRO -->
+
+            <a href="login.html?cadastro=true"
+               class="btn-primary">
+
+                Criar conta
+
             </a>
 
-        </div>
-
-    </nav>
-
-
-    <!-- ================================
-         HERO
-    ================================= -->
-
-    <header class="hero">
-
-        <div class="hero-text">
-
-            <h1>
-                Sua ideia pode ser o começo de algo incrível.
-            </h1>
-
-            <p>
-                O Conecta+ é uma rede de colaboração onde a comunidade
-                e a Inteligência Artificial ajudam a transformar seus
-                rascunhos em projetos reais.
-            </p>
-
-            <a href="login.html" class="btn-primary hero-button">
-                Começar Agora
-            </a>
-
-        </div>
-
-
-        <div class="hero-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
-                alt="Pessoas colaborando">
 
         </div>
 
     </header>
 
 
-    <!-- ================================
-         FLUXO DO CONECTA+
-    ================================= -->
 
-    <section class="fluxo-section">
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-        <h2>
-            Como o Conecta+ funciona?
-        </h2>
-
-        <p>
-            Acompanhe a evolução do seu projeto de ponta a ponta
-        </p>
+    <section class="hero"
+             id="inicio">
 
 
-        <div class="fluxo-container">
+        <div class="hero-text">
 
-            <!-- IDEIA -->
 
-            <div class="fluxo-step">
+            <div class="badge">
 
-                <span class="material-icons ideia">
-                    lightbulb
-                </span>
+                <i class="fa-solid fa-circle"></i>
 
-                <h3>
-                    Ideia
-                </h3>
-
-                <p>
-                    Compartilhe o que você pensou
-                </p>
+                PLATAFORMA COMPLETA
 
             </div>
 
 
-            <span class="material-icons arrow">
-                arrow_forward
-            </span>
+
+            <h1>
+
+                Conecte ideias.
+
+                <br>
+
+                Desenvolva projetos.
+
+                <br>
+
+                <strong>
+                    Controle cada versão.
+                </strong>
+
+            </h1>
 
 
-            <!-- SUGESTÕES -->
 
-            <div class="fluxo-step">
+            <p>
 
-                <span class="material-icons sugestoes">
-                    forum
-                </span>
+                Conecta+Cold é a plataforma que ajuda você e sua equipe
+                a criar, colaborar e versionar projetos de forma simples
+                e segura.
 
-                <h3>
-                    Sugestões
-                </h3>
+            </p>
 
-                <p>
-                    Receba feedbacks
-                </p>
+
+
+            <div class="hero-buttons">
+
+
+                <!-- COMEÇAR AGORA
+                     ABRE DIRETAMENTE O CADASTRO -->
+
+                <a href="login.html?cadastro=true"
+                   class="btn-primary big">
+
+                    Começar agora
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+
+                <a href="#funciona"
+                   class="btn-video">
+
+                    <i class="fa-regular fa-circle-play"></i>
+
+                    Ver como funciona
+
+                </a>
+
 
             </div>
 
 
-            <span class="material-icons arrow">
-                arrow_forward
-            </span>
+
+            <div class="stats">
 
 
-            <!-- IA -->
+                <div>
 
-            <div class="fluxo-step">
+                    <strong>
+                        12K+
+                    </strong>
 
-                <span class="material-icons ia">
-                    psychology
-                </span>
+                    <span>
+                        Projetos criados
+                    </span>
 
-                <h3>
-                    Insights IA
-                </h3>
+                </div>
 
-                <p>
-                    Evolua com nossa IA
-                </p>
+
+                <div>
+
+                    <strong>
+                        45K+
+                    </strong>
+
+                    <span>
+                        Usuários ativos
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        98%
+                    </strong>
+
+                    <span>
+                        Satisfação
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        24/7
+                    </strong>
+
+                    <span>
+                        Suporte
+                    </span>
+
+                </div>
+
 
             </div>
 
-
-            <span class="material-icons arrow">
-                arrow_forward
-            </span>
-
-
-            <!-- EQUIPE -->
-
-            <div class="fluxo-step">
-
-                <span class="material-icons equipe">
-                    groups
-                </span>
-
-                <h3>
-                    Equipe
-                </h3>
-
-                <p>
-                    Ache colaboradores
-                </p>
-
-            </div>
-
-
-            <span class="material-icons arrow">
-                arrow_forward
-            </span>
-
-
-            <!-- PROJETO -->
-
-            <div class="fluxo-step">
-
-                <span class="material-icons projeto">
-                    rocket_launch
-                </span>
-
-                <h3>
-                    Projeto
-                </h3>
-
-                <p>
-                    Transforme em realidade
-                </p>
-
-            </div>
 
         </div>
 
+
+
+        <!-- =================================================
+             ILUSTRAÇÃO
+        ================================================== -->
+
+        <div class="hero-image">
+
+
+            <div class="circle-bg"></div>
+
+
+
+            <div class="cloud">
+
+
+                <i class="fa-solid fa-cloud"></i>
+
+                <span>
+                    +
+                </span>
+
+
+
+                <div class="node node1"></div>
+
+                <div class="node node2"></div>
+
+                <div class="node node3"></div>
+
+
+
+                <div class="line line1"></div>
+
+                <div class="line line2"></div>
+
+
+            </div>
+
+
+
+            <!-- CARD SEGURANÇA -->
+
+            <div class="info-card secure">
+
+
+                <i class="fa-solid fa-lock"></i>
+
+
+                <div>
+
+                    <b>
+                        Seguro
+                    </b>
+
+
+                    <small>
+                        Seus dados protegidos
+                        com criptografia
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CARD VERSIONAMENTO -->
+
+            <div class="info-card version">
+
+
+                <i class="fa-solid fa-code-branch"></i>
+
+
+                <div>
+
+                    <b>
+                        Versionamento
+                    </b>
+
+
+                    <small>
+                        Controle cada mudança
+                        do seu projeto
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CARD COLABORAÇÃO -->
+
+            <div class="info-card team">
+
+
+                <i class="fa-solid fa-users"></i>
+
+
+                <div>
+
+                    <b>
+                        Colaboração
+                    </b>
+
+
+                    <small>
+                        Trabalhe em equipe
+                        em tempo real
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
     </section>
+
+
+
+    <!-- =====================================================
+         COMO FUNCIONA
+    ====================================================== -->
+
+    <section class="workflow"
+             id="funciona">
+
+
+        <div class="section-title">
+
+            <h2>
+                Como funciona?
+            </h2>
+
+        </div>
+
+
+
+        <div class="steps">
+
+
+            <!-- 1 -->
+
+            <div class="step">
+
+
+                <div class="step-icon">
+
+                    <i class="fa-regular fa-lightbulb"></i>
+
+                </div>
+
+
+                <b>
+                    1. Ideia
+                </b>
+
+
+                <p>
+
+                    Transforme sua ideia
+                    em um projeto.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- 2 -->
+
+            <div class="step">
+
+
+                <div class="step-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+
+                <b>
+                    2. Desenvolva
+                </b>
+
+
+                <p>
+
+                    Colabore com sua equipe
+                    em tempo real.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- 3 -->
+
+            <div class="step">
+
+
+                <div class="step-icon">
+
+                    <i class="fa-solid fa-code-branch"></i>
+
+                </div>
+
+
+                <b>
+                    3. Versione
+                </b>
+
+
+                <p>
+
+                    Acompanhe cada mudança
+                    com versionamento.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- 4 -->
+
+            <div class="step">
+
+
+                <div class="step-icon">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                </div>
+
+
+                <b>
+                    4. Publique
+                </b>
+
+
+                <p>
+
+                    Publique e compartilhe
+                    com o mundo.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- 5 -->
+
+            <div class="step">
+
+
+                <div class="step-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+
+                <b>
+                    5. Evolua
+                </b>
+
+
+                <p>
+
+                    Melhore continuamente
+                    seu projeto.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <section class="dashboard-section"
+             id="recursos">
+
+
+
+        <!-- =================================================
+             RECURSOS
+        ================================================== -->
+
+        <div class="box">
+
+
+            <div class="box-header">
+
+                <h3>
+                    Recursos que fazem a diferença
+                </h3>
+
+
+                <a href="#">
+                    Ver todos →
+                </a>
+
+            </div>
+
+
+
+            <div class="resource-grid">
+
+
+                <!-- VERSIONAMENTO -->
+
+                <div class="resource">
+
+
+                    <div class="resource-icon blue">
+
+                        <i class="fa-solid fa-code-branch"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>
+                            Versionamento
+                        </b>
+
+
+                        <p>
+
+                            Acompanhe cada versão
+                            e restaure quando precisar.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- COLABORAÇÃO -->
+
+                <div class="resource">
+
+
+                    <div class="resource-icon purple">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>
+                            Colaboração
+                        </b>
+
+
+                        <p>
+
+                            Convide sua equipe e
+                            trabalhe em tempo real.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- IA -->
+
+                <div class="resource">
+
+
+                    <div class="resource-icon green">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>
+                            Insights com IA
+                        </b>
+
+
+                        <p>
+
+                            Receba sugestões inteligentes
+                            para melhorar seus projetos.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SEGURANÇA -->
+
+                <div class="resource">
+
+
+                    <div class="resource-icon cyan">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <b>
+                            Segurança
+                        </b>
+
+
+                        <p>
+
+                            Seus dados protegidos
+                            com criptografia e backups.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROJETOS
+        ================================================== -->
+
+        <div class="box"
+             id="projetos">
+
+
+            <div class="box-header">
+
+                <h3>
+                    Projetos recentes
+                </h3>
+
+
+                <a href="#">
+                    Ver todos →
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJETO 1 -->
+
+            <div class="project">
+
+
+                <div class="project-symbol orange">
+
+                    <i class="fa-solid fa-burger"></i>
+
+                </div>
+
+
+                <div class="project-info">
+
+                    <b>
+                        ConectaFood
+                    </b>
+
+
+                    <small>
+                        Sistema de pedidos e gestão
+                    </small>
+
+
+                    <div class="progress">
+
+                        <span style="width:82%"></span>
+
+                    </div>
+
+                </div>
+
+
+                <strong>
+                    v2.1
+                </strong>
+
+
+                <label class="active">
+                    Ativo
+                </label>
+
+
+            </div>
+
+
+
+            <!-- PROJETO 2 -->
+
+            <div class="project">
+
+
+                <div class="project-symbol blue-bg">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                </div>
+
+
+                <div class="project-info">
+
+                    <b>
+                        Gestão Acadêmica
+                    </b>
+
+
+                    <small>
+                        Plataforma de gerenciamento escolar
+                    </small>
+
+
+                    <div class="progress">
+
+                        <span style="width:64%"></span>
+
+                    </div>
+
+                </div>
+
+
+                <strong>
+                    v1.4
+                </strong>
+
+
+                <label class="development">
+                    Desenvolvimento
+                </label>
+
+
+            </div>
+
+
+
+            <!-- PROJETO 3 -->
+
+            <div class="project">
+
+
+                <div class="project-symbol red">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                </div>
+
+
+                <div class="project-info">
+
+                    <b>
+                        Sentinela Vital
+                    </b>
+
+
+                    <small>
+                        Sistema para emergências
+                    </small>
+
+
+                    <div class="progress">
+
+                        <span style="width:100%"></span>
+
+                    </div>
+
+                </div>
+
+
+                <strong>
+                    v1.0
+                </strong>
+
+
+                <label class="finished">
+                    Finalizado
+                </label>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             TIMELINE
+        ================================================== -->
+
+        <div class="box timeline-box">
+
+
+            <div class="box-header">
+
+                <h3>
+                    Linha do tempo de versões
+                </h3>
+
+
+                <a href="#">
+                    Ver todas →
+                </a>
+
+            </div>
+
+
+
+            <div class="timeline">
+
+
+                <!-- V2.1 -->
+
+                <div class="timeline-item current">
+
+
+                    <span class="dot"></span>
+
+
+                    <div>
+
+                        <strong>
+                            v2.1
+                        </strong>
+
+
+                        <small>
+                            Atual
+                        </small>
+
+
+                        <p>
+
+                            Melhorias no dashboard
+                            e correções
+
+                        </p>
+
+                    </div>
+
+
+                    <time>
+                        Há 2 horas
+                    </time>
+
+
+                </div>
+
+
+
+                <!-- V2.0 -->
+
+                <div class="timeline-item">
+
+
+                    <span class="dot"></span>
+
+
+                    <div>
+
+                        <strong>
+                            v2.0
+                        </strong>
+
+
+                        <p>
+
+                            Novos recursos
+                            e otimizações
+
+                        </p>
+
+                    </div>
+
+
+                    <time>
+                        Há 3 dias
+                    </time>
+
+
+                </div>
+
+
+
+                <!-- V1.5 -->
+
+                <div class="timeline-item">
+
+
+                    <span class="dot"></span>
+
+
+                    <div>
+
+                        <strong>
+                            v1.5
+                        </strong>
+
+
+                        <p>
+
+                            Integração com API
+                            e ajustes
+
+                        </p>
+
+                    </div>
+
+
+                    <time>
+                        Há 1 semana
+                    </time>
+
+
+                </div>
+
+
+
+                <!-- V1.0 -->
+
+                <div class="timeline-item">
+
+
+                    <span class="dot"></span>
+
+
+                    <div>
+
+                        <strong>
+                            v1.0
+                        </strong>
+
+
+                        <p>
+
+                            Versão inicial
+                            do projeto
+
+                        </p>
+
+                    </div>
+
+
+                    <time>
+                        Há 2 semanas
+                    </time>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section class="cta"
+             id="sobre">
+
+
+        <div class="cta-logo">
+
+            <i class="fa-solid fa-cloud"></i>
+
+            <span>
+                +
+            </span>
+
+        </div>
+
+
+
+        <div>
+
+
+            <h2>
+                Pronto para começar?
+            </h2>
+
+
+            <p>
+
+                Crie sua conta gratuitamente e leve
+                seus projetos para o próximo nível.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- CRIAR CONTA
+             ABRE DIRETAMENTE O CADASTRO -->
+
+        <a href="login.html?cadastro=true"
+           class="btn-primary">
+
+            Criar conta gratuitamente
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+
+            <div class="logo-icon">
+
+                <i class="fa-solid fa-cloud"></i>
+
+                <b>
+                    +
+                </b>
+
+            </div>
+
+
+            <strong>
+
+                Conecta<span>+Cold</span>
+
+            </strong>
+
+
+        </div>
+
+
+
+        <p>
+
+            Conecte ideias. Desenvolva projetos.
+            Controle cada versão.
+
+        </p>
+
+
+
+        <div class="footer-bottom">
+
+
+            <span>
+
+                © 2026 Conecta+Cold.
+                Todos os direitos reservados.
+
+            </span>
+
+
+
+            <div>
+
+                <a href="#">
+                    Termos
+                </a>
+
+
+                <a href="#">
+                    Privacidade
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
+
 
 </body>
 
