@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conecta+Cold | Compartilhados</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="compartilhados.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <a href="home.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-cloud"></i>
+                <b>+</b>
+            </div>
+
+            <span>
+                Conecta<span>+Cold</span>
+            </span>
+
+        </a>
+
+
+        <nav class="menu">
+
+            <a href="home.html" class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="repositorios.html" class="menu-item">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Repositórios</span>
+            </a>
+
+            <a href="compartilhados.html" class="menu-item active">
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>Compartilhados</span>
+            </a>
+
+            <a href="favoritos.html" class="menu-item">
+                <i class="fa-regular fa-star"></i>
+                <span>Favoritos</span>
+            </a>
+
+            <a href="mensagens.html" class="menu-item">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Mensagens</span>
+            </a>
+
+            <a href="equipe.html" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Equipe</span>
+            </a>
+
+            <a href="configuracoes.html" class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+            </a>
+
+        </nav>
+
+
+        <!-- CARD INFERIOR -->
+
+        <div class="upgrade">
+
+            <div class="upgrade-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <strong>Espaço acadêmico</strong>
+
+            <p>
+                Organize seus trabalhos escolares.
+            </p>
+
+            <button>
+                Saiba mais
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= CONTEÚDO ================= -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button class="menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar repositórios, trabalhos, usuários...">
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="icon-button">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <button class="icon-button">
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+
+
+                <!-- PERFIL -->
+
+                <div class="profile-container">
+
+                    <div class="profile" id="profileButton">
+
+                        <div class="avatar">
+                            JS
+                        </div>
+
+                        <div class="profile-name">
+
+                            <strong>
+                                João Silva
+                            </strong>
+
+                            <small>
+                                Aluno
+                            </small>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+
+                    <!-- MENU PERFIL -->
+
+                    <div class="profile-menu">
+
+                        <a href="perfil.html">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Ver perfil</span>
+                        </a>
+
+                        <a href="configuracoes.html">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Configurações</span>
+                        </a>
+
+                        <div class="profile-divider"></div>
+
+                        <a href="index.html" class="logout">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Sair</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTEÚDO ================= -->
+
+        <div class="content">
+
+
+            <!-- CABEÇALHO -->
+
+            <section class="page-header">
+
+                <div>
+
+                    <h1>
+                        Compartilhados
+                    </h1>
+
+                    <p>
+                        Arquivos e repositórios compartilhados com você
+                    </p>
+
+                </div>
+
+
+                <button class="share-button">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Compartilhar
+
+                </button>
+
+            </section>
+
+
+            <!-- ================= ESTATÍSTICAS ================= -->
+
+            <section class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="fa-solid fa-share-nodes"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>18</strong>
+
+                        <span>
+                            Compartilhados comigo
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>7</strong>
+
+                        <span>
+                            Compartilhados por mim
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="fa-regular fa-clock"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>3</strong>
+
+                        <span>
+                            Aguardando minha ação
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon yellow">
+
+                        <i class="fa-regular fa-star"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>12</strong>
+
+                        <span>
+                            Marcados com estrela
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= PAINEL ================= -->
+
+            <section class="shared-panel">
+
+
+                <!-- FILTROS -->
+
+                <div class="filters">
+
+                    <div class="filter-tabs">
+
+                        <button class="tab active">
+                            Todos
+                        </button>
+
+                        <button class="tab">
+                            Repositórios
+                        </button>
+
+                        <button class="tab">
+                            Arquivos
+                        </button>
+
+                        <button class="tab">
+                            Pastas
+                        </button>
+
+                    </div>
+
+
+                    <div class="filter-actions">
+
+                        <button class="filter-button">
+
+                            <i class="fa-solid fa-filter"></i>
+
+                            Todos os tipos
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+
+                        <button class="filter-button">
+
+                            <i class="fa-solid fa-arrow-down-wide-short"></i>
+
+                            Mais recentes
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CABEÇALHO DA TABELA -->
+
+                <div class="table-header">
+
+                    <span>Item</span>
+
+                    <span>Compartilhado por</span>
+
+                    <span>Tipo</span>
+
+                    <span>Permissão</span>
+
+                    <span>Compartilhado em</span>
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- ITEM 1 -->
+
+                <article class="shared-item">
+
+                    <div class="item-info">
+
+                        <div class="item-icon blue-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                Trabalho Final - Engenharia de Software
+                            </a>
+
+                            <small>
+                                Repositório • Engenharia de Software
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shared-by">
+
+                        <div class="person-avatar">
+                            CM
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Carlos Mendes
+                            </strong>
+
+                            <small>
+                                Professor
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="type repository-type">
+                        Repositório
+                    </span>
+
+
+                    <span class="permission">
+                        <i class="fa-regular fa-eye"></i>
+                        Visualização
+                    </span>
+
+
+                    <span class="date">
+                        Hoje às 09:15
+                    </span>
+
+
+                    <button class="more">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- ITEM 2 -->
+
+                <article class="shared-item">
+
+                    <div class="item-info">
+
+                        <div class="item-icon green-icon">
+                            <i class="fa-regular fa-folder"></i>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                Projeto de Redes - Documentação
+                            </a>
+
+                            <small>
+                                Pasta • Redes de Computadores
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shared-by">
+
+                        <div class="person-avatar female">
+                            AP
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Ana Paula
+                            </strong>
+
+                            <small>
+                                Professora
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="type folder-type">
+                        Pasta
+                    </span>
+
+
+                    <span class="permission edit">
+                        <i class="fa-solid fa-pen"></i>
+                        Edição
+                    </span>
+
+
+                    <span class="date">
+                        Ontem às 14:30
+                    </span>
+
+
+                    <button class="more">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- ITEM 3 -->
+
+                <article class="shared-item">
+
+                    <div class="item-info">
+
+                        <div class="item-icon purple-icon">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                Relatório de Banco de Dados.pdf
+                            </a>
+
+                            <small>
+                                Arquivo • Banco de Dados
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shared-by">
+
+                        <div class="person-avatar">
+                            RC
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Rafael Costa
+                            </strong>
+
+                            <small>
+                                Aluno
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="type file-type">
+                        Arquivo
+                    </span>
+
+
+                    <span class="permission">
+                        <i class="fa-regular fa-eye"></i>
+                        Visualização
+                    </span>
+
+
+                    <span class="date">
+                        Ontem às 11:20
+                    </span>
+
+
+                    <button class="more">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- ITEM 4 -->
+
+                <article class="shared-item">
+
+                    <div class="item-info">
+
+                        <div class="item-icon orange-icon">
+                            <i class="fa-regular fa-file-powerpoint"></i>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                Apresentação - Inteligência Artificial.pptx
+                            </a>
+
+                            <small>
+                                Arquivo • Inteligência Artificial
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shared-by">
+
+                        <div class="person-avatar team">
+                            ES
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Equipe IA
+                            </strong>
+
+                            <small>
+                                5 membros
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="type file-type">
+                        Arquivo
+                    </span>
+
+
+                    <span class="permission">
+                        <i class="fa-regular fa-eye"></i>
+                        Visualização
+                    </span>
+
+
+                    <span class="date">
+                        12/05/2026
+                    </span>
+
+
+                    <button class="more">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- ITEM 5 -->
+
+                <article class="shared-item">
+
+                    <div class="item-info">
+
+                        <div class="item-icon yellow-icon">
+                            <i class="fa-regular fa-folder"></i>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                Material de Apoio - Estruturas de Dados
+                            </a>
+
+                            <small>
+                                Pasta • Algoritmos
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shared-by">
+
+                        <div class="person-avatar female">
+                            JF
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Juliana Ferreira
+                            </strong>
+
+                            <small>
+                                Professora
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="type folder-type">
+                        Pasta
+                    </span>
+
+
+                    <span class="permission edit">
+                        <i class="fa-solid fa-pen"></i>
+                        Edição
+                    </span>
+
+
+                    <span class="date">
+                        10/05/2026
+                    </span>
+
+
+                    <button class="more">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- ITEM 6 -->
+
+                <article class="shared-item">
+
+                    <div class="item-info">
+
+                        <div class="item-icon blue-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                API Conecta+Cold
+                            </a>
+
+                            <small>
+                                Repositório • Desenvolvimento Web
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shared-by">
+
+                        <div class="person-avatar team-green">
+                            DW
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Desenvolvimento Web
+                            </strong>
+
+                            <small>
+                                8 membros
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="type repository-type">
+                        Repositório
+                    </span>
+
+
+                    <span class="permission">
+                        <i class="fa-regular fa-eye"></i>
+                        Visualização
+                    </span>
+
+
+                    <span class="date">
+                        08/05/2026
+                    </span>
+
+
+                    <button class="more">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- PAGINAÇÃO -->
+
+                <div class="pagination">
+
+                    <span>
+                        Mostrando 1 a 6 de 18 itens
+                    </span>
+
+
+                    <div class="pages">
+
+                        <button>
+                            Anterior
+                        </button>
+
+                        <button class="page active">
+                            1
+                        </button>
+
+                        <button class="page">
+                            2
+                        </button>
+
+                        <button class="page">
+                            3
+                        </button>
+
+                        <span>
+                            ...
+                        </span>
+
+                        <button class="page">
+                            4
+                        </button>
+
+                        <button>
+                            Próxima
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            © 2026 Conecta+Cold.
+            Todos os direitos reservados.
+
+        </footer>
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* MENU MOBILE */
+
+        const menuButton =
+            document.querySelector(".menu-button");
+
+        const sidebar =
+            document.querySelector(".sidebar");
+
+        menuButton.addEventListener("click", () => {
+
+            sidebar.classList.toggle("open");
+
+        });
+
+
+        /* PERFIL */
+
+        const profileButton =
+            document.querySelector("#profileButton");
+
+        const profileContainer =
+            document.querySelector(".profile-container");
+
+        profileButton.addEventListener("click", (event) => {
+
+            event.stopPropagation();
+
+            profileContainer.classList.toggle("open");
+
+        });
+
+
+        document.addEventListener("click", (event) => {
+
+            if (!profileContainer.contains(event.target)) {
+
+                profileContainer.classList.remove("open");
+
+            }
+
+        });
+
+
+        /* PESQUISA */
+
+        const searchInput =
+            document.querySelector("#searchInput");
+
+        const sharedItems =
+            document.querySelectorAll(".shared-item");
+
+        searchInput.addEventListener("input", () => {
+
+            const value =
+                searchInput.value.toLowerCase();
+
+            sharedItems.forEach(item => {
+
+                const text =
+                    item.textContent.toLowerCase();
+
+                item.style.display =
+                    text.includes(value)
+                        ? "grid"
+                        : "none";
+
+            });
+
+        });
+
+
+        /* ABAS */
+
+        const tabs =
+            document.querySelectorAll(".tab");
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                tabs.forEach(item =>
+                    item.classList.remove("active")
+                );
+
+                tab.classList.add("active");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
