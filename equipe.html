@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta+Cold | Equipe</title>
+
+    <title>Conecta+Cold | Equipes</title>
 
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="equipe.css">
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
     <aside class="sidebar">
 
         <a href="home.html" class="logo">
+
             <div class="logo-icon">
                 <i class="fa-solid fa-cloud"></i>
                 <b>+</b>
             </div>
 
-            <span>Conecta<span>+Cold</span></span>
+            <span>
+                Conecta<span>+Cold</span>
+            </span>
+
         </a>
+
 
         <nav class="menu">
 
@@ -64,6 +74,9 @@
 
         </nav>
 
+
+        <!-- CARD INFERIOR -->
+
         <div class="upgrade">
 
             <div class="upgrade-icon">
@@ -76,37 +89,59 @@
                 Organize seus trabalhos escolares.
             </p>
 
-            <button>Saiba mais</button>
+            <button type="button">
+                Saiba mais
+            </button>
 
         </div>
 
     </aside>
 
 
-    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
     <main class="main">
 
-        <!-- TOPBAR -->
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
         <header class="topbar">
 
-            <button class="menu-button">
+            <button class="menu-button" id="menuButton">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
+
             <div class="search">
+
                 <i class="fa-solid fa-magnifying-glass"></i>
 
                 <input
                     type="text"
-                    placeholder="Buscar repositórios, trabalhos, usuários..."
-                >
+                    id="searchTeam"
+                    placeholder="Buscar equipes...">
+
             </div>
+
 
             <div class="top-actions">
 
-                <button class="icon-button">
+
+                <!-- MENSAGENS -->
+
+                <button class="icon-button"
+                    onclick="window.location.href='mensagens.html'">
+
                     <i class="fa-regular fa-envelope"></i>
+
                 </button>
+
+
+                <!-- PERFIL -->
 
                 <div class="profile-container">
 
@@ -116,32 +151,60 @@
                             JS
                         </div>
 
-                        <div>
-                            <strong>João Silva</strong>
-                            <small>Aluno</small>
+                        <div class="profile-info">
+
+                            <strong>
+                                João Silva
+                            </strong>
+
+                            <small>
+                                Aluno
+                            </small>
+
                         </div>
 
                         <i class="fa-solid fa-chevron-down"></i>
 
                     </div>
 
-                    <div class="profile-menu">
 
-                        <a href="perfil.html">
-                            <i class="fa-regular fa-user"></i>
-                            Ver perfil
-                        </a>
+                    <!-- MENU PERFIL -->
+
+                    <div class="profile-menu" id="profileMenu">
 
                         <a href="configuracoes.html">
-                            <i class="fa-solid fa-gear"></i>
-                            Configurações
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <span>
+                                Ver perfil
+                            </span>
+
                         </a>
+
+
+                        <a href="configuracoes.html">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span>
+                                Configurações
+                            </span>
+
+                        </a>
+
 
                         <div class="profile-divider"></div>
 
+
                         <a href="index.html" class="logout">
+
                             <i class="fa-solid fa-right-from-bracket"></i>
-                            Sair
+
+                            <span>
+                                Sair
+                            </span>
+
                         </a>
 
                     </div>
@@ -153,414 +216,1546 @@
         </header>
 
 
-        <!-- EQUIPE -->
-        <div class="content">
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
 
-            <section class="page-header">
+        <section class="content">
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="page-header">
 
                 <div>
-                    <h1>Equipe</h1>
+
+                    <h1>
+                        Minhas Equipes
+                    </h1>
 
                     <p>
-                        Gerencie os membros da sua equipe e colabore em projetos.
+                        Crie equipes e trabalhe junto com seus colegas.
                     </p>
+
                 </div>
 
-                <button class="invite-button">
-                    <i class="fa-solid fa-user-plus"></i>
-                    Convidar membro
+
+                <button
+                    class="create-team-button"
+                    id="openCreateModal">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Criar equipe
+
                 </button>
 
-            </section>
+            </div>
 
 
-            <!-- ESTATÍSTICAS -->
-            <section class="stats">
+            <!-- =================================================
+                 ÁREA DAS EQUIPES
+            ================================================== -->
 
-                <div class="stat-card">
+            <div
+                class="teams-grid"
+                id="teamsContainer">
 
-                    <div class="stat-icon blue">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
+            </div>
 
-                    <div>
-                        <strong>12</strong>
-                        <span>Membros</span>
-                        <small>Na equipe</small>
-                    </div>
-
-                </div>
-
-
-                <div class="stat-card">
-
-                    <div class="stat-icon green">
-                        <i class="fa-solid fa-folder-open"></i>
-                    </div>
-
-                    <div>
-                        <strong>8</strong>
-                        <span>Projetos</span>
-                        <small>Em andamento</small>
-                    </div>
-
-                </div>
-
-
-                <div class="stat-card">
-
-                    <div class="stat-icon purple">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-
-                    <div>
-                        <strong>24</strong>
-                        <span>Tarefas</span>
-                        <small>Concluídas</small>
-                    </div>
-
-                </div>
-
-
-                <div class="stat-card">
-
-                    <div class="stat-icon orange">
-                        <i class="fa-regular fa-clock"></i>
-                    </div>
-
-                    <div>
-                        <strong>5</strong>
-                        <span>Pendências</span>
-                        <small>Em revisão</small>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- MEMBROS -->
-            <section class="team-card">
-
-                <div class="team-header">
-
-                    <h2>Membros da equipe</h2>
-
-                    <div class="team-filters">
-
-                        <div class="member-search">
-
-                            <i class="fa-solid fa-magnifying-glass"></i>
-
-                            <input
-                                id="memberSearch"
-                                type="text"
-                                placeholder="Buscar membro..."
-                            >
-
-                        </div>
-
-                        <select id="roleFilter">
-                            <option value="todos">Todos os papéis</option>
-                            <option value="aluno">Aluno</option>
-                            <option value="professora">Professora</option>
-                        </select>
-
-                    </div>
-
-                </div>
-
-
-                <div class="members" id="members">
-
-                    <!-- JOÃO -->
-                    <article class="member">
-
-                        <div class="member-avatar blue-avatar">
-                            JS
-                        </div>
-
-                        <div class="member-info">
-
-                            <div class="member-name">
-                                <strong>João Silva</strong>
-                                <span class="role aluno">Aluno</span>
-                            </div>
-
-                            <p>joaosilva@email.com</p>
-
-                        </div>
-
-                        <div class="member-projects">
-                            <strong>4 projetos</strong>
-                            <span class="online">
-                                <i></i> Online
-                            </span>
-                        </div>
-
-                        <div class="member-actions">
-
-                            <a href="mensagens.html" title="Enviar mensagem">
-                                <i class="fa-regular fa-message"></i>
-                            </a>
-
-                            <button title="Mais opções">
-                                <i class="fa-solid fa-ellipsis"></i>
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- MARIA -->
-                    <article class="member">
-
-                        <div class="member-avatar pink-avatar">
-                            ME
-                        </div>
-
-                        <div class="member-info">
-
-                            <div class="member-name">
-                                <strong>Maria Eduarda</strong>
-                                <span class="role professora">Professora</span>
-                            </div>
-
-                            <p>maria.eduarda@escola.edu.br</p>
-
-                        </div>
-
-                        <div class="member-projects">
-                            <strong>6 projetos</strong>
-                            <span class="online">
-                                <i></i> Online
-                            </span>
-                        </div>
-
-                        <div class="member-actions">
-
-                            <a href="mensagens.html" title="Enviar mensagem">
-                                <i class="fa-regular fa-message"></i>
-                            </a>
-
-                            <button>
-                                <i class="fa-solid fa-ellipsis"></i>
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- LUCAS -->
-                    <article class="member">
-
-                        <div class="member-avatar gray-avatar">
-                            LF
-                        </div>
-
-                        <div class="member-info">
-
-                            <div class="member-name">
-                                <strong>Lucas Ferreira</strong>
-                                <span class="role aluno">Aluno</span>
-                            </div>
-
-                            <p>lucas.ferreira@email.com</p>
-
-                        </div>
-
-                        <div class="member-projects">
-                            <strong>3 projetos</strong>
-                            <span class="away">
-                                <i></i> Ausente
-                            </span>
-                        </div>
-
-                        <div class="member-actions">
-
-                            <a href="mensagens.html">
-                                <i class="fa-regular fa-message"></i>
-                            </a>
-
-                            <button>
-                                <i class="fa-solid fa-ellipsis"></i>
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- JULIANA -->
-                    <article class="member">
-
-                        <div class="member-avatar purple-avatar">
-                            JC
-                        </div>
-
-                        <div class="member-info">
-
-                            <div class="member-name">
-                                <strong>Juliana Costa</strong>
-                                <span class="role aluno">Aluno</span>
-                            </div>
-
-                            <p>juliana.costa@email.com</p>
-
-                        </div>
-
-                        <div class="member-projects">
-                            <strong>2 projetos</strong>
-                            <span class="online">
-                                <i></i> Online
-                            </span>
-                        </div>
-
-                        <div class="member-actions">
-
-                            <a href="mensagens.html">
-                                <i class="fa-regular fa-message"></i>
-                            </a>
-
-                            <button>
-                                <i class="fa-solid fa-ellipsis"></i>
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PEDRO -->
-                    <article class="member">
-
-                        <div class="member-avatar green-avatar">
-                            PH
-                        </div>
-
-                        <div class="member-info">
-
-                            <div class="member-name">
-                                <strong>Pedro Henrique</strong>
-                                <span class="role aluno">Aluno</span>
-                            </div>
-
-                            <p>pedro.henrique@email.com</p>
-
-                        </div>
-
-                        <div class="member-projects">
-                            <strong>2 projetos</strong>
-                            <span class="offline">
-                                <i></i> Offline
-                            </span>
-                        </div>
-
-                        <div class="member-actions">
-
-                            <a href="mensagens.html">
-                                <i class="fa-regular fa-message"></i>
-                            </a>
-
-                            <button>
-                                <i class="fa-solid fa-ellipsis"></i>
-                            </button>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-                <!-- PAGINAÇÃO -->
-                <div class="pagination">
-
-                    <button>
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-
-                    <button class="page active">1</button>
-                    <button class="page">2</button>
-                    <button class="page">3</button>
-
-                    <button>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-
-                </div>
-
-            </section>
-
-        </div>
+        </section>
 
     </main>
 
 
+    <!-- =====================================================
+         MODAL CRIAR EQUIPE
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="createTeamModal">
+
+        <div class="modal-box">
+
+
+            <div class="modal-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Criar nova equipe
+
+                </h2>
+
+
+                <button
+                    class="close-modal"
+                    id="closeCreateModal">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <form id="createTeamForm">
+
+
+                <div class="form-group">
+
+                    <label for="teamName">
+                        Nome da equipe
+                    </label>
+
+                    <input
+                        type="text"
+                        id="teamName"
+                        placeholder="Ex: Equipe TCC"
+                        maxlength="50"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="teamDescription">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="teamDescription"
+                        placeholder="Descreva o objetivo da equipe..."
+                        maxlength="200"
+                        required></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-button"
+                        id="cancelCreate">
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="confirm-button">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Criar equipe
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL CONVIDAR
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="inviteModal">
+
+        <div class="modal-box">
+
+
+            <div class="modal-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Convidar membro
+
+                </h2>
+
+
+                <button
+                    class="close-modal"
+                    id="closeInviteModal">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <form id="inviteForm">
+
+
+                <div class="form-group">
+
+                    <label for="inviteUser">
+                        Nome ou e-mail do colega
+                    </label>
+
+                    <input
+                        type="text"
+                        id="inviteUser"
+                        placeholder="Ex: colega@email.com"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="inviteMessage">
+                        Mensagem do convite
+                    </label>
+
+                    <textarea
+                        id="inviteMessage"
+                        placeholder="Escreva uma mensagem...">Olá! Você foi convidado para participar da nossa equipe no Conecta+Cold.</textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-button"
+                        id="cancelInvite">
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="confirm-button">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Enviar convite
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL VER EQUIPE
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="viewTeamModal">
+
+        <div class="modal-box team-details">
+
+
+            <div class="modal-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span id="viewTeamName">
+                        Equipe
+                    </span>
+
+                </h2>
+
+
+                <button
+                    class="close-modal"
+                    id="closeViewModal">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="team-detail-content">
+
+                <div class="detail-description">
+
+                    <span>
+                        Descrição
+                    </span>
+
+                    <p id="viewTeamDescription">
+                    </p>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+
+                    <div>
+
+                        <strong id="viewTeamMembers">
+                            0
+                        </strong>
+
+                        <small>
+                            Membros
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+
+                        <strong id="viewTeamInvites">
+                            0
+                        </strong>
+
+                        <small>
+                            Convites pendentes
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="invitations-list"
+                    id="invitationsList">
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="closeViewButton">
+
+                    Fechar
+
+                </button>
+
+                <button
+                    type="button"
+                    class="confirm-button"
+                    id="viewInviteButton">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Convidar membro
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="toast"
+        id="toast">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span id="toastMessage">
+            Operação realizada!
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
     <script>
 
-        /* MENU MOBILE */
-        const menuButton = document.querySelector(".menu-button");
-        const sidebar = document.querySelector(".sidebar");
+        /* =====================================================
+           ELEMENTOS
+        ====================================================== */
 
-        menuButton.addEventListener("click", () => {
-            sidebar.classList.toggle("open");
-        });
+        const sidebar =
+            document.querySelector(".sidebar");
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const profileButton =
+            document.getElementById("profileButton");
+
+        const profileContainer =
+            document.querySelector(".profile-container");
+
+        const profileMenu =
+            document.getElementById("profileMenu");
+
+        const teamsContainer =
+            document.getElementById("teamsContainer");
+
+        const searchTeam =
+            document.getElementById("searchTeam");
+
+        const createTeamModal =
+            document.getElementById("createTeamModal");
+
+        const inviteModal =
+            document.getElementById("inviteModal");
+
+        const viewTeamModal =
+            document.getElementById("viewTeamModal");
+
+        const createTeamForm =
+            document.getElementById("createTeamForm");
+
+        const inviteForm =
+            document.getElementById("inviteForm");
 
 
-        /* PERFIL */
-        const profileButton = document.querySelector("#profileButton");
-        const profileContainer = document.querySelector(".profile-container");
+        /* =====================================================
+           MEMÓRIA TEMPORÁRIA
+           
+           sessionStorage mantém os dados enquanto a sessão
+           da aba estiver disponível.
+        ====================================================== */
 
-        profileButton.addEventListener("click", (event) => {
-            event.stopPropagation();
-            profileContainer.classList.toggle("open");
-        });
-
-        document.addEventListener("click", (event) => {
-            if (!profileContainer.contains(event.target)) {
-                profileContainer.classList.remove("open");
-            }
-        });
+        let teams = JSON.parse(
+            sessionStorage.getItem("conectaColdTeams")
+        ) || [];
 
 
-        /* BUSCA DE MEMBROS */
-        const search = document.querySelector("#memberSearch");
-        const roleFilter = document.querySelector("#roleFilter");
-        const members = document.querySelectorAll(".member");
+        let selectedTeamId = null;
 
-        function filterMembers() {
 
-            const text = search.value.toLowerCase();
-            const role = roleFilter.value;
+        /* =====================================================
+           SALVAR EQUIPES
+        ====================================================== */
 
-            members.forEach(member => {
+        function saveTeams() {
 
-                const content = member.textContent.toLowerCase();
-                const roleElement = member.querySelector(".role");
+            sessionStorage.setItem(
+                "conectaColdTeams",
+                JSON.stringify(teams)
+            );
 
-                const roleText = roleElement
-                    ? roleElement.textContent.toLowerCase()
-                    : "";
-
-                const matchesText = content.includes(text);
-                const matchesRole =
-                    role === "todos" || roleText === role;
-
-                member.style.display =
-                    matchesText && matchesRole
-                    ? "grid"
-                    : "none";
-
-            });
         }
 
-        search.addEventListener("input", filterMembers);
-        roleFilter.addEventListener("change", filterMembers);
+
+        /* =====================================================
+           MENU MOBILE
+        ====================================================== */
+
+        if (menuButton) {
+
+            menuButton.addEventListener("click", function () {
+
+                sidebar.classList.toggle("open");
+
+            });
+
+        }
+
+
+        /* =====================================================
+           FECHAR SIDEBAR
+        ====================================================== */
+
+        document.querySelectorAll(".menu-item")
+            .forEach(item => {
+
+                item.addEventListener("click", function () {
+
+                    if (window.innerWidth <= 900) {
+
+                        sidebar.classList.remove("open");
+
+                    }
+
+                });
+
+            });
+
+
+        /* =====================================================
+           MENU PERFIL
+        ====================================================== */
+
+        if (profileButton) {
+
+            profileButton.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+                    profileContainer.classList.toggle("open");
+
+                }
+            );
+
+        }
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    profileContainer &&
+                    !profileContainer.contains(event.target)
+                ) {
+
+                    profileContainer.classList.remove("open");
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           ABRIR MODAL CRIAR
+        ====================================================== */
+
+        document
+            .getElementById("openCreateModal")
+            .addEventListener("click", function () {
+
+                createTeamModal.classList.add("active");
+
+                setTimeout(() => {
+
+                    document
+                        .getElementById("teamName")
+                        .focus();
+
+                }, 100);
+
+            });
+
+
+        /* =====================================================
+           FECHAR MODAL CRIAR
+        ====================================================== */
+
+        function closeCreateModal() {
+
+            createTeamModal.classList.remove("active");
+
+        }
+
+
+        document
+            .getElementById("closeCreateModal")
+            .addEventListener(
+                "click",
+                closeCreateModal
+            );
+
+
+        document
+            .getElementById("cancelCreate")
+            .addEventListener(
+                "click",
+                closeCreateModal
+            );
+
+
+        /* =====================================================
+           CRIAR EQUIPE
+        ====================================================== */
+
+        createTeamForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document
+                        .getElementById("teamName")
+                        .value
+                        .trim();
+
+
+                const description =
+                    document
+                        .getElementById("teamDescription")
+                        .value
+                        .trim();
+
+
+                if (!name || !description) {
+
+                    showToast(
+                        "Preencha todos os campos."
+                    );
+
+                    return;
+
+                }
+
+
+                /* =============================================
+                   VERIFICAR NOME DUPLICADO
+                ============================================= */
+
+                const alreadyExists =
+                    teams.some(team =>
+                        team.name.toLowerCase() ===
+                        name.toLowerCase()
+                    );
+
+
+                if (alreadyExists) {
+
+                    showToast(
+                        "Já existe uma equipe com esse nome."
+                    );
+
+                    return;
+
+                }
+
+
+                /* =============================================
+                   NOVA EQUIPE
+                ============================================= */
+
+                const newTeam = {
+
+                    id: Date.now(),
+
+                    name: name,
+
+                    description: description,
+
+                    createdAt:
+                        new Date().toISOString(),
+
+                    members: [
+
+                        {
+                            name: "João Silva",
+                            initials: "JS"
+                        }
+
+                    ],
+
+                    invitations: []
+
+                };
+
+
+                teams.push(newTeam);
+
+
+                saveTeams();
+
+                renderTeams();
+
+
+                createTeamForm.reset();
+
+                closeCreateModal();
+
+
+                showToast(
+                    "Equipe criada com sucesso!"
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           RENDERIZAR EQUIPES
+        ====================================================== */
+
+        function renderTeams() {
+
+            teamsContainer.innerHTML = "";
+
+
+            /* =============================================
+               NENHUMA EQUIPE
+            ============================================= */
+
+            if (teams.length === 0) {
+
+                teamsContainer.innerHTML = `
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <h2>
+                            Nenhuma equipe criada ainda
+                        </h2>
+
+                        <p>
+                            Crie sua primeira equipe e comece
+                            a colaborar com seus colegas.
+                        </p>
+
+                        <button
+                            class="empty-create-button"
+                            onclick="openCreateFromEmpty()">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Criar primeira equipe
+
+                        </button>
+
+                    </div>
+
+                `;
+
+                return;
+
+            }
+
+
+            /* =============================================
+               CARDS
+            ============================================= */
+
+            teams.forEach(team => {
+
+                const card =
+                    document.createElement("div");
+
+
+                card.className = "team-card";
+
+
+                const members =
+                    team.members
+                        .slice(0, 4)
+                        .map(member => `
+
+                            <div
+                                class="member"
+                                title="${escapeHTML(member.name)}">
+
+                                ${escapeHTML(member.initials)}
+
+                            </div>
+
+                        `)
+                        .join("");
+
+
+                const extraMembers =
+                    team.members.length > 4
+                        ? `<div class="member more">
+                            +${team.members.length - 4}
+                           </div>`
+                        : "";
+
+
+                card.innerHTML = `
+
+                    <div class="team-card-header">
+
+                        <div class="team-icon">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <button
+                            class="team-options"
+                            title="Opções"
+                            onclick="showTeamOptions(${team.id})">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <h3>
+                        ${escapeHTML(team.name)}
+                    </h3>
+
+
+                    <p class="team-description">
+
+                        ${escapeHTML(team.description)}
+
+                    </p>
+
+
+                    <div class="team-members">
+
+                        <div class="members">
+
+                            ${members}
+
+                            ${extraMembers}
+
+                        </div>
+
+
+                        <span class="member-count">
+
+                            ${team.members.length}
+                            ${team.members.length === 1
+                                ? "membro"
+                                : "membros"}
+
+                        </span>
+
+                    </div>
+
+
+                    ${
+                        team.invitations.length > 0
+                        ?
+
+                        `<div class="pending-invite">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            ${team.invitations.length}
+                            convite(s) pendente(s)
+
+                        </div>`
+
+                        :
+
+                        ""
+                    }
+
+
+                    <div class="team-actions">
+
+                        <button
+                            class="invite-button"
+                            onclick="openInvite(${team.id})">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                            Convidar
+
+                        </button>
+
+
+                        <button
+                            class="view-button"
+                            onclick="viewTeam(${team.id})">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver equipe
+
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                teamsContainer.appendChild(card);
+
+            });
+
+        }
+
+
+        /* =====================================================
+           ABRIR CRIAR PELO ESTADO VAZIO
+        ====================================================== */
+
+        function openCreateFromEmpty() {
+
+            createTeamModal.classList.add("active");
+
+            setTimeout(() => {
+
+                document
+                    .getElementById("teamName")
+                    .focus();
+
+            }, 100);
+
+        }
+
+
+        /* =====================================================
+           CONVIDAR
+        ====================================================== */
+
+        function openInvite(teamId) {
+
+            selectedTeamId = teamId;
+
+
+            const team =
+                teams.find(team =>
+                    team.id === teamId
+                );
+
+
+            if (!team) {
+
+                showToast(
+                    "Equipe não encontrada."
+                );
+
+                return;
+
+            }
+
+
+            inviteModal.classList.add("active");
+
+
+            setTimeout(() => {
+
+                document
+                    .getElementById("inviteUser")
+                    .focus();
+
+            }, 100);
+
+        }
+
+
+        /* =====================================================
+           FECHAR CONVITE
+        ====================================================== */
+
+        function closeInviteModal() {
+
+            inviteModal.classList.remove("active");
+
+            selectedTeamId = null;
+
+        }
+
+
+        document
+            .getElementById("closeInviteModal")
+            .addEventListener(
+                "click",
+                closeInviteModal
+            );
+
+
+        document
+            .getElementById("cancelInvite")
+            .addEventListener(
+                "click",
+                closeInviteModal
+            );
+
+
+        /* =====================================================
+           ENVIAR CONVITE
+        ====================================================== */
+
+        inviteForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const invitedUser =
+                    document
+                        .getElementById("inviteUser")
+                        .value
+                        .trim();
+
+
+                const message =
+                    document
+                        .getElementById("inviteMessage")
+                        .value
+                        .trim();
+
+
+                if (!invitedUser) {
+
+                    showToast(
+                        "Digite o nome ou e-mail do colega."
+                    );
+
+                    return;
+
+                }
+
+
+                const team =
+                    teams.find(team =>
+                        team.id === selectedTeamId
+                    );
+
+
+                if (!team) {
+
+                    showToast(
+                        "Equipe não encontrada."
+                    );
+
+                    return;
+
+                }
+
+
+                /* =============================================
+                   ADICIONAR CONVITE
+                ============================================= */
+
+                team.invitations.push({
+
+                    id: Date.now(),
+
+                    user: invitedUser,
+
+                    message:
+                        message ||
+                        "Você foi convidado para participar da equipe.",
+
+                    date:
+                        new Date().toLocaleString(
+                            "pt-BR"
+                        )
+
+                });
+
+
+                saveTeams();
+
+                renderTeams();
+
+
+                inviteForm.reset();
+
+                closeInviteModal();
+
+
+                showToast(
+                    `Convite enviado para ${invitedUser}!`
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           VER EQUIPE
+        ====================================================== */
+
+        function viewTeam(teamId) {
+
+            const team =
+                teams.find(team =>
+                    team.id === teamId
+                );
+
+
+            if (!team) {
+
+                showToast(
+                    "Equipe não encontrada."
+                );
+
+                return;
+
+            }
+
+
+            selectedTeamId = teamId;
+
+
+            document
+                .getElementById("viewTeamName")
+                .textContent = team.name;
+
+
+            document
+                .getElementById("viewTeamDescription")
+                .textContent = team.description;
+
+
+            document
+                .getElementById("viewTeamMembers")
+                .textContent =
+                    team.members.length;
+
+
+            document
+                .getElementById("viewTeamInvites")
+                .textContent =
+                    team.invitations.length;
+
+
+            const invitationsList =
+                document.getElementById(
+                    "invitationsList"
+                );
+
+
+            if (team.invitations.length === 0) {
+
+                invitationsList.innerHTML = `
+
+                    <div class="no-invitations">
+
+                        <i class="fa-regular fa-circle-check"></i>
+
+                        <span>
+                            Nenhum convite pendente.
+                        </span>
+
+                    </div>
+
+                `;
+
+            } else {
+
+                invitationsList.innerHTML = `
+
+                    <h4>
+                        Convites pendentes
+                    </h4>
+
+                    ${team.invitations.map(invite => `
+
+                        <div class="invitation-item">
+
+                            <div class="invitation-icon">
+
+                                <i class="fa-solid fa-user"></i>
+
+                            </div>
+
+                            <div class="invitation-info">
+
+                                <strong>
+                                    ${escapeHTML(invite.user)}
+                                </strong>
+
+                                <p>
+                                    ${escapeHTML(invite.message)}
+                                </p>
+
+                                <small>
+                                    ${escapeHTML(invite.date)}
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    `).join("")}
+
+                `;
+
+            }
+
+
+            viewTeamModal.classList.add("active");
+
+        }
+
+
+        /* =====================================================
+           FECHAR MODAL EQUIPE
+        ====================================================== */
+
+        function closeViewModal() {
+
+            viewTeamModal.classList.remove("active");
+
+            selectedTeamId = null;
+
+        }
+
+
+        document
+            .getElementById("closeViewModal")
+            .addEventListener(
+                "click",
+                closeViewModal
+            );
+
+
+        document
+            .getElementById("closeViewButton")
+            .addEventListener(
+                "click",
+                closeViewModal
+            );
+
+
+        /* =====================================================
+           BOTÃO CONVIDAR DENTRO DE VER EQUIPE
+        ====================================================== */
+
+        document
+            .getElementById("viewInviteButton")
+            .addEventListener(
+                "click",
+                function () {
+
+                    const teamId =
+                        selectedTeamId;
+
+                    closeViewModal();
+
+                    if (teamId) {
+
+                        setTimeout(() => {
+
+                            openInvite(teamId);
+
+                        }, 150);
+
+                    }
+
+                }
+            );
+
+
+        /* =====================================================
+           OPÇÕES DA EQUIPE
+        ====================================================== */
+
+        function showTeamOptions(teamId) {
+
+            const team =
+                teams.find(team =>
+                    team.id === teamId
+                );
+
+
+            if (!team) return;
+
+
+            const action =
+                confirm(
+                    `Equipe: ${team.name}\n\n` +
+                    `Clique em "OK" para excluir esta equipe.\n` +
+                    `Clique em "Cancelar" para manter.`
+                );
+
+
+            if (action) {
+
+                deleteTeam(teamId);
+
+            }
+
+        }
+
+
+        /* =====================================================
+           EXCLUIR EQUIPE
+        ====================================================== */
+
+        function deleteTeam(teamId) {
+
+            const index =
+                teams.findIndex(team =>
+                    team.id === teamId
+                );
+
+
+            if (index === -1) return;
+
+
+            const teamName =
+                teams[index].name;
+
+
+            teams.splice(index, 1);
+
+
+            saveTeams();
+
+            renderTeams();
+
+
+            showToast(
+                `Equipe "${teamName}" excluída.`
+            );
+
+        }
+
+
+        /* =====================================================
+           PESQUISA
+        ====================================================== */
+
+        searchTeam.addEventListener(
+            "input",
+            function () {
+
+                const search =
+                    this.value
+                        .toLowerCase()
+                        .trim();
+
+
+                const cards =
+                    document.querySelectorAll(
+                        ".team-card"
+                    );
+
+
+                cards.forEach(card => {
+
+                    const name =
+                        card
+                            .querySelector("h3")
+                            .textContent
+                            .toLowerCase();
+
+
+                    const description =
+                        card
+                            .querySelector(
+                                ".team-description"
+                            )
+                            .textContent
+                            .toLowerCase();
+
+
+                    if (
+                        name.includes(search) ||
+                        description.includes(search)
+                    ) {
+
+                        card.style.display = "";
+
+                    } else {
+
+                        card.style.display = "none";
+
+                    }
+
+                });
+
+            }
+        );
+
+
+        /* =====================================================
+           TOAST
+        ====================================================== */
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById("toast");
+
+            const toastMessage =
+                document.getElementById(
+                    "toastMessage"
+                );
+
+
+            toastMessage.textContent =
+                message;
+
+
+            toast.classList.add("show");
+
+
+            clearTimeout(
+                window.toastTimeout
+            );
+
+
+            window.toastTimeout =
+                setTimeout(() => {
+
+                    toast.classList.remove(
+                        "show"
+                    );
+
+                }, 3000);
+
+        }
+
+
+        /* =====================================================
+           FECHAR MODAIS CLICANDO FORA
+        ====================================================== */
+
+        window.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target ===
+                    createTeamModal
+                ) {
+
+                    closeCreateModal();
+
+                }
+
+
+                if (
+                    event.target ===
+                    inviteModal
+                ) {
+
+                    closeInviteModal();
+
+                }
+
+
+                if (
+                    event.target ===
+                    viewTeamModal
+                ) {
+
+                    closeViewModal();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           ESC
+        ====================================================== */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key !== "Escape") {
+                    return;
+                }
+
+
+                if (
+                    createTeamModal.classList
+                        .contains("active")
+                ) {
+
+                    closeCreateModal();
+
+                }
+
+
+                if (
+                    inviteModal.classList
+                        .contains("active")
+                ) {
+
+                    closeInviteModal();
+
+                }
+
+
+                if (
+                    viewTeamModal.classList
+                        .contains("active")
+                ) {
+
+                    closeViewModal();
+
+                }
+
+
+                if (
+                    profileContainer &&
+                    profileContainer.classList
+                        .contains("open")
+                ) {
+
+                    profileContainer.classList
+                        .remove("open");
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           PROTEÇÃO CONTRA HTML
+        ====================================================== */
+
+        function escapeHTML(text) {
+
+            const div =
+                document.createElement("div");
+
+            div.textContent =
+                text;
+
+            return div.innerHTML;
+
+        }
+
+
+        /* =====================================================
+           INICIALIZAR
+        ====================================================== */
+
+        renderTeams();
 
     </script>
 
 </body>
+
 </html>

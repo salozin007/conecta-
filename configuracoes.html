@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Conecta+Cold | Configurações</title>
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="configuracoes.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR PRINCIPAL
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <a href="home.html"
+           class="logo">
+
+            <div class="logo-icon">
+
+                <i class="fa-solid fa-cloud"></i>
+
+                <b>+</b>
+
+            </div>
+
+            <span>
+                Conecta<span>+Cold</span>
+            </span>
+
+        </a>
+
+
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+
+            <a href="home.html"
+               class="menu-item">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Início</span>
+
+            </a>
+
+
+
+            <a href="repositorios.html"
+               class="menu-item">
+
+                <i class="fa-solid fa-box-archive"></i>
+
+                <span>Repositórios</span>
+
+            </a>
+
+
+
+            <a href="compartilhados.html"
+               class="menu-item">
+
+                <i class="fa-solid fa-share-nodes"></i>
+
+                <span>Compartilhados</span>
+
+            </a>
+
+
+
+            <a href="favoritos.html"
+               class="menu-item">
+
+                <i class="fa-regular fa-star"></i>
+
+                <span>Favoritos</span>
+
+            </a>
+
+
+
+            <a href="mensagens.html"
+               class="menu-item">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <span>Mensagens</span>
+
+            </a>
+
+
+
+            <a href="equipe.html"
+               class="menu-item">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Equipe</span>
+
+            </a>
+
+
+
+            <!-- CONFIGURAÇÕES ATIVA -->
+
+            <a href="configuracoes.html"
+               class="menu-item active">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Configurações</span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- CARD INFERIOR -->
+
+        <div class="upgrade">
+
+            <div class="upgrade-icon">
+
+                <i class="fa-solid fa-rocket"></i>
+
+            </div>
+
+
+            <strong>
+                Espaço acadêmico
+            </strong>
+
+
+            <p>
+                Organize seus trabalhos escolares.
+            </p>
+
+
+            <button>
+                Saiba mais
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- =====================================================
+             TOPBAR
+        ====================================================== -->
+
+        <header class="topbar">
+
+
+            <!-- MENU MOBILE -->
+
+            <button class="menu-button"
+                    id="menuButton">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- PESQUISA -->
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Buscar repositórios, trabalhos, usuários...">
+
+            </div>
+
+
+
+            <!-- AÇÕES -->
+
+            <div class="top-actions">
+
+
+                <!-- MENSAGENS -->
+
+                <button class="icon-button">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                </button>
+
+
+
+                <!-- NOTIFICAÇÕES -->
+
+                <button class="icon-button notification-button">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+
+
+                <!-- PERFIL -->
+
+                <div class="profile-container">
+
+
+                    <div class="profile"
+                         id="profileButton">
+
+
+                        <div class="avatar">
+
+                            JS
+
+                        </div>
+
+
+                        <div class="profile-info">
+
+                            <strong>
+                                João Silva
+                            </strong>
+
+                            <small>
+                                Aluno
+                            </small>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+
+                    </div>
+
+
+
+                    <!-- MENU PERFIL -->
+
+                    <div class="profile-menu"
+                         id="profileMenu">
+
+
+                        <a href="configuracoes.html">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <span>
+                                Ver perfil
+                            </span>
+
+                        </a>
+
+
+
+                        <a href="configuracoes.html">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span>
+                                Configurações
+                            </span>
+
+                        </a>
+
+
+
+                        <div class="profile-divider"></div>
+
+
+
+                        <a href="index.html"
+                           class="logout">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            <span>
+                                Sair
+                            </span>
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =====================================================
+             CONFIGURAÇÕES
+        ====================================================== -->
+
+        <div class="content">
+
+
+            <!-- TÍTULO -->
+
+            <div class="page-title">
+
+                <h1>
+                    Configurações
+                </h1>
+
+                <p>
+                    Gerencie suas preferências e personalize sua experiência.
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 LAYOUT DAS CONFIGURAÇÕES
+            ====================================================== -->
+
+            <div class="settings-layout">
+
+
+                <!-- =====================================================
+                     MENU INTERNO
+                ====================================================== -->
+
+                <aside class="settings-sidebar">
+
+
+                    <!-- PERFIL -->
+
+                    <button class="settings-menu-item active"
+                            data-section="perfil">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <span>
+                            Perfil
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- CONTA -->
+
+                    <button class="settings-menu-item"
+                            data-section="conta">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <span>
+                            Conta
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- NOTIFICAÇÕES -->
+
+                    <button class="settings-menu-item"
+                            data-section="notificacoes">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span>
+                            Notificações
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- PRIVACIDADE -->
+
+                    <button class="settings-menu-item"
+                            data-section="privacidade">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>
+                            Privacidade
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- SEGURANÇA -->
+
+                    <button class="settings-menu-item"
+                            data-section="seguranca">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Segurança
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- APARÊNCIA -->
+
+                    <button class="settings-menu-item"
+                            data-section="aparencia">
+
+                        <i class="fa-solid fa-palette"></i>
+
+                        <span>
+                            Aparência
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- ARMAZENAMENTO -->
+
+                    <button class="settings-menu-item"
+                            data-section="armazenamento">
+
+                        <i class="fa-solid fa-database"></i>
+
+                        <span>
+                            Armazenamento
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- INTEGRAÇÕES -->
+
+                    <button class="settings-menu-item"
+                            data-section="integracoes">
+
+                        <i class="fa-solid fa-puzzle-piece"></i>
+
+                        <span>
+                            Integrações
+                        </span>
+
+                    </button>
+
+
+                </aside>
+
+
+
+                <!-- =====================================================
+                     CONTEÚDO DAS CONFIGURAÇÕES
+                ====================================================== -->
+
+                <div class="settings-content">
+
+
+
+                    <!-- =====================================================
+                         PERFIL
+                    ====================================================== -->
+
+                    <section class="settings-section active"
+                             id="perfil">
+
+
+                        <div class="section-header">
+
+                            <h2>
+                                Informações do Perfil
+                            </h2>
+
+                            <p>
+                                Atualize suas informações pessoais.
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="profile-settings-card">
+
+
+                            <!-- FOTO -->
+
+                            <div class="profile-photo-area">
+
+
+                                <div class="large-avatar">
+
+                                    JS
+
+                                    <button class="change-photo">
+
+                                        <i class="fa-solid fa-camera"></i>
+
+                                    </button>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        João Silva
+                                    </strong>
+
+                                    <p>
+                                        joaosilva@email.com
+                                    </p>
+
+                                    <button class="text-button">
+                                        Alterar foto
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- FORMULÁRIO -->
+
+                            <div class="form-grid">
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        Nome completo
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        value="João Silva">
+
+                                </div>
+
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        Nome de usuário
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        value="joaosilva">
+
+                                </div>
+
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        E-mail
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        value="joaosilva@email.com">
+
+                                </div>
+
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        Instituição de ensino
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        value="Colégio Estadual">
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="form-actions">
+
+                                <button class="save-button">
+
+                                    <i class="fa-solid fa-floppy-disk"></i>
+
+                                    Salvar alterações
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                    </section>
+
+
+
+                    <!-- =====================================================
+                         CONTA
+                    ====================================================== -->
+
+                    <section class="settings-section"
+                             id="conta">
+
+
+                        <div class="section-header">
+
+                            <h2>
+                                Configurações da Conta
+                            </h2>
+
+                            <p>
+                                Gerencie as informações da sua conta.
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="card-title">
+
+                                <div class="card-icon">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Informações da conta
+                                    </h3>
+
+                                    <p>
+                                        Dados principais da sua conta.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="form-grid">
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        Nome de usuário
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        value="joaosilva">
+
+                                </div>
+
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        E-mail da conta
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        value="joaosilva@email.com">
+
+                                </div>
+
+
+                            </div>
+
+
+                            <button class="save-button">
+
+                                Salvar alterações
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <!-- ALTERAR SENHA -->
+
+                        <div class="settings-card">
+
+
+                            <div class="card-title">
+
+                                <div class="card-icon">
+
+                                    <i class="fa-solid fa-key"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Alterar senha
+                                    </h3>
+
+                                    <p>
+                                        Mantenha sua conta protegida.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="form-grid">
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        Senha atual
+                                    </label>
+
+                                    <input
+                                        type="password">
+
+                                </div>
+
+
+
+                                <div class="input-group">
+
+                                    <label>
+                                        Nova senha
+                                    </label>
+
+                                    <input
+                                        type="password">
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <button class="save-button">
+
+                                Alterar senha
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <!-- EXCLUIR CONTA -->
+
+                        <div class="danger-card">
+
+
+                            <div>
+
+                                <h3>
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                    Excluir conta
+
+                                </h3>
+
+
+                                <p>
+                                    Esta ação não poderá ser desfeita.
+                                    Todos os seus dados serão removidos.
+                                </p>
+
+                            </div>
+
+
+                            <button class="delete-button">
+
+                                Excluir minha conta
+
+                            </button>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =====================================================
+                         NOTIFICAÇÕES
+                    ====================================================== -->
+
+                    <section class="settings-section"
+                             id="notificacoes">
+
+
+                        <div class="section-header">
+
+                            <h2>
+                                Notificações
+                            </h2>
+
+                            <p>
+                                Escolha quais notificações deseja receber.
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="toggle-item">
+
+                                <div>
+
+                                    <strong>
+                                        Novas mensagens
+                                    </strong>
+
+                                    <p>
+                                        Receba avisos sobre novas mensagens.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input type="checkbox"
+                                           checked>
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="toggle-item">
+
+                                <div>
+
+                                    <strong>
+                                        Atividades da equipe
+                                    </strong>
+
+                                    <p>
+                                        Atualizações dos membros da equipe.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input type="checkbox"
+                                           checked>
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="toggle-item">
+
+                                <div>
+
+                                    <strong>
+                                        Comentários em trabalhos
+                                    </strong>
+
+                                    <p>
+                                        Seja avisado quando alguém comentar.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input type="checkbox">
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="toggle-item">
+
+                                <div>
+
+                                    <strong>
+                                        Compartilhamentos
+                                    </strong>
+
+                                    <p>
+                                        Receba avisos sobre arquivos compartilhados.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input type="checkbox"
+                                           checked>
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="toggle-item">
+
+                                <div>
+
+                                    <strong>
+                                        Lembretes e prazos
+                                    </strong>
+
+                                    <p>
+                                        Não perca nenhuma entrega importante.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input type="checkbox"
+                                           checked>
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =====================================================
+                         PRIVACIDADE
+                    ====================================================== -->
+
+                    <section class="settings-section"
+                             id="privacidade">
+
+
+                        <div class="section-header">
+
+                            <h2>
+                                Privacidade
+                            </h2>
+
+                            <p>
+                                Controle quem pode visualizar suas informações.
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    Visibilidade padrão dos repositórios
+                                </label>
+
+
+                                <select>
+
+                                    <option>
+                                        Privado
+                                    </option>
+
+                                    <option>
+                                        Compartilhado
+                                    </option>
+
+                                    <option>
+                                        Público
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="toggle-item">
+
+                                <div>
+
+                                    <strong>
+                                        Mostrar perfil para outros usuários
+                                    </strong>
+
+                                    <p>
+                                        Permitir que outros alunos encontrem seu perfil.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input type="checkbox"
+                                           checked>
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =====================================================
+                         SEGURANÇA
+                    ====================================================== -->
+
+                    <section class="settings-section"
+                             id="seguranca">
+
+
+                        <div class="section-header">
+
+                            <h2>
+                                Segurança
+                            </h2>
+
+                            <p>
+                                Proteja sua conta e seus dados.
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="toggle-item">
+
+                                <div>
+
+                                    <strong>
+                                        Autenticação em duas etapas
+                                    </strong>
+
+                                    <p>
+                                        Adicione uma camada extra de segurança.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="switch">
+
+                                    <input type="checkbox">
+
+                                    <span class="slider"></span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="security-button-area">
+
+                                <button class="secondary-button">
+
+                                    <i class="fa-solid fa-mobile-screen"></i>
+
+                                    Gerenciar dispositivos
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =====================================================
+                         APARÊNCIA
+                    ====================================================== -->
+
+                    <section class="settings-section"
+                             id="aparencia">
+
+
+                        <div class="section-header">
+
+                            <h2>
+                                Aparência
+                            </h2>
+
+                            <p>
+                                Personalize a aparência da plataforma.
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <h3 class="appearance-title">
+
+                                Tema
+
+                            </h3>
+
+
+
+                            <div class="theme-options">
+
+
+                                <button class="theme-option active-theme"
+                                        data-theme="light">
+
+                                    <i class="fa-solid fa-sun"></i>
+
+                                    <span>
+                                        Claro
+                                    </span>
+
+                                </button>
+
+
+
+                                <button class="theme-option"
+                                        data-theme="dark">
+
+                                    <i class="fa-solid fa-moon"></i>
+
+                                    <span>
+                                        Escuro
+                                    </span>
+
+                                </button>
+
+
+
+                                <button class="theme-option"
+                                        data-theme="system">
+
+                                    <i class="fa-solid fa-desktop"></i>
+
+                                    <span>
+                                        Sistema
+                                    </span>
+
+                                </button>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =====================================================
+                         ARMAZENAMENTO
+                    ====================================================== -->
+
+                    <section class="settings-section"
+                             id="armazenamento">
+
+
+                        <div class="section-header">
+
+                            <h2>
+                                Armazenamento
+                            </h2>
+
+                            <p>
+                                Acompanhe o espaço utilizado pelos seus arquivos.
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="settings-card">
+
+
+                            <div class="storage-info">
+
+
+                                <div class="storage-icon">
+
+                                    <i class="fa-solid fa-cloud"></i>
+
+                                </div>
+
+
+                                <div class="storage-text">
+
+                                    <strong>
+                                        2,4 GB de 10 GB utilizados
+                                    </strong>
+
+                                    <p>
+                                        Espaço disponível para seus trabalhos e projetos.
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="progress-bar">
+
+                                <div class="progress"></div>
+
+                            </div>
+
+
+                            <p class="storage-percentage">
+
+                                24% utilizado
+
+                            </p>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =====================================================
+                         INTEGRAÇÕES
+                    ====================================================== -->
+
+                    <section class="settings-section"
+                             id="integracoes">
+
+
+                        <div class="section-header">
+
+                            <h2>
+                                Integrações
+                            </h2>
+
+                            <p>
+                                Conecte outras ferramentas à sua conta.
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="settings-card integration-card">
+
+
+                            <div class="integration">
+
+                                <div class="integration-icon">
+
+                                    <i class="fa-brands fa-google"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        Google Drive
+                                    </strong>
+
+                                    <p>
+                                        Conecte seus arquivos do Google Drive.
+                                    </p>
+
+                                </div>
+
+
+                                <button class="secondary-button">
+
+                                    Conectar
+
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="integration">
+
+                                <div class="integration-icon github">
+
+                                    <i class="fa-brands fa-github"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        GitHub
+                                    </strong>
+
+                                    <p>
+                                        Conecte seus repositórios do GitHub.
+                                    </p>
+
+                                </div>
+
+
+                                <button class="secondary-button">
+
+                                    Conectar
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            © 2026 Conecta+Cold.
+            Todos os direitos reservados.
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="configuracoes.js"></script>
+
+
+</body>
+
+</html>
