@@ -1,3 +1,4 @@
+
 /* =====================================================
    RESET
 ===================================================== */
@@ -48,6 +49,9 @@ button {
     flex-direction: column;
 
     z-index: 1000;
+
+    /* SEM SOMBRA */
+    box-shadow: none;
 }
 
 
@@ -199,6 +203,8 @@ button {
     padding: 18px;
 
     border: 1px solid #dbeafe;
+
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
 }
 
 .upgrade-icon {
@@ -294,6 +300,9 @@ button {
     padding: 0 30px;
 
     gap: 20px;
+
+    /* SEM SOMBRA */
+    box-shadow: none;
 }
 
 .menu-button {
@@ -330,6 +339,8 @@ button {
     padding: 0 14px;
 
     gap: 10px;
+
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
 }
 
 .search i {
@@ -465,6 +476,7 @@ button {
     position: absolute;
 
     right: 0;
+
     top: 52px;
 
     width: 200px;
@@ -583,6 +595,11 @@ button {
     overflow: hidden;
 
     position: relative;
+
+    /* SOMBRA MAIS DESTACADA */
+    box-shadow:
+        0 8px 22px rgba(37, 99, 235, 0.18),
+        0 2px 6px rgba(15, 23, 42, 0.06);
 }
 
 .welcome-text {
@@ -634,6 +651,8 @@ button {
     align-items: center;
 
     gap: 10px;
+
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08);
 }
 
 .stat-icon {
@@ -733,7 +752,18 @@ button {
 
     padding: 22px;
 
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    /* SOMBRA DA HOME */
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.06),
+        0 1px 3px rgba(15, 23, 42, 0.04);
+
+    transition: 0.25s ease;
+}
+
+.panel:hover {
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.09),
+        0 2px 5px rgba(15, 23, 42, 0.05);
 }
 
 .panel-header {
@@ -929,6 +959,8 @@ button {
     border-radius: 10px;
 
     background: #f8fafc;
+
+    box-shadow: 0 2px 7px rgba(15, 23, 42, 0.04);
 }
 
 .date {
@@ -1181,8 +1213,8 @@ footer {
     .welcome-illustration {
         display: none;
     }
-
 }
+
 
 
 /* =====================================================
@@ -1218,7 +1250,6 @@ footer {
     .content {
         padding: 20px;
     }
-
 }
 
 
@@ -1303,7 +1334,6 @@ footer {
     .content {
         padding: 15px;
     }
-
 }
 
 
@@ -1352,5 +1382,4 @@ footer {
     .repo-info a {
         font-size: 11px;
     }
-
 }

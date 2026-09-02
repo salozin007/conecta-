@@ -1,3 +1,4 @@
+
 /* =====================================================
    RESET
 ===================================================== */
@@ -29,9 +30,8 @@ a {
 }
 
 
-
 /* =====================================================
-   SIDEBAR (igual à home)
+   SIDEBAR
 ===================================================== */
 
 .sidebar {
@@ -52,7 +52,15 @@ a {
     flex-direction: column;
 
     z-index: 1000;
+
+    /* SEM SOMBRA */
+    box-shadow: none;
 }
+
+
+/* =====================================================
+   LOGO
+===================================================== */
 
 .logo {
     display: flex;
@@ -100,6 +108,7 @@ a {
     height: 17px;
 
     background: white;
+
     color: #2563eb;
 
     border-radius: 50%;
@@ -110,6 +119,11 @@ a {
     align-items: center;
     justify-content: center;
 }
+
+
+/* =====================================================
+   MENU
+===================================================== */
 
 .menu {
     display: flex;
@@ -149,6 +163,7 @@ a {
 
 .menu-item:hover {
     background: #eff6ff;
+
     color: #2563eb;
 }
 
@@ -168,6 +183,11 @@ a {
     color: white;
 }
 
+
+/* =====================================================
+   UPGRADE
+===================================================== */
+
 .upgrade {
     margin-top: auto;
 
@@ -178,6 +198,8 @@ a {
     padding: 18px;
 
     border: 1px solid #dbeafe;
+
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.06);
 }
 
 .upgrade-icon {
@@ -242,7 +264,6 @@ a {
 }
 
 
-
 /* =====================================================
    MAIN
 ===================================================== */
@@ -257,9 +278,8 @@ a {
 }
 
 
-
 /* =====================================================
-   TOPBAR (igual à home)
+   TOPBAR
 ===================================================== */
 
 .topbar {
@@ -275,18 +295,27 @@ a {
     padding: 0 30px;
 
     gap: 20px;
+
+    /* SEM SOMBRA */
+    box-shadow: none;
 }
 
 .menu-button {
     display: none;
 
     background: transparent;
+
     border: 0;
 
     font-size: 20px;
 
     color: #475569;
 }
+
+
+/* =====================================================
+   PESQUISA
+===================================================== */
 
 .search {
     flex: 1;
@@ -329,11 +358,20 @@ a {
 
 .shortcut {
     border: 1px solid #dce3ed;
+
     padding: 5px 8px;
+
     border-radius: 6px;
+
     font-size: 12px;
+
     color: #697589;
 }
+
+
+/* =====================================================
+   TOP ACTIONS
+===================================================== */
 
 .top-actions {
     margin-left: auto;
@@ -368,9 +406,8 @@ a {
 }
 
 
-
 /* =====================================================
-   PERFIL (igual à home)
+   PERFIL
 ===================================================== */
 
 .profile-container {
@@ -417,17 +454,21 @@ a {
 
 .profile-name {
     display: flex;
+
     flex-direction: column;
 }
 
 .profile-name strong {
     font-size: 13px;
+
     color: #1e293b;
 }
 
 .profile-name small {
     font-size: 11px;
+
     color: #64748b;
+
     margin-top: 2px;
 }
 
@@ -439,10 +480,16 @@ a {
     margin-left: 5px;
 }
 
+
+/* =====================================================
+   PROFILE MENU
+===================================================== */
+
 .profile-menu {
     position: absolute;
 
     right: 0;
+
     top: 52px;
 
     width: 200px;
@@ -469,19 +516,23 @@ a {
 }
 
 @keyframes profileMenu {
+
     from {
         opacity: 0;
+
         transform: translateY(-5px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 }
 
 .profile-menu a {
     display: flex;
+
     align-items: center;
 
     gap: 10px;
@@ -524,53 +575,80 @@ a {
 }
 
 
-
 /* =====================================================
    CONTENT
 ===================================================== */
 
 .content {
     padding: 30px 40px 25px;
+
     max-width: 1500px;
+
     margin: auto;
 }
 
 .page-header {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     margin-bottom: 30px;
 }
 
 .page-header h1 {
     font-size: 30px;
+
     margin-bottom: 8px;
 }
 
 .page-header p {
     color: #64748b;
+
     font-size: 15px;
 }
 
+
+/* =====================================================
+   BOTÃO NOVO REPOSITÓRIO
+===================================================== */
+
 .new-repository {
     height: 48px;
+
     padding: 0 20px;
+
     border: 0;
+
     border-radius: 8px;
+
     background: #2563eb;
+
     color: white;
+
     font-weight: bold;
+
     font-size: 14px;
+
     display: flex;
+
     align-items: center;
+
     gap: 9px;
-    box-shadow: 0 5px 14px rgba(37, 99, 235, .18);
+
+    box-shadow: 0 5px 14px rgba(37, 99, 235, 0.14);
+
+    transition: 0.2s ease;
 }
 
 .new-repository:hover {
     background: #1d4ed8;
-}
 
+    transform: translateY(-1px);
+
+    box-shadow: 0 7px 18px rgba(37, 99, 235, 0.20);
+}
 
 
 /* =====================================================
@@ -579,63 +657,97 @@ a {
 
 .stats-grid {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 25px;
+
     margin-bottom: 28px;
 }
 
 .stat-card {
     background: white;
+
     border: 1px solid #e5e7eb;
+
     border-radius: 11px;
+
     padding: 22px;
+
     display: flex;
+
     align-items: center;
+
     gap: 17px;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+
+    /* SOMBRA AZUL SUAVE */
+    box-shadow:
+        0 4px 14px rgba(37, 99, 235, 0.08),
+        0 1px 4px rgba(59, 130, 246, 0.04);
+
+    transition: 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.11),
+        0 2px 5px rgba(59, 130, 246, 0.05);
 }
 
 .stat-icon {
     width: 56px;
     height: 56px;
+
     border-radius: 13px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     font-size: 21px;
 }
 
 .stat-icon.blue {
     background: #eff6ff;
+
     color: #2563eb;
 }
 
 .stat-icon.green {
     background: #eaf9f0;
+
     color: #19a15a;
 }
 
 .stat-icon.purple {
     background: #f3edff;
+
     color: #8755df;
 }
 
 .stat-icon.yellow {
     background: #fff7e5;
+
     color: #e99b00;
 }
 
 .stat-card strong {
     display: block;
+
     font-size: 25px;
+
     margin-bottom: 5px;
 }
 
 .stat-card span {
     color: #64748b;
+
     font-size: 13px;
 }
-
 
 
 /* =====================================================
@@ -644,18 +756,43 @@ a {
 
 .repository-panel {
     background: white;
+
     border: 1px solid #e5e7eb;
+
     border-radius: 11px;
+
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+
+    /* SOMBRA AZUL SUAVE */
+    box-shadow:
+        0 5px 16px rgba(37, 99, 235, 0.08),
+        0 1px 4px rgba(59, 130, 246, 0.04);
+
+    transition: 0.25s ease;
 }
+
+.repository-panel:hover {
+    box-shadow:
+        0 8px 22px rgba(37, 99, 235, 0.11),
+        0 2px 6px rgba(59, 130, 246, 0.05);
+}
+
+
+/* =====================================================
+   FERRAMENTAS
+===================================================== */
 
 .repository-tools {
     min-height: 78px;
+
     padding: 17px 19px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     border-bottom: 1px solid #e6eaf0;
 }
 
@@ -665,10 +802,15 @@ a {
 
 .tab {
     height: 43px;
+
     padding: 0 21px;
+
     border: 1px solid #dfe5ed;
+
     background: white;
+
     color: #566378;
+
     font-size: 14px;
 }
 
@@ -686,33 +828,45 @@ a {
 
 .tab.active {
     color: #2563eb;
+
     background: #eff6ff;
+
     border-color: #bfdbfe;
 }
 
 .filters {
     display: flex;
+
     gap: 12px;
 }
 
 .filter {
     height: 43px;
+
     padding: 0 14px;
+
     background: white;
+
     border: 1px solid #dce3ec;
+
     border-radius: 8px;
+
     display: flex;
+
     align-items: center;
+
     gap: 9px;
+
     color: #4f5c70;
+
     font-size: 13px;
 }
 
 .filter i:last-child {
     font-size: 10px;
+
     margin-left: 8px;
 }
-
 
 
 /* =====================================================
@@ -722,76 +876,108 @@ a {
 .repository-header,
 .repository {
     display: grid;
+
     grid-template-columns: 2.5fr 1.2fr .9fr .9fr .55fr 30px;
+
     align-items: center;
+
     column-gap: 18px;
 }
 
 .repository-header {
     min-height: 48px;
+
     padding: 0 20px;
+
     background: #fafbfd;
+
     border-bottom: 1px solid #e7ebf1;
+
     color: #596579;
+
     font-size: 13px;
 }
 
 .repository {
     min-height: 91px;
+
     padding: 13px 20px;
+
     border-bottom: 1px solid #e8ecf1;
+
+    transition: 0.2s ease;
 }
 
 .repository:hover {
-    background: #f8fafc;
+    background: #f8fbff;
+
+    box-shadow:
+        inset 3px 0 0 #bfdbfe,
+        0 2px 8px rgba(37, 99, 235, 0.04);
 }
 
 .repo-main {
     display: flex;
+
     align-items: center;
+
     gap: 15px;
+
     min-width: 0;
 }
 
 .repo-icon {
     width: 46px;
     height: 46px;
+
     border-radius: 11px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     flex-shrink: 0;
+
     font-size: 19px;
 }
 
 .repo-icon.blue {
     background: #eff6ff;
+
     color: #2563eb;
 }
 
 .repo-icon.green {
     background: #eaf9f0;
+
     color: #19a15a;
 }
 
 .repo-icon.purple {
     background: #f3edff;
+
     color: #8755df;
 }
 
 .repo-icon.orange {
     background: #fff4e3;
+
     color: #e89200;
 }
 
 .repo-icon.cyan {
     background: #e8f8f8;
+
     color: #159b9b;
 }
 
 .repo-main a {
     color: #2563eb;
+
     font-weight: bold;
+
     font-size: 15px;
 }
 
@@ -801,72 +987,102 @@ a {
 
 .repo-main p {
     margin-top: 6px;
+
     color: #64748b;
+
     font-size: 13px;
+
     white-space: nowrap;
+
     overflow: hidden;
+
     text-overflow: ellipsis;
 }
 
 .owner {
     display: flex;
+
     align-items: center;
+
     gap: 9px;
+
     font-size: 13px;
 }
 
 .mini-avatar,
 .team-avatar {
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     border-radius: 50%;
+
     font-weight: bold;
+
     width: 34px;
+
     height: 34px;
+
     font-size: 11px;
 }
 
 .mini-avatar {
     background: #dbeafe;
+
     color: #2563eb;
 }
 
 .team-avatar {
     background: #eff6ff;
+
     color: #2563eb;
 }
 
 .type {
     width: max-content;
+
     padding: 7px 10px;
+
     border-radius: 8px;
+
     font-size: 12px;
+
     display: flex;
+
     align-items: center;
+
     gap: 7px;
 }
 
 .type.private {
     color: #2563eb;
+
     background: #eff6ff;
 }
 
 .type.public {
     color: #169653;
+
     background: #eaf9f0;
 }
 
 .updated {
     color: #64748b;
+
     font-size: 13px;
 }
 
 .stars {
     color: #4e5b6f;
+
     display: flex;
+
     align-items: center;
+
     gap: 7px;
+
     font-size: 13px;
 }
 
@@ -876,11 +1092,23 @@ a {
 
 .more {
     border: 0;
+
     background: transparent;
+
     color: #94a3b8;
+
     font-size: 16px;
+
+    transition: 0.2s;
 }
 
+.more:hover {
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border-radius: 6px;
+}
 
 
 /* =====================================================
@@ -889,32 +1117,52 @@ a {
 
 .repository-footer {
     min-height: 68px;
+
     padding: 0 20px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     color: #657186;
+
     font-size: 13px;
 }
 
 .pagination {
     display: flex;
+
     align-items: center;
+
     gap: 5px;
 }
 
 .pagination button {
     height: 37px;
+
     min-width: 37px;
+
     border: 1px solid #dce3eb;
+
     background: white;
+
     border-radius: 7px;
+
     color: #536176;
+
     padding: 0 12px;
+
+    transition: 0.2s;
 }
 
 .pagination button:hover {
-    background: #f1f5fb;
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-color: #bfdbfe;
 }
 
 .pagination .page {
@@ -923,7 +1171,9 @@ a {
 
 .pagination .page.active {
     color: #2563eb;
+
     border-color: #93c5fd;
+
     background: #eff6ff;
 }
 
@@ -932,22 +1182,23 @@ a {
 }
 
 
-
 /* =====================================================
    FOOTER
 ===================================================== */
 
 footer {
     text-align: center;
+
     padding: 25px;
+
     color: #94a3b8;
+
     font-size: 12px;
 }
 
 
-
 /* =====================================================
-   RESPONSIVIDADE (igual à home para sidebar/topbar)
+   RESPONSIVIDADE
 ===================================================== */
 
 @media (max-width: 1100px) {
@@ -968,16 +1219,20 @@ footer {
     .repository {
         grid-template-columns: 2fr 1fr .8fr .8fr .5fr 25px;
     }
-
 }
 
 
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 900px) {
 
     .sidebar {
         left: -250px;
+
         width: 250px;
+
         transition: 0.3s;
     }
 
@@ -999,6 +1254,7 @@ footer {
 
     .search {
         width: 100%;
+
         max-width: none;
     }
 
@@ -1012,6 +1268,7 @@ footer {
 
     .repository {
         grid-template-columns: 1fr auto;
+
         gap: 15px;
     }
 
@@ -1024,17 +1281,21 @@ footer {
 
     .more {
         grid-column: 2;
+
         grid-row: 1;
     }
-
 }
 
 
+/* =====================================================
+   CELULAR
+===================================================== */
 
 @media (max-width: 650px) {
 
     .topbar {
         padding: 0 18px;
+
         gap: 10px;
     }
 
@@ -1057,12 +1318,15 @@ footer {
 
     .page-header {
         align-items: flex-start;
+
         gap: 20px;
+
         flex-direction: column;
     }
 
     .new-repository {
         width: 100%;
+
         justify-content: center;
     }
 
@@ -1072,7 +1336,9 @@ footer {
 
     .repository-tools {
         flex-direction: column;
+
         align-items: stretch;
+
         gap: 15px;
     }
 
@@ -1094,12 +1360,13 @@ footer {
 
     .repository-footer {
         flex-direction: column;
+
         gap: 15px;
+
         padding: 18px;
     }
 
     .pagination button:not(.active) {
         display: none;
     }
-
 }
